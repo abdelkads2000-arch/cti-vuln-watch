@@ -1,0 +1,73 @@
+# Catalogue de produits canoniques. Le matching inventaire <-> vulnérabilité
+# utilise : (1) le CPE vendor:product, (2) les alias (comparaison normalisée,
+# insensible à la casse et à la ponctuation).
+# Ajouter ici tout produit présent dans les inventaires clients.
+
+products:
+  - id: citrix-netscaler-adc
+    vendor: Citrix
+    name: NetScaler ADC
+    aliases: [NetScaler ADC, Citrix ADC, NetScaler, Citrix NetScaler ADC, NetScaler ADC FIPS, NetScaler ADC NDcPP]
+    cpe: [citrix:netscaler_application_delivery_controller, citrix:application_delivery_controller, citrix:netscaler_adc]
+    version_scheme: citrix   # "14.1-73.37"
+
+  - id: citrix-netscaler-gateway
+    vendor: Citrix
+    name: NetScaler Gateway
+    aliases: [NetScaler Gateway, Citrix Gateway, Citrix NetScaler Gateway]
+    cpe: [citrix:netscaler_gateway, citrix:gateway]
+    version_scheme: citrix
+
+  - id: fortinet-fortios
+    vendor: Fortinet
+    name: FortiOS
+    aliases: [FortiOS, FortiGate]
+    cpe: [fortinet:fortios]
+
+  - id: fortinet-fortimanager
+    vendor: Fortinet
+    name: FortiManager
+    aliases: [FortiManager]
+    cpe: [fortinet:fortimanager]
+
+  - id: fortinet-forticlient-windows
+    vendor: Fortinet
+    name: FortiClient Windows
+    aliases: [FortiClient Windows, FortiClientWindows, FortiClient]
+    cpe: [fortinet:forticlient]
+
+  - id: ivanti-connect-secure
+    vendor: Ivanti
+    name: Connect Secure
+    aliases: [Ivanti Connect Secure, Connect Secure, Pulse Connect Secure, ICS]
+    cpe: [ivanti:connect_secure, pulsesecure:pulse_connect_secure]
+
+  - id: ivanti-epmm
+    vendor: Ivanti
+    name: Endpoint Manager Mobile
+    aliases: [Endpoint Manager Mobile, EPMM, MobileIron Core]
+    cpe: [ivanti:endpoint_manager_mobile]
+
+  - id: paloalto-panos
+    vendor: Palo Alto Networks
+    name: PAN-OS
+    aliases: [PAN-OS, PANOS, GlobalProtect]
+    cpe: [paloaltonetworks:pan-os]
+
+  - id: microsoft-exchange
+    vendor: Microsoft
+    name: Exchange Server
+    aliases: [Exchange Server, Microsoft Exchange, Exchange]
+    cpe: [microsoft:exchange_server]
+
+  - id: vmware-vcenter
+    vendor: VMware
+    name: vCenter Server
+    aliases: [vCenter Server, vCenter, VMware vCenter]
+    cpe: [vmware:vcenter_server]
+
+  - id: roundcube-webmail
+    vendor: Roundcube
+    name: Roundcube Webmail
+    aliases: [Roundcube, Roundcube Webmail]
+    cpe: [roundcube:webmail]

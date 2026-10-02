@@ -1,0 +1,47 @@
+# Motifs déterministes (expressions régulières, insensibles à la casse) appliqués
+# PHRASE PAR PHRASE : une affirmation n'est attribuée qu'aux CVE citées dans la même
+# phrase (ou, à défaut, dans le même paragraphe / document mono-CVE).
+# Les négations sont testées AVANT les affirmations.
+
+exploitation:
+  deny:
+    - "no (?:known |public |current )?(?:evidence|indication|reports?)[^.]{0,40}(?:exploit|attack)"
+    - "(?:not|n't) aware of (?:any )?(?:active |public )?(?:exploit|attack|customers? being exploited)"
+    - "(?:has|have) not been exploited"
+    - "aucune (?:exploitation|preuve d'exploitation)"
+    - "pas (?:connaissance )?d'exploitation"
+    - "n'a pas connaissance d'exploitation"
+  affirm:
+    - "(?:actively|being) exploited"
+    - "exploited in the wild"
+    - "exploitation in the wild"
+    - "exploits? of [^.]{0,120} (?:have|has) been observed"
+    - "(?:is|are) aware of [^.]{0,60}(?:exploit|attack)"
+    - "limited (?:number of )?(?:customers|exploitation)"
+    - "known to (?:be|have been) exploited"
+    - "activement exploitée?s?"
+    - "exploitation active"
+    - "fait l'objet d'une exploitation"
+    - "(?:cas d')?exploitations? (?:ont été )?(?:observée?s?|constatée?s?)"
+
+poc:
+  affirm:
+    - "proof[- ]of[- ]concept (?:is |has been )?(?:publicly )?(?:available|published|released)"
+    - "public(?:ly available)? (?:proof[- ]of[- ]concept|poc|exploit code)"
+    - "preuve de concept (?:est )?publique"
+    - "preuve de concept (?:a été )?publiée"
+    - "code d'exploitation (?:est )?(?:public|disponible)"
+
+# Signaux "patch contourné / correctif incomplet" (utilisés aussi en phase 2)
+bypass:
+  affirm:
+    - "patch bypass"
+    - "bypass(?:es|ed)? (?:the |a )?(?:previous |original |initial )?(?:patch|fix)"
+    - "incomplete (?:fix|patch)"
+    - "insufficient (?:fix|patch)"
+    - "(?:fix|patch) (?:was|is) incomplete"
+    - "variant of CVE-\\d{4}-\\d{4,}"
+    - "regression"
+    - "contournement du correctif"
+    - "correctif incomplet"
+    - "correctif insuffisant"

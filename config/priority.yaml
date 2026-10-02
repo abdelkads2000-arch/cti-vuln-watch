@@ -1,0 +1,47 @@
+# Règles de priorité : la PREMIÈRE règle satisfaite l'emporte.
+# Conditions disponibles (toutes combinées en ET dans une règle) :
+#   exploited: true              niveau EXPLOITED_CONFIRMED ou EXPLOITED_REPORTED (corroboré)
+#   exploited_confirmed: true    niveau EXPLOITED_CONFIRMED
+#   poc_public_verified: true    niveau >= POC_PUBLIC_VERIFIED
+#   client_match: true|false     au moins un actif client concerné (version affectée ou inconnue)
+#   client_exposed: true         au moins un actif concerné exposé sur internet
+#   in_watchlist: true           CVE en surveillance renforcée
+#   bypass_signal: true          signal de contournement / correctif incomplet / révision
+#   min_cvss: 9.0                CVSS v3.1 ou v4 (le plus élevé)
+#   min_epss: 0.5
+#   any_of: [ {...}, {...} ]     OU entre sous-conditions
+#
+# Garde-fou (non désactivable) : un niveau de preuve qui ne repose que sur des sources
+# de niveau 4 ou "observation" ne déclenche jamais P1/P2.
+
+rules:
+  - priority: P1
+    name: exploitation + client
+    when: {exploited: true, client_match: true}
+  - priority: P1
+    name: contournement sur CVE surveillée
+    when: {bypass_signal: true, in_watchlist: true}
+  - priority: P1
+    name: critique sur actif exposé
+    when: {min_cvss: 9.0, client_exposed: true}
+  - priority: P2
+    name: sévérité/probabilité élevée + client
+    when: {client_match: true, any_of: [{min_cvss: 9.0}, {min_epss: 0.5}]}
+  - priority: P2
+    name: PoC public vérifié + client
+    when: {poc_public_verified: true, client_match: true}
+  - priority: P3
+    name: exploitée, aucun client concerné
+    when: {exploited_confirmed: true, client_match: false}
+  - priority: P3
+    name: critique, aucun client concerné
+    when: {min_cvss: 9.0, client_match: false}
+
+# Délais cibles (affichés dans les messages)
+sla:
+  P1: immédiat
+  P2: sous 4 h
+  P3: digest quotidien
+
+# Premier passage d'une source (historique) : on n'alerte que sur ce qui est récent.
+backfill_notify_days: 7

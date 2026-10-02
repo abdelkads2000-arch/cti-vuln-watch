@@ -1,0 +1,71 @@
+# INVENTAIRE FICTIF — à des fins de test uniquement. Aucune donnée client réelle.
+# Les inventaires réels (config/inventory.yaml) sont exclus du dépôt par .gitignore.
+#
+# product : nom libre, rapproché du catalogue config/product_aliases.yaml
+# version : version exacte si connue ; absente => matching "version à confirmer"
+# exposure.declared : IP / plages / domaines déclarés (utilisés en phase 2, recherche PASSIVE)
+
+clients:
+  - id: acme-industrie
+    name: ACME Industrie (fictif)
+    contacts:
+      - {name: RSSI ACME, email: rssi@acme.example}
+    exposure:
+      declared: [203.0.113.0/28, vpn.acme.example]
+    assets:
+      - id: vpn-gw-01
+        vendor: Citrix
+        product: NetScaler Gateway
+        version: "14.1-47.46"
+        internet_exposed: true
+      - id: adc-lb-01
+        vendor: Citrix
+        product: Citrix ADC
+        version: "13.1-64.23"     # déjà corrigé pour CTX697096
+        internet_exposed: false
+      - id: fw-01
+        vendor: Fortinet
+        product: FortiGate
+        version: "7.4.4"
+        internet_exposed: true
+
+  - id: banque-horizon
+    name: Banque Horizon (fictif)
+    contacts:
+      - {name: SOC Horizon, email: soc@horizon.example}
+    exposure:
+      declared: [198.51.100.16/29, mail.horizon.example]
+    assets:
+      - id: mail-01
+        vendor: Microsoft
+        product: Exchange Server
+        version: "2019 CU14"
+        internet_exposed: true
+      - id: ics-01
+        vendor: Ivanti
+        product: Ivanti Connect Secure
+        version: "22.7R2.3"
+        internet_exposed: true
+      - id: webmail-01
+        vendor: Roundcube
+        product: Roundcube
+        version: "1.6.9"
+        internet_exposed: true
+
+  - id: sante-plus
+    name: Santé Plus (fictif)
+    contacts:
+      - {name: DSI Santé Plus, email: dsi@santeplus.example}
+    exposure:
+      declared: [192.0.2.64/28]
+    assets:
+      - id: netscaler-01
+        vendor: Citrix
+        product: NetScaler ADC
+        # version inconnue -> "version à confirmer"
+        internet_exposed: true
+      - id: vcenter-01
+        vendor: VMware
+        product: vCenter
+        version: "8.0 U2"
+        internet_exposed: false

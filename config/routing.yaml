@@ -1,0 +1,23 @@
+# Routage follow-the-sun (PROVISOIRE : horaires réels à fournir).
+# Chaque équipe a un créneau dans son fuseau, une langue et un canal Teams (.env).
+# Pendant un chevauchement, les deux équipes reçoivent l'alerte.
+# Hors de tout créneau : P1 envoyée à toutes les équipes, P2 à l'équipe de référence.
+
+teams:
+  - id: fr
+    name: Équipe France
+    timezone: Europe/Paris
+    hours: {start: "08:00", end: "20:00"}
+    days: [mon, tue, wed, thu, fri, sat, sun]
+    lang: fr
+    teams_webhook_env: TEAMS_WEBHOOK_URL_FR
+  - id: kr
+    name: Équipe Corée
+    timezone: Asia/Seoul
+    hours: {start: "08:00", end: "20:00"}
+    days: [mon, tue, wed, thu, fri, sat, sun]
+    lang: en
+    # Vide => repli sur le canal de l'équipe France
+    teams_webhook_env: TEAMS_WEBHOOK_URL_KR
+
+default_team: fr

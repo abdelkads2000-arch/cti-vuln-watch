@@ -1,0 +1,2261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="6a5fee8c-80be-4b9a-ab7e-b607e3f8ad3e-test" ></script> -->
+    <script id="cookieScript"
+        src=""
+        type="text/javascript" charset="UTF-8"
+        data-domain-script=""></script>
+    <!-- <script type="text/javascript">
+        function OptanonWrapper() { }
+    </script> -->
+
+
+    <!-- OneTrust Cookies Settings button start -->
+    <!-- <button id="ot-sdk-btn" class="ot-sdk-show-settings" >Cookie Settings</button> -->
+    <!-- OneTrust Cookies Settings button end -->
+
+    <!-- Google Tag Manager -->
+    <!-- <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KF7XWD');
+
+    </script> -->
+    <!-- End Google Tag Manager -->
+    <title>
+        Citrix NetScaler ADC and Citrix NetScaler Gateway Security Bulletin for CVE-2026-88771, CVE-2026-88772, CVE-2026-88773, CVE-2026-88774, CVE-2026-88775, CVE-2026-88776, CVE-2026-88777, and CVE-2026-88778
+    </title>
+    <link rel="icon" type="image/x-icon" href="https://cdn.wolkenservicedesk.com/Citrix/Logos/company_logo/CitrixFavicon.ico">
+    <meta name="description"
+    content=" Citrix NetScaler ADC and Citrix NetScaler Gateway Security Bulletin for CVE-2026-88771, CVE-2026-88772, CVE-2026-88773, CVE-2026-88774, CVE-2026-88775, CVE-2026 ">  
+
+        <script type="application/ld+json">
+        {"@context":"http://schema.org","@type":"Article","name":["NetScaler"],"alternateName":["NetScaler"],"datePublished":"09-27-2026 10:10","dateModified":"09-27-2026 10:10","mainEntityOfPage":{"@type":"WebPage","url":"support.citrix.com/external/article/697096"},"keywords":["Security Bulletin","NetScaler"],"url":"support.citrix.com/external/article/697096","about":[],"author":{"@type":"Person","name":"Citrix"},"headline":"Citrix NetScaler ADC and Citrix NetScaler Gateway Security Bulletin for CVE-2026-88771, CVE-2026-88772, CVE-2026-88773, CVE-2026-88774, CVE-2026-88775, CVE-2026-88776, CVE-2026-88777, and CVE-2026-88778","publisher":{"@type":"Organization","name":"Citrix","logo":{"@type":"ImageObject","url":"https://support.citrix.com/assets/images/company-logo.png"}},"aggregateRating":{}}</script>
+
+    <link rel="canonical"
+        href="https://support.citrix.com/external/article/CTX697096/citrix-netscaler-adc-and-citrix-netscale.html"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500" rel="stylesheet">
+
+    <!--SU Scripts-->
+
+    <style>
+        :root {
+            --wolken-primary-color: #CC092F;
+            --wolken-primary-color-light: #CC092F0D;
+            --wolken-primary-complimentory-color: #2030CC;
+            --wolken-accent-complimentory-color: #CCBC20;
+        }
+
+        body {
+            background: #FFFFFF;
+            height: 100vh;
+            padding: 0;
+            margin: 0;
+            font-size: 16px;
+            /* margin: 12px !important; */
+        }
+
+        #onetrust-consent-sdk {
+            font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-family: "Gotham-Book", sans-serif;
+        }
+
+        #ot-sdk-btn.ot-sdk-show-settings {
+            display: none;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 12px 0;
+        }
+
+        h1 {
+            line-height: 28px;
+        }
+
+        h2 {
+            line-height: 24px;
+        }
+
+        /* newly added for INC01200689 */
+        img {
+            height: auto !important;
+            max-width: 100% !important;
+        }
+
+        .wolken-h3 {
+            font: 500 19px/32px Poppins;
+        }
+
+        .wolken-h4 {
+            font: 400 15px/24px Poppins;
+        }
+        .wolken-h4-no-margin {
+            font: 400 15px/24px Poppins;
+            margin: 0;
+        }
+
+        .wolken-h5 {
+            font: 400 13px/20px Poppins;
+        }
+
+        .flex-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .column-gap-16>*:not(:last-child) {
+            margin-bottom: 16px;
+        }
+
+        .row-gap-16>*:not(:last-child) {
+            margin-right: 16px;
+        }
+
+        .row-gap-8>*:not(:last-child) {
+            margin-right: 8px;
+        }
+
+        .row-gap {
+            margin: 10px 15px;
+        }
+
+        .row-align-space-between-center {
+            place-content: center space-between;
+            align-items: center;
+        }
+
+        .row-align-center-center {
+            place-content: center;
+            align-items: center;
+        }
+
+        .custom-header,
+        .custom-footer {
+            max-height: 100%;
+            width: 100%;
+            display: block;
+            border: 0;
+        }
+
+        .search-bar {
+            border: 1px solid #cacaca;
+            width: calc(100%);
+            outline: none;
+            padding: 12px 0;
+            padding-left: 15px !important;
+            text-indent: 12px;
+            font-family: arial, sans-serif;
+            font-size: 16px;
+            line-height: 24px;
+            height: 30px;
+            white-space: pre;
+            overflow: auto;
+            box-sizing: border-box;
+            display: block;
+            border-radius: 6px;
+        }
+
+        .show_more,
+        .show_less {
+            width: auto !important;
+        }
+
+        .search-button-container {
+            padding: 0 16px;
+            display: flex;
+            align-items: center;
+            /* place-content: end; */
+            margin-bottom: 5px !important;
+            place-content: center;
+            margin-bottom: 5px !important;
+            width: 100%;
+            background: transparent linear-gradient(90deg, #3D4145 0%, #FAFAFA 100%) 0% 0% no-repeat padding-box !important;
+            background-repeat: no-repeat;
+        }
+
+        .search-bar-container {
+            width: 880px;
+            display: flex;
+            height: 100px;
+            align-items: center;
+        }
+
+        .material-icon-search {
+            cursor: pointer;
+            align-self: center;
+            font-size: 20px;
+            color: #00000061;
+        }
+
+        .article-updated-time {
+            flex: 0 0 auto;
+            align-items: center;
+        }
+
+        .article-updated-date-icon {
+            color: var(--wolken-accent-complimentory-color);
+        }
+
+        .article-updated-date-icon_cal {
+            color: var(--wolken-primary-complimentory-color);
+        }
+
+
+        .article-detail-card {
+            box-shadow: 0px 0px 6px #00000066;
+            border-top: 4px solid var(--wolken-primary-color);
+            border-radius: 10px;
+            width: 100%;
+        }
+        .article-detail-card-desc {
+            display: none;
+
+        }
+
+        .article-detail-card-header {
+            padding: 8px 16px;
+            border-bottom: 1px solid #00000066;
+        }
+
+        .article-detail-card-content {
+            padding: 8px 16px;
+            max-width: 100%;
+            overflow: auto;
+        }
+
+        .like_dislike_btn {
+            cursor: pointer;
+        }
+
+        .product-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 8px;
+        }
+
+        .product-chip {
+            padding: 4px 12px;
+            margin: 4px;
+            background: var(--wolken-primary-color-light);
+            border: 1px solid #00000066;
+            border-radius: 50px;
+            font: 400 12px/25px Poppins;
+            color: #000000;
+        }
+
+        .attachment-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .attachment-card {
+            box-shadow: 0px 0px 2px #00000033;
+            border-radius: 4px;
+            margin: 8px;
+        }
+
+        .attachment-card:hover {
+            box-shadow: 0px 0px 4px #00000033;
+        }
+
+        .attachment-name {
+            padding: 0px 8px;
+            font: 400 12px/18px Poppins;
+        }
+
+        .attachment {
+            max-width: 100%;
+        }
+
+        .full-width {
+            width: 100%;
+        }
+
+        .attachment-download {
+            padding: 8px 12px;
+            color: #ffffff;
+            background: var(--wolken-primary-color);
+            border-radius: 4px;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .attachment-download-icon {
+            font-size: 16px;
+            height: 16px;
+            width: 16px;
+        }
+
+        .text-ellipsis {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .article-page {
+            position: relative;
+        }
+
+        .loader-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ffffff;
+            z-index: 1;
+        }
+
+        .article-container {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            width: 100%;
+        }
+
+        .wolken-footer {
+            width: 100%;
+            height: 30px;
+            padding: 0 16px;
+            background-color: var(--wolken-primary-color-light);
+            place-content: center flex-end;
+            align-items: center;
+        }
+
+        .wolken-footer-content {
+            text-decoration: none;
+            cursor: pointer;
+            font: 400 12px/10px Poppins;
+        }
+
+        table {
+            table-layout: fixed;
+            border: 1px solid;
+            border-collapse: collapse;
+            white-space: initial;
+            word-break: break-word;
+        }
+
+        table td,
+        table th {
+            border: 1px solid;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+
+        .product-table {
+            width: 100%;
+            text-align: left;
+
+            th,
+            td {
+                border: 1px solid #cacaca;
+                padding: 1rem, 2rem;
+            }
+
+            td:nth-child(1),
+            th:nth-child(1) {
+                width: auto;
+            }
+
+            td:nth-child(2),
+            th:nth-child(2) {
+                width: 30%;
+            }
+
+            .product-table-header {
+                background: var(--wolken-primary-color-light);
+            }
+        }
+
+        .alert_style {
+            background-color: rgb(209, 119, 119);
+            padding: 5px 5px 5px 5px;
+            border-radius: 5px 5px 5px 5px;
+        }
+
+        .kb_article_alert {
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .article-detail-card-attachment{
+            order: 19;
+        }
+        
+        .feedback-section{
+            order: 20;
+        }
+
+
+        @media all and (min-width: 1200px) {
+            .wolken-content-container {
+                max-width: 1170px;
+                width: 100%;
+                margin: auto;
+            }
+
+            .article-header {
+                display: flex;
+                flex-direction: row;
+                place-content: flex-start space-between;
+                align-items: flex-start;
+                margin-top: 10px !important;
+                order: 1;
+            }
+
+            .article-ruler {
+                border: 2px solid var(--wolken-primary-color);
+                width: 10px;
+                width: 100%;
+                position: absolute;
+                top: 135px;
+                left: 0;
+                right: 0;
+            }
+
+            .article-header>div:not(:last-child) {
+                margin-right: 16px;
+            }
+
+            .article-header-info {
+                display: flex;
+                flex-direction: row;
+                place-content: flex-start start;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                order: 2;
+            }
+            .article-detail-card-product{
+                order: 3;
+            }
+
+            .article-header-info>div:not(:last-child) {
+                margin-right: 2.5rem;
+            }
+        }
+
+        @media all and (min-width: 1440px) {
+            .wolken-content-container {
+                max-width: 1400px;
+                margin: auto;
+            }
+        }
+
+        @media all and (min-width: 1199px) {
+            .wolken-content-container {
+                max-width: 930px;
+                margin: auto;
+            }
+        }
+
+        @media all and (min-width: 992px) {
+            .wolken-content-container {
+                max-width: 960px;
+                margin: auto;
+            }
+        }
+
+        @media all and (max-width: 1199px) {
+            .wolken-content-container {
+                width: 100%;
+                padding: 16px;
+            }
+
+            .attachment {
+                width: 25%;
+            }
+
+            .article-header {
+                display: flex;
+                flex-direction: row;
+                place-content: flex-start space-between;
+                align-items: flex-start;
+            }
+
+            .article-header>div:not(:last-child) {
+                margin-right: 16px;
+            }
+
+            .article-header-info {
+                display: flex;
+                flex-direction: row;
+                place-content: flex-start start;
+                align-items: flex-start;
+            }
+
+            .article-header-info>div:not(:last-child) {
+                margin-right: 16px;
+            }
+        }
+
+        @media all and (min-width: 768px) and (max-width: 959px) {
+            .attachment {
+                width: 33.333333%;
+            }
+
+            .article-header {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .article-header>div:not(:last-child) {
+                margin-bottom: 8px;
+            }
+        }
+
+        @media all and (max-width: 767px) {
+            .attachment {
+                width: 50%;
+            }
+
+            .article-header {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .article-header>div:not(:last-child) {
+                margin-bottom: 8px;
+            }
+
+            .article-header-info {
+                display: flex;
+                flex-direction: row;
+                place-content: flex-start start;
+                align-items: flex-start;
+            }
+
+            .article-header-info>div:not(:last-child) {
+                margin-right: 16px;
+            }
+        }
+
+        .ghost-loader {
+            border-radius: 5px;
+            animation: shine-lines 1.5s infinite linear;
+            background-image: linear-gradient(to right, rgba(211, 211, 211, 0.2) 0%, rgba(211, 211, 211, 0.7) 20%,
+                    rgba(211, 211, 211, 0.9) 40%, rgba(211, 211, 211, 0.2) 100%);
+        }
+
+        @keyframes shine-lines {
+            0% {
+                background-position: -100px;
+            }
+
+            40%,
+            100% {
+                background-position: 140px;
+            }
+        }
+
+        .ghost-custom-header {
+            width: 100%;
+            height: 90px;
+        }
+
+        .ghost-article-title {
+            width: 200px;
+            height: 32px;
+        }
+
+        .ghost-article-date {
+            width: 200px;
+            height: 32px;
+        }
+
+        .ghost-article-detail-title {
+            width: 150px;
+            height: 24px;
+        }
+
+        .ghost-product-detail-content>div {
+            width: 20%;
+            height: 30px;
+            padding: 4px 12px;
+            margin: 4px;
+            border-radius: 50px;
+        }
+
+        .ghost-article-detail-content>div:nth-child(1) {
+            width: 70%;
+            height: 20px
+        }
+
+        .ghost-article-detail-content>div:nth-child(2) {
+            width: 20%;
+            height: 30px
+        }
+
+        .ghost-article-detail-content>div:nth-child(3) {
+            width: 40%;
+            height: 20px
+        }
+
+        .ghost-article-detail-content>div:nth-child(4) {
+            width: 30%;
+            height: 15px
+        }
+
+        .ghost-article-detail-content>div:nth-child(5) {
+            width: 50%;
+            height: 25px
+        }
+
+        .ghost-custom-footer {
+            width: 100%;
+            height: 140px;
+        }
+
+        .wolken-primary-button {
+            margin-left: 2px;
+            /* background-color: var(--wolken-primary-color); */
+            background-color: #005C8A;
+            border-radius: 4px;
+            box-shadow: 0 5px 6px 0rgba(0, 0, 0, 0.1);
+            border: none;
+            color: white;
+            border: 1px solid #7e8c9a;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            overflow: hidden;
+            height: 30px;
+            width: 65px;
+            min-width: 65px;
+            cursor: pointer;
+            line-height: 0;
+        }
+
+        .wolken-primary-button .material-icons {
+            font-size: 20px;
+            height: 20px;
+            width: 20px;
+        }
+
+        #feedback_actionMsg,
+        #feedback_actions {
+            margin: 8px 8px 8px 0px;
+        }
+
+        #feedbackForm {
+            display: none;
+        }
+
+        .article-feedback-card {
+            box-shadow: 0px 0px 6px #00000066;
+            border-radius: 10px;
+            width: 100%;
+            padding: 1em;
+        }
+        .article-feedback-card input {
+            padding: 0.5em;
+            border: 1px solid;
+            border-radius: 4px;
+            border-color: rgba(0, 0, 0, 0.2);
+            outline: none;
+        }
+        input:focus {
+            border-color: rgba(0, 0, 0, 0.7);
+        }
+        
+        .article-feedback-card textarea {
+            padding: 0.5em;
+            border: 1px solid;
+            border-radius: 4px;
+            border-color: rgba(0, 0, 0, 0.2);
+            outline: none;
+        }
+        .article-feedback-card .cancel-button {
+            background-color: transparent;
+            color: red;
+        }
+        .article-feedback-card .reset-button {
+            background-color: transparent;
+            color: var(--wolken-primary-color);
+        }
+
+        textarea:focus {
+            border-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .checkbox-section {
+            gap: 1em;
+            margin-bottom: 1em;
+        }
+
+        #comment-error {
+            color: 'red';
+            font: 400 11px/17px Poppins;
+            margin-top: '5px';
+        }
+
+        #feedback-success-msg {
+            margin-top: 1em;
+            text-align: center;
+        }
+
+        .icon-24 {
+            font-size: 20px;
+        }
+
+        span.mat-caption {
+            font: 400 12px/14px Poppins;
+            letter-spacing: normal;
+        }
+
+        @media screen and (-ms-high-contrast: active),
+        (-ms-high-contrast: none) {
+
+            /* IE10+ specific styles go here */
+            .article-updated-date-icon {
+                color: var(--wolken-primary-complimentory-color);
+                color: #ccbc20;
+            }
+
+            .article-updated-date-icon_cal {
+                color: var(--wolken-primary-complimentory-color);
+                color: #2030cc;
+            }
+
+            .article-detail-card {
+
+                box-shadow: 0px 0px 10px 0px rgba(68, 68, 68, 0.6);
+                border-top: 4px solid var(--wolken-primary-color);
+                border-top-style: solid;
+                border-top-width: 4px;
+                border-top-color: rgb(204, 9, 47);
+                border-radius: 10px;
+                width: 100%;
+            }
+
+            .article-detail-card-header {
+                padding: 8px 16px;
+                border-bottom: 1px solid #00000066;
+                border-bottom-style: solid;
+                border-bottom-width: 1px;
+                border-bottom-color: rgba(0, 0, 0, 0.40);
+            }
+
+            .product-chip {
+                padding: 4px 12px;
+                margin: 4px;
+                background: var(--wolken-primary-color-light);
+                background: rgba(204, 9, 47, 0.05);
+                border: 1px solid rgba(0, 0, 0, 0.40);
+                border-style: solid;
+                border-width: 1px;
+                border-color: rgba(0, 0, 0, 0.40);
+                border-radius: 50px;
+                font: 400 12px/25px Poppins;
+                color: #000000;
+            }
+
+            .attachment-card {
+                box-shadow: 0px 0px 2px 0px rgba(68, 68, 68, 0.6);
+                border-radius: 4px;
+                margin: 8px;
+            }
+
+            .attachment-card:hover {
+                box-shadow: 0px 0px 4px 0px rgba(68, 68, 68, 0.6);
+
+            }
+
+            .attachment-name {
+                padding: 0px 8px;
+                font: 400 12px/18px Poppins;
+            }
+
+            .attachment-download {
+                padding: 8px 12px;
+                color: #ffffff;
+                background: var(--wolken-primary-color);
+                background: rgb(204, 9, 47);
+                border-radius: 4px;
+                height: 100%;
+                cursor: pointer;
+            }
+
+            .wolken-footer {
+                width: 100%;
+                height: 30px;
+                padding: 0 16px;
+                background-color: var(--wolken-primary-color-light);
+                background: rgba(204, 9, 47, 0.05);
+                place-content: center flex-end;
+                justify-content: flex-end;
+                align-items: center;
+            }
+
+            .wolken-primary-button {
+                box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+                background-color: var(--wolken-primary-color);
+                background-color: rgb(204, 9, 47);
+                color: #ffffff;
+                padding: 4px 12px;
+                font-size: 12px;
+                line-height: 24px;
+                cursor: pointer;
+                outline: 0;
+                border: none;
+                transform: translate3d(0, 0, 0);
+                transition: background .4s cubic-bezier(.25, .8, .25, 1), box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
+                font-family: Poppins;
+                font-weight: 500;
+                border-radius: 4px;
+            }
+
+            table {
+                table-layout: fixed;
+                border: 1px solid;
+                border-collapse: collapse;
+                white-space: initial;
+                word-break: break-word;
+            }
+
+            table td,
+            table th {
+                border: 1px solid;
+                border-collapse: collapse;
+            }
+
+
+
+        }
+
+        pre {
+            white-space: pre-wrap !important;
+            background: #f7f7f7 !important;
+            padding: 5px !important;
+        }
+
+        hr {
+            margin: 20px 0;
+        }
+
+        hr br[data-mce-bogus] {
+            display: none;
+        }
+
+        .custom-header-container {
+            background-color: #eee;
+            border-bottom: .3em solid var(--wolken-primary-color);
+            box-sizing: border-box;
+            display: flex;
+            min-height: 48px;
+            justify-content: space-between;
+            position: relative;
+
+            .company-logo {
+                padding: 0px !important;
+                display: flex;
+                align-items: center;
+                font-family: 'Poppins';
+            }
+
+            .header-title {
+                margin-left: 12px;
+            }
+        }
+        #feedback-submit-button:disabled{
+            opacity: .3;
+        }
+        .text-red{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="article-page">
+        <div class="article-container flex-column">
+            <div class="custom-header-container"
+                style="display: none;">
+                <div class="company-logo wolken-content-container">
+                    <!-- <p><img id="brand_logo" src="https://cdn.wolkenservicedesk.com/wolken-footer-image.png" alt="Wolken Software"></p> -->
+                    <p><img id="brand_logo"></p>
+
+                    <h2 class="header-title">Welcome to "KB Articles"</h2>
+                    <p></p>
+                </div>
+            </div>
+            <iframe id="global-header"
+                style="display: block;"
+                class="custom-header"
+                title="https://cdn.wolkenservicedesk.com/Citrix/Header-footer/external_article_header.html"
+                src="https://cdn.wolkenservicedesk.com/Citrix/Header-footer/external_article_header.html"
+                height="65px"></iframe>
+            
+            <div id="article-details-container" class="wolken-content-container flex-column column-gap-16">
+
+                <!-- <hr class="article-ruler"> -->
+                <div class="article-header">
+                    <h3 class="wolken-h3">
+                        Citrix NetScaler ADC and Citrix NetScaler Gateway Security Bulletin for CVE-2026-88771, CVE-2026-88772, CVE-2026-88773, CVE-2026-88774, CVE-2026-88775, CVE-2026-88776, CVE-2026-88777, and CVE-2026-88778
+                    </h3>
+                </div>
+
+                <div class="article-header-info" id="article-header-info">
+                    <div class="flex-row article-updated-time">
+                        <span class="material-icons article-updated-date-icon">book</span>
+                        <h4 class="wolken-h4">Article ID: CTX697096
+                        </h4>
+                    </div>
+                    <div class="flex-row row-gap-8 article-updated-time">
+                        <span class="material-icons article-updated-date-icon_cal">calendar_today</span>
+                        <h4 class="wolken-h4">Updated On: <span id="date_time"></span></h4>
+                    </div>
+                </div>
+
+                
+                    
+                
+
+                    
+                    <div id="description" class="article-detail-card article-detail-card-desc">
+                        <div class="article-detail-card-header">
+                            <h4 class="wolken-h4">Description</h4>
+                        </div>
+                        <div class="article-detail-card-content wolken-h5">
+                            <p><p><span style="font-size: 11pt; font-family: Calibri,sans-serif; color: #000000; font-weight: 400;">Citrix NetScaler ADC and Citrix NetScaler Gateway are affected by the vulnerabilities identified below</span></p>
+<table style="border-collapse: collapse; width: 100%; height: 738px;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 15.8131%; height: 18px;">CVE-ID</td>
+<td style="width: 16.6453%; height: 18px;">Description</td>
+<td style="width: 16.3892%; height: 18px;">Pre-conditions</td>
+<td style="width: 16.5173%; height: 18px;">CWE</td>
+<td style="width: 34.6351%; height: 18px;">CVSSv4</td>
+</tr>
+<tr style="height: 144px;">
+<td style="width: 15.8131%; height: 144px;">CVE-2026-88771</td>
+<td style="width: 16.6453%; height: 144px;">A remote code execution vulnerability exists due to improper input validation, which can allow an unauthenticated attacker to execute arbitrary commands</td>
+<td style="width: 16.3892%; height: 144px;">All NetScaler ADC and NetScaler Gateway deployments (Default configuration / No additional feature required)</td>
+<td style="width: 16.5173%; height: 144px;">CWE-20: Improper Input Validation</td>
+<td style="width: 34.6351%; height: 144px;">CVSS v4.0 Base Score: 9.5<br>(CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H)</td>
+</tr>
+<tr style="height: 144px;">
+<td style="width: 15.8131%; height: 144px;">CVE-2026-88772</td>
+<td style="width: 16.6453%; height: 144px;">Memory overflow vulnerability leading to Remote Code Execution or Denial of Service</td>
+<td style="width: 16.3892%; height: 144px;">DTLS configuration enabled on NetScaler ADC or NetScaler Gateway (Note: Enabled by default on VPN vServer)</td>
+<td style="width: 16.5173%; height: 144px;">CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer<br><br></td>
+<td style="width: 34.6351%; height: 144px;">CVSS v4.0 Base Score: 9.5<br>(CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H)</td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 15.8131%; height: 72px;">CVE-2026-88773</td>
+<td style="width: 16.6453%; height: 72px;">HTTP Request Smuggling</td>
+<td style="width: 16.3892%; height: 72px;">HTTP Configuration enabled on NetScaler ADC or NetScaler Gateway</td>
+<td style="width: 16.5173%; height: 72px;">CWE-444: Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling')</td>
+<td style="width: 34.6351%; height: 72px;"><br>CVSS v4.0 Base Score: 9.3<br>(CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:H/SI:H/SA:N)</td>
+</tr>
+<tr style="height: 54px;">
+<td style="width: 15.8131%; height: 54px;">CVE-2026-88774</td>
+<td style="width: 16.6453%; height: 54px;">Feature policy bypass due to improper HTTP URL based expression usage</td>
+<td style="width: 16.3892%; height: 54px;">Any policy expression configured with HTTP URL based expression</td>
+<td style="width: 16.5173%; height: 54px;">CWE-16: Configuration</td>
+<td style="width: 34.6351%; height: 54px;">CVSS v4.0 Base Score:7<br>(CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:L/VA:N/SC:H/SI:H/SA:N)</td>
+</tr>
+<tr style="height: 90px;">
+<td style="width: 15.8131%; height: 90px;">CVE-2026-88775</td>
+<td style="width: 16.6453%; height: 90px;">Memory overflow vulnerability leading to unpredictable or erroneous behavior or Denial of Service</td>
+<td style="width: 16.3892%; height: 90px;">NetScaler ADC or NetScaler Gateway configured as either:• Gateway (SSL VPN, ICA Proxy, CVPN, RDP Proxy)• AAA virtual server</td>
+<td style="width: 16.5173%; height: 90px;">CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer</td>
+<td style="width: 34.6351%; height: 90px;">CVSS v4.0 Base Score: 8.8<br>(CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:H/SC:N/SI:N/SA:N)</td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 15.8131%; height: 72px;">CVE-2026-88776</td>
+<td style="width: 16.6453%; height: 72px;">Memory overflow vulnerability leading to unpredictable or erroneous behavior or Denial of Service</td>
+<td style="width: 16.3892%; height: 72px;">Configured as a Load Balancing (LB) virtual server of type Oracle on NetScaler ADC or NetScaler Gateway</td>
+<td style="width: 16.5173%; height: 72px;"><br>CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer</td>
+<td style="width: 34.6351%; height: 72px;">CVSS v4.0 Base Score: 8.8<br>(CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:H/SC:N/SI:N/SA:N)</td>
+</tr>
+<tr style="height: 90px;">
+<td style="width: 15.8131%; height: 90px;">CVE-2026-88777</td>
+<td style="width: 16.6453%; height: 90px;">Memory overflow vulnerability leading to unpredictable or erroneous behavior or Denial of Service</td>
+<td style="width: 16.3892%; height: 90px;">Configured as an LB/CS or CGNAT-LSN/NAT64 device with a non-HTTP L7 protocol feature enabled on NetScaler ADC or NetScaler Gateway</td>
+<td style="width: 16.5173%; height: 90px;">CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer</td>
+<td style="width: 34.6351%; height: 90px;">CVSS v4.0 Base Score: 8.8<br>(CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:H/SC:N/SI:N/SA:N)</td>
+</tr>
+<tr style="height: 54px;">
+<td style="width: 15.8131%; height: 54px;">CVE-2026-88778</td>
+<td style="width: 16.6453%; height: 54px;">TCP Initial Sequence Number (ISN) prediction</td>
+<td style="width: 16.3892%; height: 54px;">TCP Configuration enabled on NetScaler ADC or NetScaler Gateway</td>
+<td style="width: 16.5173%; height: 54px;">CWE-342: Predictable Exact Value from Previous Values</td>
+<td style="width: 34.6351%; height: 54px;">CVSS v4.0 Base Score: 8.8<br>(CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:H/VA:H/SC:L/SI:L/SA:L)</td>
+</tr>
+</tbody>
+</table>
+<h2 style="all: revert !important;">What Customers Should Do</h2>
+<p>Exploits of CVE-2026-88771 and CVE-2026-88772 on unmitigated NetScaler deployments have been observed.<br><br>Cloud Software Group strongly urges affected customers of NetScaler ADC and NetScaler Gateway to install the relevant updated versions as soon as possible.</p>
+<ul>
+<li>Citrix NetScaler ADC and Citrix NetScaler Gateway 14.1-73.37 and later releases</li>
+<li>Citrix NetScaler ADC and Citrix NetScaler Gateway 13.1-64.23 and later releases of 13.1</li>
+<li>Citrix NetScaler ADC 14.1-FIPS 14.1-73.37 FIPS and later releases of 14.1-FIPS</li>
+<li>Citrix NetScaler ADC 13.1-FIPS and 13.1-NDcPP 13.1.37.279 and later releases of 13.1-FIPS and 13.1-NDcPP</li>
+</ul>
+<p>NetScaler deployments impacted by CVE-2026-88778 should apply the TCP configuration change as mentioned in <a href="https://docs.netscaler.com/en-us/citrix-adc/current-release/system/tcp-configurations.html#enhanced-isn-generation">https://docs.netscaler.com/en-us/citrix-adc/current-release/system/tcp-configurations.html#enhanced-isn-generation</a></p>
+<h2 style="color-scheme: revert; forced-color-adjust: revert; math-depth: revert; position: revert; position-anchor: revert; text-size-adjust: revert; appearance: revert; font-feature-settings: revert; font-kerning: revert; font-language-override: revert; font-optical-sizing: revert; font-palette: revert; font-size: revert; font-size-adjust: revert; font-stretch: revert; font-synthesis: revert; font-variant-alternates: revert; font-variant-east-asian: revert; font-variant-emoji: revert; font-variant-numeric: revert; font-variant-position: revert; font-variation-settings: revert; font-weight: revert; position-area: revert; text-orientation: revert; text-rendering: revert; text-spacing-trim: revert; -webkit-font-smoothing: revert; -webkit-locale: revert; -webkit-text-orientation: revert; -webkit-writing-mode: revert; writing-mode: revert; zoom: revert; accent-color: revert; place-content: revert; place-items: revert; place-self: revert; alignment-baseline: revert; anchor-name: revert; anchor-scope: revert; animation-composition: revert; animation: revert; animation-trigger: revert; app-region: revert; aspect-ratio: revert; backdrop-filter: revert; backface-visibility: revert; background-attachment: revert; background-blend-mode: revert; background-clip: revert; background-image: revert; background-origin: revert; background-position: revert; background-repeat: revert; background-size: revert; baseline-shift: revert; baseline-source: revert; block-size: revert; border-block: revert; border: revert; border-radius: revert; border-collapse: revert; border-end-end-radius: revert; border-end-start-radius: revert; border-inline: revert; border-shape: revert; border-start-end-radius: revert; border-start-start-radius: revert; inset: revert; box-decoration-break: revert; box-shadow: revert; box-sizing: revert; break-after: revert; break-before: revert; break-inside: revert; buffered-rendering: revert; caption-side: revert; caret-animation: revert; caret-color: revert; caret-shape: revert; clear: revert; clip: revert; clip-path: revert; clip-rule: revert; color-interpolation: revert; color-interpolation-filters: revert; color-rendering: revert; columns: revert; column-fill: revert; gap: revert; rule-break: revert; rule: revert; rule-inset: revert; rule-visibility-items: revert; column-span: revert; contain: revert; contain-intrinsic-block-size: revert; contain-intrinsic-size: revert; contain-intrinsic-inline-size: revert; container: revert; content: revert; content-visibility: revert; corner-shape: revert; corner-block-end-shape: revert; corner-block-start-shape: revert; counter-increment: revert; counter-reset: revert; counter-set: revert; cursor: revert; cx: revert; cy: revert; d: revert; display: revert; dominant-baseline: revert; dynamic-range-limit: revert; empty-cells: revert; field-sizing: revert; fill: revert; fill-opacity: revert; fill-rule: revert; filter: revert; flex: revert; flex-flow: revert; flex-line-count: revert; float: revert; flood-color: revert; flood-opacity: revert; grid: revert; grid-area: revert; height: revert; hyphenate-character: revert; hyphenate-limit-chars: revert; hyphens: revert; image-orientation: revert; image-rendering: revert; initial-letter: revert; inline-size: revert; inset-block: revert; inset-inline: revert; interactivity: revert; interest-delay: revert; interpolate-size: revert; isolation: revert; lighting-color: revert; line-break: revert; line-height: revert; list-style: revert; margin-block: revert; margin: revert; margin-inline: revert; marker: revert; mask: revert; mask-type: revert; math-shift: revert; math-style: revert; max-block-size: revert; max-height: revert; max-inline-size: revert; max-width: revert; min-block-size: revert; min-height: revert; min-inline-size: revert; min-width: revert; mix-blend-mode: revert; object-fit: revert; object-position: revert; object-view-box: revert; offset: revert; opacity: revert; order: revert; outline: revert; outline-offset: revert; overflow-anchor: revert; overflow-block: revert; overflow-clip-margin: revert; overflow-inline: revert; overflow-wrap: revert; overflow: revert; overlay: revert; overscroll-behavior-block: revert; overscroll-behavior-inline: revert; overscroll-behavior: revert; padding-block: revert; padding: revert; padding-inline: revert; page: revert; page-margin-safety: revert; page-orientation: revert; paint-order: revert; perspective: revert; perspective-origin: revert; pointer-events: revert; position-try: revert; position-visibility: revert; print-color-adjust: revert; quotes: revert; r: revert; reading-flow: revert; reading-order: revert; resize: revert; rotate: revert; ruby-align: revert; ruby-overhang: revert; ruby-position: revert; rule-overlap: revert; rx: revert; ry: revert; scale: revert; scroll-axis-lock: revert; scroll-behavior: revert; scroll-initial-target: revert; scroll-margin-block: revert; scroll-margin: revert; scroll-margin-inline: revert; scroll-marker-group: revert; scroll-padding-block: revert; scroll-padding: revert; scroll-padding-inline: revert; scroll-snap-align: revert; scroll-snap-stop: revert; scroll-snap-type: revert; scroll-target-group: revert; scroll-timeline: revert; scrollbar-color: revert; scrollbar-gutter: revert; scrollbar-width: revert; shape-image-threshold: revert; shape-margin: revert; shape-outside: revert; shape-rendering: revert; size: revert; speak: revert; stop-color: revert; stop-opacity: revert; stroke: revert; stroke-dasharray: revert; stroke-dashoffset: revert; stroke-linecap: revert; stroke-linejoin: revert; stroke-miterlimit: revert; stroke-opacity: revert; stroke-width: revert; tab-size: revert; table-layout: revert; text-align-last: revert; text-anchor: revert; text-autospace: revert; text-box: revert; text-combine-upright: revert; text-decoration-line: revert; text-decoration-skip-ink: revert; text-emphasis: revert; text-emphasis-position: revert; text-fit: revert; text-justify: revert; text-overflow: revert; text-shadow: revert; text-underline-offset: revert; text-underline-position: revert; text-wrap-style: revert; timeline-scope: revert; timeline-trigger: revert; touch-action: revert; transform: revert; transform-box: revert; transform-origin: revert; transform-style: revert; transition: revert; translate: revert; trigger-scope: revert; user-select: revert; vector-effect: revert; vertical-align: revert; view-timeline: revert; view-transition-class: revert; view-transition-group: revert; view-transition-name: revert; view-transition-scope: revert; visibility: revert; border-spacing: revert; -webkit-box-align: revert; -webkit-box-decoration-break: revert; -webkit-box-direction: revert; -webkit-box-flex: revert; -webkit-box-ordinal-group: revert; -webkit-box-orient: revert; -webkit-box-pack: revert; -webkit-box-reflect: revert; -webkit-line-break: revert; -webkit-line-clamp: revert; -webkit-mask-box-image: revert; -webkit-rtl-ordering: revert; -webkit-ruby-position: revert; -webkit-tap-highlight-color: revert; -webkit-text-combine: revert; -webkit-text-decorations-in-effect: revert; -webkit-text-fill-color: revert; -webkit-text-security: revert; -webkit-text-stroke-color: revert; -webkit-user-drag: revert; width: revert; will-change: revert; window-drag: revert; word-break: revert; x: revert; y: revert; z-index: revert; color: rgba(0, 0, 0, 0.87); font-family: Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><span style="box-sizing: border-box; scrollbar-width: thin; scrollbar-color: #80d2f2 rgba(0, 0, 0, 0); color: #000000;">Steps to determine if an appliance meets the CVE preconditions</span></h2>
+<p><span style="text-decoration: underline;">CVE-2026-88771</span> <br><strong>Precondition</strong>: All NetScaler ADC and NetScaler Gateway deployments (Default configuration / No additional feature required)<br><br><strong>Instructions</strong>: All NetScaler ADC and NetScaler Gateway deployments are affected, including those deployed with the default configuration. No additional features or settings need to be enabled for the NetScaler deployment to be vulnerable.<br><br><span style="text-decoration: underline;">CVE-2026-88772</span><br><strong>Precondition</strong>: DTLS configuration enabled on NetScaler ADC or NetScaler Gateway (Note: Enabled by default on VPN vServer)<br><br><strong>Instructions</strong>: Customers can determine whether their NetScaler deployment meets this precondition by inspecting the configuration for DTLS-enabled virtual servers. A NetScaler Gateway is vulnerable if DTLS is not explicitly disabled, and other virtual servers are vulnerable if they are configured with type DTLS.<br><br>Relevant configuration patterns to check:</p>
+<ul>
+<li><code>add vpn vserver vpn1 SSL 10.0.0.0 443 -Listenpolicy NONE&nbsp;</code><br>This indicates DTLS is not explicitly disabled, so DTLS is enabled by default.</li>
+<li><code>add vpn vserver vpn1 SSL 10.0.0.0 443 -dtls OFF -Listenpolicy NONE</code><br>This indicates DTLS is explicitly disabled, so the precondition is not met.</li>
+<li><code>add vpn vserver vs1 DTLS 10.11.1.1 443</code> <br>This indicates DTLS is enabled.</li>
+<li><code>add lb vserver vd_dtls DTLS 10.146.111.74 443 -persistenceType NONE -cltTimeout 120</code><br>This indicates DTLS is enabled.</li>
+</ul>
+<p><span style="text-decoration: underline;">CVE-2026-88773</span><br><strong>Precondition</strong>: HTTP Configuration enabled on NetScaler ADC or NetScaler Gateway<br><br><strong>Instructions</strong>: Customers can determine whether their NetScaler deployment meets this precondition if Load Balancing, Content Switching, VPN, or Authentication virtual servers of type HTTP or SSL are configured on NetScaler ADC or NetScaler Gateway.</p>
+<ul>
+<li><code>add lb vserver &lt;vserver-name&gt; &lt;HTTP or SSL&gt;</code></li>
+<li><code>add cs vserver &lt;vserver-name&gt; &lt;HTTP or SSL&gt;</code></li>
+<li><code>add vpn vserver &lt;vserver-name&gt; &lt;HTTP or SSL&gt;</code></li>
+<li><code>add authentication vserver &lt;vserver-name&gt; &lt;HTTP or SSL&gt;</code></li>
+</ul>
+<p><span style="text-decoration: underline;">CVE-2026-88774</span><br><strong>Precondition</strong>: Any policy expression configured with HTTP URL based expression<br><br><strong>Instructions</strong>: Customers can determine whether their NetScaler deployment meets this precondition if Load Balancing, Content Switching, VPN, or Authentication virtual servers of type HTTP or SSL are configured on NetScaler ADC or NetScaler Gateway.</p>
+<ul>
+<li><code><code>add lb vserver &lt;<code>vserver-name</code>&gt; &lt;<code>HTTP or SSL</code>&gt;</code></code></li>
+<li><code>add cs vserver &lt;<code>vserver-name</code>&gt; &lt;<code>HTTP or SSL</code>&gt;</code></li>
+<li><code>add vpn vserver &lt;<code>vserver-name</code>&gt; &lt;<code>HTTP or SSL</code>&gt;</code></li>
+<li><code>add authentication vserver &lt;<code>vserver-name</code>&gt; &lt;<code>HTTP or SSL</code>&gt;</code></li>
+</ul>
+<p><span style="text-decoration: underline;">CVE-2026-88775</span><br><strong>Precondition</strong>: NetScaler ADC or NetScaler Gateway configured as either:</p>
+<p style="padding-left: 40px;">• Gateway (SSL VPN, ICA Proxy, CVPN, RDP Proxy)<br>• AAA virtual server</p>
+<p><strong>Instructions</strong>: Customers can determine whether their NetScaler deployment meets the precondition by inspecting their NetScaler configuration for entries matching either of the following regular expressions:</p>
+<ul>
+<li>Gateway (SSL VPN, ICA Proxy, CVPN, RDP Proxy):<br><code>add vpn vserver .*</code></li>
+<li>AAA virtual server:<br><code>add authentication vserver .*</code></li>
+</ul>
+<p><span style="text-decoration: underline;">CVE-2026-88776</span><br><strong>Preconditions</strong>: Configured as a Load Balancing (LB) virtual server of type Oracle on NetScaler ADC or NetScaler Gateway<br><br><strong>Instructions</strong>: Customers can determine whether their NetScaler deployment meets this precondition by inspecting their NetScaler configuration for entries matching the following regular expression:</p>
+<ul>
+<li><code>add lb vserver.*ORACLE.*</code></li>
+</ul>
+<p><span style="text-decoration: underline;">CVE-2026-88777</span><br><strong>Preconditions</strong>: Configured as an LB/CS or CGNAT-LSN/NAT64 device with a non-HTTP L7 protocol feature enabled on NetScaler ADC or NetScaler Gateway<br><br><strong>Instructions</strong>: Customers can determine whether their NetScaler deployment meets this precondition by inspecting their NetScaler configuration, such as /nsconfig/ns.conf or the output of show ns runningConfig, for entries matching any of the following case-insensitive regular-expression patterns. These patterns are intended for configuration-text search and are not NetScaler CLI commands.</p>
+<ul>
+<li><code>grep -iE '' /nsconfig/ns.conf</code></li>
+</ul>
+<p>A match against any pattern below indicates that the precondition may be met. Text after # is explanatory and is not part of the pattern.</p>
+<p>FTP over LB / CS:</p>
+<ul>
+<li><code>add (lb|cs) vserver .* FTP</code></li>
+<li><code>add service .* FTP</code></li>
+</ul>
+<p>FTP over LSN/CGNAT — FTP ALG is enabled by default unless explicitly disabled:</p>
+<ul>
+<li><code>add lsn group .*</code></li>
+<li><code>set lsn group .* -ftp DISABLED # explicitly disabled; if this line is absent, FTP ALG is treated as enabled, and the appliance is vulnerable</code></li>
+</ul>
+<p>FTP via non-HTTP health monitor</p>
+<ul>
+<li><code>add lb monitor .* FTP</code></li>
+<li><code>add lb monitor .* FTP-EXTENDED</code></li>
+</ul>
+<p>RTSP over LSN/CGNAT</p>
+<ul>
+<li><code>set lsn group .* -rtspalg ENABLED</code></li>
+</ul>
+<p>DNS64</p>
+<ul>
+<li><code>add lb vserver .* DNS .* -dns64 ENABLED</code></li>
+<li><code>add dns policy64 # (must be bound to a DNS vserver to be vulnerable)</code></li>
+</ul>
+<p>NAT64</p>
+<ul>
+<li><code>add nat64</code></li>
+</ul>
+<p><span style="text-decoration: underline;">CVE-2026-88778</span><br><strong>Preconditions</strong>: TCP Configuration enabled on NetScaler ADC or NetScaler Gateway<br><br><strong>Instructions</strong>: Customers can determine whether their NetScaler deployment meets the precondition by verifying that both of the following conditions are true:</p>
+<ul>
+<li>At least one virtual server is configured with one of the following types: HTTP, SSL, SSL_BRIDGE, TCP, SSL_TCP, FTP, NNTP, RTSP, RDP, DNS_TCP, DOT, SIP_TCP, SIP_SSL, DIAMETER, SSL_DIAMETER, MYSQL, MSSQL, ORACLE, SMPP, MQTT, MQTT_TLS, MONGO, MONGO_TLS, PROXY, SSL_PROXY, USER_TCP, USER_SSL_TCP<br><br>AND</li>
+<li>The following command returns: Enhanced ISN Generation: DISABLED:<br><br><code>show ns tcpparam | grep "Enhanced ISN Generation"</code></li>
+</ul>
+<h2 style="color-scheme: revert; forced-color-adjust: revert; math-depth: revert; position: revert; position-anchor: revert; text-size-adjust: revert; appearance: revert; font-feature-settings: revert; font-kerning: revert; font-language-override: revert; font-optical-sizing: revert; font-palette: revert; font-size: revert; font-size-adjust: revert; font-stretch: revert; font-synthesis: revert; font-variant-alternates: revert; font-variant-east-asian: revert; font-variant-emoji: revert; font-variant-numeric: revert; font-variant-position: revert; font-variation-settings: revert; font-weight: revert; position-area: revert; text-orientation: revert; text-rendering: revert; text-spacing-trim: revert; -webkit-font-smoothing: revert; -webkit-locale: revert; -webkit-text-orientation: revert; -webkit-writing-mode: revert; writing-mode: revert; zoom: revert; accent-color: revert; place-content: revert; place-items: revert; place-self: revert; alignment-baseline: revert; anchor-name: revert; anchor-scope: revert; animation-composition: revert; animation: revert; animation-trigger: revert; app-region: revert; aspect-ratio: revert; backdrop-filter: revert; backface-visibility: revert; background-attachment: revert; background-blend-mode: revert; background-clip: revert; background-image: revert; background-origin: revert; background-position: revert; background-repeat: revert; background-size: revert; baseline-shift: revert; baseline-source: revert; block-size: revert; border-block: revert; border: revert; border-radius: revert; border-collapse: revert; border-end-end-radius: revert; border-end-start-radius: revert; border-inline: revert; border-shape: revert; border-start-end-radius: revert; border-start-start-radius: revert; inset: revert; box-decoration-break: revert; box-shadow: revert; box-sizing: revert; break-after: revert; break-before: revert; break-inside: revert; buffered-rendering: revert; caption-side: revert; caret-animation: revert; caret-color: revert; caret-shape: revert; clear: revert; clip: revert; clip-path: revert; clip-rule: revert; color-interpolation: revert; color-interpolation-filters: revert; color-rendering: revert; columns: revert; column-fill: revert; gap: revert; rule-break: revert; rule: revert; rule-inset: revert; rule-visibility-items: revert; column-span: revert; contain: revert; contain-intrinsic-block-size: revert; contain-intrinsic-size: revert; contain-intrinsic-inline-size: revert; container: revert; content: revert; content-visibility: revert; corner-shape: revert; corner-block-end-shape: revert; corner-block-start-shape: revert; counter-increment: revert; counter-reset: revert; counter-set: revert; cursor: revert; cx: revert; cy: revert; d: revert; display: revert; dominant-baseline: revert; dynamic-range-limit: revert; empty-cells: revert; field-sizing: revert; fill: revert; fill-opacity: revert; fill-rule: revert; filter: revert; flex: revert; flex-flow: revert; flex-line-count: revert; float: revert; flood-color: revert; flood-opacity: revert; grid: revert; grid-area: revert; height: revert; hyphenate-character: revert; hyphenate-limit-chars: revert; hyphens: revert; image-orientation: revert; image-rendering: revert; initial-letter: revert; inline-size: revert; inset-block: revert; inset-inline: revert; interactivity: revert; interest-delay: revert; interpolate-size: revert; isolation: revert; lighting-color: revert; line-break: revert; line-height: revert; list-style: revert; margin-block: revert; margin: revert; margin-inline: revert; marker: revert; mask: revert; mask-type: revert; math-shift: revert; math-style: revert; max-block-size: revert; max-height: revert; max-inline-size: revert; max-width: revert; min-block-size: revert; min-height: revert; min-inline-size: revert; min-width: revert; mix-blend-mode: revert; object-fit: revert; object-position: revert; object-view-box: revert; offset: revert; opacity: revert; order: revert; outline: revert; outline-offset: revert; overflow-anchor: revert; overflow-block: revert; overflow-clip-margin: revert; overflow-inline: revert; overflow-wrap: revert; overflow: revert; overlay: revert; overscroll-behavior-block: revert; overscroll-behavior-inline: revert; overscroll-behavior: revert; padding-block: revert; padding: revert; padding-inline: revert; page: revert; page-margin-safety: revert; page-orientation: revert; paint-order: revert; perspective: revert; perspective-origin: revert; pointer-events: revert; position-try: revert; position-visibility: revert; print-color-adjust: revert; quotes: revert; r: revert; reading-flow: revert; reading-order: revert; resize: revert; rotate: revert; ruby-align: revert; ruby-overhang: revert; ruby-position: revert; rule-overlap: revert; rx: revert; ry: revert; scale: revert; scroll-axis-lock: revert; scroll-behavior: revert; scroll-initial-target: revert; scroll-margin-block: revert; scroll-margin: revert; scroll-margin-inline: revert; scroll-marker-group: revert; scroll-padding-block: revert; scroll-padding: revert; scroll-padding-inline: revert; scroll-snap-align: revert; scroll-snap-stop: revert; scroll-snap-type: revert; scroll-target-group: revert; scroll-timeline: revert; scrollbar-color: revert; scrollbar-gutter: revert; scrollbar-width: revert; shape-image-threshold: revert; shape-margin: revert; shape-outside: revert; shape-rendering: revert; size: revert; speak: revert; stop-color: revert; stop-opacity: revert; stroke: revert; stroke-dasharray: revert; stroke-dashoffset: revert; stroke-linecap: revert; stroke-linejoin: revert; stroke-miterlimit: revert; stroke-opacity: revert; stroke-width: revert; tab-size: revert; table-layout: revert; text-align-last: revert; text-anchor: revert; text-autospace: revert; text-box: revert; text-combine-upright: revert; text-decoration-line: revert; text-decoration-skip-ink: revert; text-emphasis: revert; text-emphasis-position: revert; text-fit: revert; text-justify: revert; text-overflow: revert; text-shadow: revert; text-underline-offset: revert; text-underline-position: revert; text-wrap-style: revert; timeline-scope: revert; timeline-trigger: revert; touch-action: revert; transform: revert; transform-box: revert; transform-origin: revert; transform-style: revert; transition: revert; translate: revert; trigger-scope: revert; user-select: revert; vector-effect: revert; vertical-align: revert; view-timeline: revert; view-transition-class: revert; view-transition-group: revert; view-transition-name: revert; view-transition-scope: revert; visibility: revert; border-spacing: revert; -webkit-box-align: revert; -webkit-box-decoration-break: revert; -webkit-box-direction: revert; -webkit-box-flex: revert; -webkit-box-ordinal-group: revert; -webkit-box-orient: revert; -webkit-box-pack: revert; -webkit-box-reflect: revert; -webkit-line-break: revert; -webkit-line-clamp: revert; -webkit-mask-box-image: revert; -webkit-rtl-ordering: revert; -webkit-ruby-position: revert; -webkit-tap-highlight-color: revert; -webkit-text-combine: revert; -webkit-text-decorations-in-effect: revert; -webkit-text-fill-color: revert; -webkit-text-security: revert; -webkit-text-stroke-color: revert; -webkit-user-drag: revert; width: revert; will-change: revert; window-drag: revert; word-break: revert; x: revert; y: revert; z-index: revert; color: rgba(0, 0, 0, 0.87); font-family: Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><span style="box-sizing: border-box; scrollbar-width: thin; scrollbar-color: #80d2f2 rgba(0, 0, 0, 0); color: #000000;">Acknowledgement</span></h2>
+<p>We acknowledge Michael Tucker, Chew Keong Tan and Alex Bernier of the JPMorgan Chase XOR Team, and Maxim Suhanov for working with us to protect our customers</p></p>
+                        </div>
+                    </div>
+                    
+                    
+                        <div id="environment" class="article-detail-card article-detail-card-desc">
+                            <div class="article-detail-card-header">
+                                <h4 class="wolken-h4">Environment</h4>
+                            </div>
+                            <div class="article-detail-card-content wolken-h5">
+                                <p>The information on this page is being provided to you on an "AS IS" and "AS-AVAILABLE" basis. The issues described on this page may or may not impact your system(s). Cloud Software Group Holdings, Inc. and its affiliates, including Citrix Systems, Inc. (collectively, "Cloud SG") make no representations, warranties, or guarantees as to the information contained herein. ANY AND ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE ARE HEREBY DISCLAIMED. BY ACCESSING THIS PAGE, YOU ACKNOWLEDGE THAT CLOUD SG SHALL IN NO EVENT BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, PUNITIVE, OR CONSEQUENTIAL DAMAGES THAT ARISE OUT OF YOUR USE OR FAILURE TO USE THE INFORMATION CONTAINED HEREIN. Cloud SG reserves the right to change or update the information on this page at any time. Cloud SG accordingly recommends that you always view the latest version of this page. The information contained herein is being provided to you under the terms of your applicable customer agreement with Cloud SG, and may be used only for the purposes contemplated by such agreement. If you do not have such an agreement with Cloud SG, this information is provided under the cloud.com Terms of Use, and may be used only for the purposes contemplated by such Terms of Use.</p>
+                            </div>
+                        </div>
+                        
+                    
+                    
+                    
+                        <div id="introduction" class="article-detail-card article-detail-card-desc">
+                            <div class="article-detail-card-header">
+                                <h4 class="wolken-h4">Issue/Introduction</h4>
+                            </div>
+                            <div class="article-detail-card-content wolken-h5">
+                                <p style="box-sizing: border-box; scrollbar-width: thin; scrollbar-color: #80d2f2 rgba(0, 0, 0, 0); margin: 0px 0px 12px; color: rgba(0, 0, 0, 0.87); font-family: Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">Severity - Critical</p>
+<h2 style="flex-line-count: revert; page-margin-safety: revert; ruby-overhang: revert; scroll-axis-lock: revert; text-fit: revert; window-drag: revert; color: rgba(0, 0, 0, 0.87); font-family: Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color-scheme: revert; forced-color-adjust: revert; math-depth: revert; position: revert; position-anchor: revert; text-size-adjust: revert; appearance: revert; font-feature-settings: revert; font-kerning: revert; font-language-override: revert; font-optical-sizing: revert; font-palette: revert; font-size: revert; font-size-adjust: revert; font-stretch: revert; font-synthesis: revert; font-variant-alternates: revert; font-variant-east-asian: revert; font-variant-emoji: revert; font-variant-numeric: revert; font-variant-position: revert; font-variation-settings: revert; font-weight: revert; position-area: revert; text-orientation: revert; text-rendering: revert; text-spacing-trim: revert; -webkit-font-smoothing: revert; -webkit-locale: revert; -webkit-text-orientation: revert; -webkit-writing-mode: revert; writing-mode: revert; zoom: revert; accent-color: revert; place-content: revert; place-items: revert; place-self: revert; alignment-baseline: revert; anchor-name: revert; anchor-scope: revert; animation-composition: revert; animation: revert; animation-trigger: revert; app-region: revert; aspect-ratio: revert; backdrop-filter: revert; backface-visibility: revert; background-attachment: revert; background-blend-mode: revert; background-clip: revert; background-image: revert; background-origin: revert; background-position: revert; background-repeat: revert; background-size: revert; baseline-shift: revert; baseline-source: revert; block-size: revert; border-block: revert; border: revert; border-radius: revert; border-collapse: revert; border-end-end-radius: revert; border-end-start-radius: revert; border-inline: revert; border-shape: revert; border-start-end-radius: revert; border-start-start-radius: revert; inset: revert; box-decoration-break: revert; box-shadow: revert; box-sizing: revert; break-after: revert; break-before: revert; break-inside: revert; buffered-rendering: revert; caption-side: revert; caret-animation: revert; caret-color: revert; caret-shape: revert; clear: revert; clip: revert; clip-path: revert; clip-rule: revert; color-interpolation: revert; color-interpolation-filters: revert; color-rendering: revert; columns: revert; column-fill: revert; gap: revert; rule-break: revert; rule: revert; rule-inset: revert; rule-visibility-items: revert; column-span: revert; contain: revert; contain-intrinsic-block-size: revert; contain-intrinsic-size: revert; contain-intrinsic-inline-size: revert; container: revert; content: revert; content-visibility: revert; corner-shape: revert; corner-block-end-shape: revert; corner-block-start-shape: revert; counter-increment: revert; counter-reset: revert; counter-set: revert; cursor: revert; cx: revert; cy: revert; d: revert; display: revert; dominant-baseline: revert; dynamic-range-limit: revert; empty-cells: revert; field-sizing: revert; fill: revert; fill-opacity: revert; fill-rule: revert; filter: revert; flex: revert; flex-flow: revert; float: revert; flood-color: revert; flood-opacity: revert; grid: revert; grid-area: revert; height: revert; hyphenate-character: revert; hyphenate-limit-chars: revert; hyphens: revert; image-orientation: revert; image-rendering: revert; initial-letter: revert; inline-size: revert; inset-block: revert; inset-inline: revert; interactivity: revert; interest-delay: revert; interpolate-size: revert; isolation: revert; lighting-color: revert; line-break: revert; line-height: revert; list-style: revert; margin-block: revert; margin: revert; margin-inline: revert; marker: revert; mask: revert; mask-type: revert; math-shift: revert; math-style: revert; max-block-size: revert; max-height: revert; max-inline-size: revert; max-width: revert; min-block-size: revert; min-height: revert; min-inline-size: revert; min-width: revert; mix-blend-mode: revert; object-fit: revert; object-position: revert; object-view-box: revert; offset: revert; opacity: revert; order: revert; outline: revert; outline-offset: revert; overflow-anchor: revert; overflow-block: revert; overflow-clip-margin: revert; overflow-inline: revert; overflow-wrap: revert; overflow: revert; overlay: revert; overscroll-behavior-block: revert; overscroll-behavior-inline: revert; overscroll-behavior: revert; padding-block: revert; padding: revert; padding-inline: revert; page: revert; page-orientation: revert; paint-order: revert; perspective: revert; perspective-origin: revert; pointer-events: revert; position-try: revert; position-visibility: revert; print-color-adjust: revert; quotes: revert; r: revert; reading-flow: revert; reading-order: revert; resize: revert; rotate: revert; ruby-align: revert; ruby-position: revert; rule-overlap: revert; rx: revert; ry: revert; scale: revert; scroll-behavior: revert; scroll-initial-target: revert; scroll-margin-block: revert; scroll-margin: revert; scroll-margin-inline: revert; scroll-marker-group: revert; scroll-padding-block: revert; scroll-padding: revert; scroll-padding-inline: revert; scroll-snap-align: revert; scroll-snap-stop: revert; scroll-snap-type: revert; scroll-target-group: revert; scroll-timeline: revert; scrollbar-color: revert; scrollbar-gutter: revert; scrollbar-width: revert; shape-image-threshold: revert; shape-margin: revert; shape-outside: revert; shape-rendering: revert; size: revert; speak: revert; stop-color: revert; stop-opacity: revert; stroke: revert; stroke-dasharray: revert; stroke-dashoffset: revert; stroke-linecap: revert; stroke-linejoin: revert; stroke-miterlimit: revert; stroke-opacity: revert; stroke-width: revert; tab-size: revert; table-layout: revert; text-align-last: revert; text-anchor: revert; text-autospace: revert; text-box: revert; text-combine-upright: revert; text-decoration-line: revert; text-decoration-skip-ink: revert; text-emphasis: revert; text-emphasis-position: revert; text-justify: revert; text-overflow: revert; text-shadow: revert; text-underline-offset: revert; text-underline-position: revert; text-wrap-style: revert; timeline-scope: revert; timeline-trigger: revert; touch-action: revert; transform: revert; transform-box: revert; transform-origin: revert; transform-style: revert; transition: revert; translate: revert; trigger-scope: revert; user-select: revert; vector-effect: revert; vertical-align: revert; view-timeline: revert; view-transition-class: revert; view-transition-group: revert; view-transition-name: revert; view-transition-scope: revert; visibility: revert; border-spacing: revert; -webkit-box-align: revert; -webkit-box-decoration-break: revert; -webkit-box-direction: revert; -webkit-box-flex: revert; -webkit-box-ordinal-group: revert; -webkit-box-orient: revert; -webkit-box-pack: revert; -webkit-box-reflect: revert; -webkit-line-break: revert; -webkit-line-clamp: revert; -webkit-mask-box-image: revert; -webkit-rtl-ordering: revert; -webkit-ruby-position: revert; -webkit-tap-highlight-color: revert; -webkit-text-combine: revert; -webkit-text-decorations-in-effect: revert; -webkit-text-fill-color: revert; -webkit-text-security: revert; -webkit-text-stroke-color: revert; -webkit-user-drag: revert; width: revert; will-change: revert; word-break: revert; x: revert; y: revert; z-index: revert; background-color: #ffffff;">Description of Problem</h2>
+<p style="box-sizing: border-box; scrollbar-width: thin; scrollbar-color: #80d2f2 rgba(0, 0, 0, 0); margin: 0px 0px 12px; color: rgba(0, 0, 0, 0.87); font-family: Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">Multiple vulnerabilities have been discovered in Citrix NetScaler ADC (formerly Citrix ADC) and Citrix NetScaler Gateway (formerly Citrix Gateway). Refer below for further details.</p>
+<h2 style="flex-line-count: revert; page-margin-safety: revert; ruby-overhang: revert; scroll-axis-lock: revert; text-fit: revert; window-drag: revert; color: rgba(0, 0, 0, 0.87); font-family: Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color-scheme: revert; forced-color-adjust: revert; math-depth: revert; position: revert; position-anchor: revert; text-size-adjust: revert; appearance: revert; font-feature-settings: revert; font-kerning: revert; font-language-override: revert; font-optical-sizing: revert; font-palette: revert; font-size: revert; font-size-adjust: revert; font-stretch: revert; font-synthesis: revert; font-variant-alternates: revert; font-variant-east-asian: revert; font-variant-emoji: revert; font-variant-numeric: revert; font-variant-position: revert; font-variation-settings: revert; font-weight: revert; position-area: revert; text-orientation: revert; text-rendering: revert; text-spacing-trim: revert; -webkit-font-smoothing: revert; -webkit-locale: revert; -webkit-text-orientation: revert; -webkit-writing-mode: revert; writing-mode: revert; zoom: revert; accent-color: revert; place-content: revert; place-items: revert; place-self: revert; alignment-baseline: revert; anchor-name: revert; anchor-scope: revert; animation-composition: revert; animation: revert; animation-trigger: revert; app-region: revert; aspect-ratio: revert; backdrop-filter: revert; backface-visibility: revert; background-attachment: revert; background-blend-mode: revert; background-clip: revert; background-image: revert; background-origin: revert; background-position: revert; background-repeat: revert; background-size: revert; baseline-shift: revert; baseline-source: revert; block-size: revert; border-block: revert; border: revert; border-radius: revert; border-collapse: revert; border-end-end-radius: revert; border-end-start-radius: revert; border-inline: revert; border-shape: revert; border-start-end-radius: revert; border-start-start-radius: revert; inset: revert; box-decoration-break: revert; box-shadow: revert; box-sizing: revert; break-after: revert; break-before: revert; break-inside: revert; buffered-rendering: revert; caption-side: revert; caret-animation: revert; caret-color: revert; caret-shape: revert; clear: revert; clip: revert; clip-path: revert; clip-rule: revert; color-interpolation: revert; color-interpolation-filters: revert; color-rendering: revert; columns: revert; column-fill: revert; gap: revert; rule-break: revert; rule: revert; rule-inset: revert; rule-visibility-items: revert; column-span: revert; contain: revert; contain-intrinsic-block-size: revert; contain-intrinsic-size: revert; contain-intrinsic-inline-size: revert; container: revert; content: revert; content-visibility: revert; corner-shape: revert; corner-block-end-shape: revert; corner-block-start-shape: revert; counter-increment: revert; counter-reset: revert; counter-set: revert; cursor: revert; cx: revert; cy: revert; d: revert; display: revert; dominant-baseline: revert; dynamic-range-limit: revert; empty-cells: revert; field-sizing: revert; fill: revert; fill-opacity: revert; fill-rule: revert; filter: revert; flex: revert; flex-flow: revert; float: revert; flood-color: revert; flood-opacity: revert; grid: revert; grid-area: revert; height: revert; hyphenate-character: revert; hyphenate-limit-chars: revert; hyphens: revert; image-orientation: revert; image-rendering: revert; initial-letter: revert; inline-size: revert; inset-block: revert; inset-inline: revert; interactivity: revert; interest-delay: revert; interpolate-size: revert; isolation: revert; lighting-color: revert; line-break: revert; line-height: revert; list-style: revert; margin-block: revert; margin: revert; margin-inline: revert; marker: revert; mask: revert; mask-type: revert; math-shift: revert; math-style: revert; max-block-size: revert; max-height: revert; max-inline-size: revert; max-width: revert; min-block-size: revert; min-height: revert; min-inline-size: revert; min-width: revert; mix-blend-mode: revert; object-fit: revert; object-position: revert; object-view-box: revert; offset: revert; opacity: revert; order: revert; outline: revert; outline-offset: revert; overflow-anchor: revert; overflow-block: revert; overflow-clip-margin: revert; overflow-inline: revert; overflow-wrap: revert; overflow: revert; overlay: revert; overscroll-behavior-block: revert; overscroll-behavior-inline: revert; overscroll-behavior: revert; padding-block: revert; padding: revert; padding-inline: revert; page: revert; page-orientation: revert; paint-order: revert; perspective: revert; perspective-origin: revert; pointer-events: revert; position-try: revert; position-visibility: revert; print-color-adjust: revert; quotes: revert; r: revert; reading-flow: revert; reading-order: revert; resize: revert; rotate: revert; ruby-align: revert; ruby-position: revert; rule-overlap: revert; rx: revert; ry: revert; scale: revert; scroll-behavior: revert; scroll-initial-target: revert; scroll-margin-block: revert; scroll-margin: revert; scroll-margin-inline: revert; scroll-marker-group: revert; scroll-padding-block: revert; scroll-padding: revert; scroll-padding-inline: revert; scroll-snap-align: revert; scroll-snap-stop: revert; scroll-snap-type: revert; scroll-target-group: revert; scroll-timeline: revert; scrollbar-color: revert; scrollbar-gutter: revert; scrollbar-width: revert; shape-image-threshold: revert; shape-margin: revert; shape-outside: revert; shape-rendering: revert; size: revert; speak: revert; stop-color: revert; stop-opacity: revert; stroke: revert; stroke-dasharray: revert; stroke-dashoffset: revert; stroke-linecap: revert; stroke-linejoin: revert; stroke-miterlimit: revert; stroke-opacity: revert; stroke-width: revert; tab-size: revert; table-layout: revert; text-align-last: revert; text-anchor: revert; text-autospace: revert; text-box: revert; text-combine-upright: revert; text-decoration-line: revert; text-decoration-skip-ink: revert; text-emphasis: revert; text-emphasis-position: revert; text-justify: revert; text-overflow: revert; text-shadow: revert; text-underline-offset: revert; text-underline-position: revert; text-wrap-style: revert; timeline-scope: revert; timeline-trigger: revert; touch-action: revert; transform: revert; transform-box: revert; transform-origin: revert; transform-style: revert; transition: revert; translate: revert; trigger-scope: revert; user-select: revert; vector-effect: revert; vertical-align: revert; view-timeline: revert; view-transition-class: revert; view-transition-group: revert; view-transition-name: revert; view-transition-scope: revert; visibility: revert; border-spacing: revert; -webkit-box-align: revert; -webkit-box-decoration-break: revert; -webkit-box-direction: revert; -webkit-box-flex: revert; -webkit-box-ordinal-group: revert; -webkit-box-orient: revert; -webkit-box-pack: revert; -webkit-box-reflect: revert; -webkit-line-break: revert; -webkit-line-clamp: revert; -webkit-mask-box-image: revert; -webkit-rtl-ordering: revert; -webkit-ruby-position: revert; -webkit-tap-highlight-color: revert; -webkit-text-combine: revert; -webkit-text-decorations-in-effect: revert; -webkit-text-fill-color: revert; -webkit-text-security: revert; -webkit-text-stroke-color: revert; -webkit-user-drag: revert; width: revert; will-change: revert; word-break: revert; x: revert; y: revert; z-index: revert; background-color: #ffffff;">Affected Versions:</h2>
+<p>The following supported versions of Citrix NetScaler ADC and Citrix NetScaler Gateway are affected by the vulnerabilities:</p>
+<ul>
+<li>Citrix NetScaler ADC and Citrix NetScaler Gateway 14.1 BEFORE 14.1-73.37</li>
+<li>Citrix NetScaler ADC and Citrix NetScaler Gateway 13.1 BEFORE 13.1-64.23</li>
+<li>Citrix NetScaler ADC FIPS BEFORE 14.1-73.37 FIPS</li>
+<li>Citrix NetScaler ADC FIPS and NDcPP BEFORE 13.1-37.279</li>
+</ul>
+<p><span style="text-decoration: underline;">Additional Note:</span> Secure Private Access Hybrid deployments using NetScaler instances are also affected by the vulnerabilities. Customers need to upgrade these NetScaler instances to the recommended NetScaler builds to address the vulnerabilities. <br><br>This bulletin only applies to customer-managed Citrix NetScaler ADC (“NetScaler ADC”) and Citrix NetScaler Gateway (“NetScaler Gateway”). Cloud Software Group upgrades the Citrix-managed cloud services and Citrix-managed Adaptive Authentication with the necessary software updates.</p>
+                            </div>
+                        </div>
+                        
+                    
+                        <div id="additionalInfo" class="article-detail-card article-detail-card-desc">
+                            <div class="article-detail-card-header">
+                                <h4 class="wolken-h4">Additional Information</h4>
+                            </div>
+                            <div class="article-detail-card-content wolken-h5">
+                                <h2 style="flex-line-count: revert; page-margin-safety: revert; ruby-overhang: revert; scroll-axis-lock: revert; text-fit: revert; window-drag: revert; color: rgba(0, 0, 0, 0.87); font-family: Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color-scheme: revert; forced-color-adjust: revert; math-depth: revert; position: revert; position-anchor: revert; text-size-adjust: revert; appearance: revert; font-feature-settings: revert; font-kerning: revert; font-language-override: revert; font-optical-sizing: revert; font-palette: revert; font-size: revert; font-size-adjust: revert; font-stretch: revert; font-synthesis: revert; font-variant-alternates: revert; font-variant-east-asian: revert; font-variant-emoji: revert; font-variant-numeric: revert; font-variant-position: revert; font-variation-settings: revert; font-weight: revert; position-area: revert; text-orientation: revert; text-rendering: revert; text-spacing-trim: revert; -webkit-font-smoothing: revert; -webkit-locale: revert; -webkit-text-orientation: revert; -webkit-writing-mode: revert; writing-mode: revert; zoom: revert; accent-color: revert; place-content: revert; place-items: revert; place-self: revert; alignment-baseline: revert; anchor-name: revert; anchor-scope: revert; animation-composition: revert; animation: revert; animation-trigger: revert; app-region: revert; aspect-ratio: revert; backdrop-filter: revert; backface-visibility: revert; background-attachment: revert; background-blend-mode: revert; background-clip: revert; background-image: revert; background-origin: revert; background-position: revert; background-repeat: revert; background-size: revert; baseline-shift: revert; baseline-source: revert; block-size: revert; border-block: revert; border: revert; border-radius: revert; border-collapse: revert; border-end-end-radius: revert; border-end-start-radius: revert; border-inline: revert; border-shape: revert; border-start-end-radius: revert; border-start-start-radius: revert; inset: revert; box-decoration-break: revert; box-shadow: revert; box-sizing: revert; break-after: revert; break-before: revert; break-inside: revert; buffered-rendering: revert; caption-side: revert; caret-animation: revert; caret-color: revert; caret-shape: revert; clear: revert; clip: revert; clip-path: revert; clip-rule: revert; color-interpolation: revert; color-interpolation-filters: revert; color-rendering: revert; columns: revert; column-fill: revert; gap: revert; rule-break: revert; rule: revert; rule-inset: revert; rule-visibility-items: revert; column-span: revert; contain: revert; contain-intrinsic-block-size: revert; contain-intrinsic-size: revert; contain-intrinsic-inline-size: revert; container: revert; content: revert; content-visibility: revert; corner-shape: revert; corner-block-end-shape: revert; corner-block-start-shape: revert; counter-increment: revert; counter-reset: revert; counter-set: revert; cursor: revert; cx: revert; cy: revert; d: revert; display: revert; dominant-baseline: revert; dynamic-range-limit: revert; empty-cells: revert; field-sizing: revert; fill: revert; fill-opacity: revert; fill-rule: revert; filter: revert; flex: revert; flex-flow: revert; float: revert; flood-color: revert; flood-opacity: revert; grid: revert; grid-area: revert; height: revert; hyphenate-character: revert; hyphenate-limit-chars: revert; hyphens: revert; image-orientation: revert; image-rendering: revert; initial-letter: revert; inline-size: revert; inset-block: revert; inset-inline: revert; interactivity: revert; interest-delay: revert; interpolate-size: revert; isolation: revert; lighting-color: revert; line-break: revert; line-height: revert; list-style: revert; margin-block: revert; margin: revert; margin-inline: revert; marker: revert; mask: revert; mask-type: revert; math-shift: revert; math-style: revert; max-block-size: revert; max-height: revert; max-inline-size: revert; max-width: revert; min-block-size: revert; min-height: revert; min-inline-size: revert; min-width: revert; mix-blend-mode: revert; object-fit: revert; object-position: revert; object-view-box: revert; offset: revert; opacity: revert; order: revert; outline: revert; outline-offset: revert; overflow-anchor: revert; overflow-block: revert; overflow-clip-margin: revert; overflow-inline: revert; overflow-wrap: revert; overflow: revert; overlay: revert; overscroll-behavior-block: revert; overscroll-behavior-inline: revert; overscroll-behavior: revert; padding-block: revert; padding: revert; padding-inline: revert; page: revert; page-orientation: revert; paint-order: revert; perspective: revert; perspective-origin: revert; pointer-events: revert; position-try: revert; position-visibility: revert; print-color-adjust: revert; quotes: revert; r: revert; reading-flow: revert; reading-order: revert; resize: revert; rotate: revert; ruby-align: revert; ruby-position: revert; rule-overlap: revert; rx: revert; ry: revert; scale: revert; scroll-behavior: revert; scroll-initial-target: revert; scroll-margin-block: revert; scroll-margin: revert; scroll-margin-inline: revert; scroll-marker-group: revert; scroll-padding-block: revert; scroll-padding: revert; scroll-padding-inline: revert; scroll-snap-align: revert; scroll-snap-stop: revert; scroll-snap-type: revert; scroll-target-group: revert; scroll-timeline: revert; scrollbar-color: revert; scrollbar-gutter: revert; scrollbar-width: revert; shape-image-threshold: revert; shape-margin: revert; shape-outside: revert; shape-rendering: revert; size: revert; speak: revert; stop-color: revert; stop-opacity: revert; stroke: revert; stroke-dasharray: revert; stroke-dashoffset: revert; stroke-linecap: revert; stroke-linejoin: revert; stroke-miterlimit: revert; stroke-opacity: revert; stroke-width: revert; tab-size: revert; table-layout: revert; text-align-last: revert; text-anchor: revert; text-autospace: revert; text-box: revert; text-combine-upright: revert; text-decoration-line: revert; text-decoration-skip-ink: revert; text-emphasis: revert; text-emphasis-position: revert; text-justify: revert; text-overflow: revert; text-shadow: revert; text-underline-offset: revert; text-underline-position: revert; text-wrap-style: revert; timeline-scope: revert; timeline-trigger: revert; touch-action: revert; transform: revert; transform-box: revert; transform-origin: revert; transform-style: revert; transition: revert; translate: revert; trigger-scope: revert; user-select: revert; vector-effect: revert; vertical-align: revert; view-timeline: revert; view-transition-class: revert; view-transition-group: revert; view-transition-name: revert; view-transition-scope: revert; visibility: revert; border-spacing: revert; -webkit-box-align: revert; -webkit-box-decoration-break: revert; -webkit-box-direction: revert; -webkit-box-flex: revert; -webkit-box-ordinal-group: revert; -webkit-box-orient: revert; -webkit-box-pack: revert; -webkit-box-reflect: revert; -webkit-line-break: revert; -webkit-line-clamp: revert; -webkit-mask-box-image: revert; -webkit-rtl-ordering: revert; -webkit-ruby-position: revert; -webkit-tap-highlight-color: revert; -webkit-text-combine: revert; -webkit-text-decorations-in-effect: revert; -webkit-text-fill-color: revert; -webkit-text-security: revert; -webkit-text-stroke-color: revert; -webkit-user-drag: revert; width: revert; will-change: revert; word-break: revert; x: revert; y: revert; z-index: revert; background-color: #ffffff;">Blog</h2>
+<p>Cloud Software Group team has published a related blog at:&nbsp;<a href="https://community.citrix.com/techzone-blogs/110_security-updates/netscaler-adc-and-netscaler-gateway-security-bulletin-for-cve-2026-88771-through-cve-2026-88778/#Indicators_of_Compromise__cabcb4">https://community.citrix.com/techzone-blogs/110_security-updates/netscaler-adc-and-netscaler-gateway-security-bulletin-for-cve-2026-88771-through-cve-2026-88778/#Indicators_of_Compromise__cabcb4</a> which contains further context.</p>
+<h2 style="flex-line-count: revert; page-margin-safety: revert; ruby-overhang: revert; scroll-axis-lock: revert; text-fit: revert; window-drag: revert; color: rgba(0, 0, 0, 0.87); font-family: Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color-scheme: revert; forced-color-adjust: revert; math-depth: revert; position: revert; position-anchor: revert; text-size-adjust: revert; appearance: revert; font-feature-settings: revert; font-kerning: revert; font-language-override: revert; font-optical-sizing: revert; font-palette: revert; font-size: revert; font-size-adjust: revert; font-stretch: revert; font-synthesis: revert; font-variant-alternates: revert; font-variant-east-asian: revert; font-variant-emoji: revert; font-variant-numeric: revert; font-variant-position: revert; font-variation-settings: revert; font-weight: revert; position-area: revert; text-orientation: revert; text-rendering: revert; text-spacing-trim: revert; -webkit-font-smoothing: revert; -webkit-locale: revert; -webkit-text-orientation: revert; -webkit-writing-mode: revert; writing-mode: revert; zoom: revert; accent-color: revert; place-content: revert; place-items: revert; place-self: revert; alignment-baseline: revert; anchor-name: revert; anchor-scope: revert; animation-composition: revert; animation: revert; animation-trigger: revert; app-region: revert; aspect-ratio: revert; backdrop-filter: revert; backface-visibility: revert; background-attachment: revert; background-blend-mode: revert; background-clip: revert; background-image: revert; background-origin: revert; background-position: revert; background-repeat: revert; background-size: revert; baseline-shift: revert; baseline-source: revert; block-size: revert; border-block: revert; border: revert; border-radius: revert; border-collapse: revert; border-end-end-radius: revert; border-end-start-radius: revert; border-inline: revert; border-shape: revert; border-start-end-radius: revert; border-start-start-radius: revert; inset: revert; box-decoration-break: revert; box-shadow: revert; box-sizing: revert; break-after: revert; break-before: revert; break-inside: revert; buffered-rendering: revert; caption-side: revert; caret-animation: revert; caret-color: revert; caret-shape: revert; clear: revert; clip: revert; clip-path: revert; clip-rule: revert; color-interpolation: revert; color-interpolation-filters: revert; color-rendering: revert; columns: revert; column-fill: revert; gap: revert; rule-break: revert; rule: revert; rule-inset: revert; rule-visibility-items: revert; column-span: revert; contain: revert; contain-intrinsic-block-size: revert; contain-intrinsic-size: revert; contain-intrinsic-inline-size: revert; container: revert; content: revert; content-visibility: revert; corner-shape: revert; corner-block-end-shape: revert; corner-block-start-shape: revert; counter-increment: revert; counter-reset: revert; counter-set: revert; cursor: revert; cx: revert; cy: revert; d: revert; display: revert; dominant-baseline: revert; dynamic-range-limit: revert; empty-cells: revert; field-sizing: revert; fill: revert; fill-opacity: revert; fill-rule: revert; filter: revert; flex: revert; flex-flow: revert; float: revert; flood-color: revert; flood-opacity: revert; grid: revert; grid-area: revert; height: revert; hyphenate-character: revert; hyphenate-limit-chars: revert; hyphens: revert; image-orientation: revert; image-rendering: revert; initial-letter: revert; inline-size: revert; inset-block: revert; inset-inline: revert; interactivity: revert; interest-delay: revert; interpolate-size: revert; isolation: revert; lighting-color: revert; line-break: revert; line-height: revert; list-style: revert; margin-block: revert; margin: revert; margin-inline: revert; marker: revert; mask: revert; mask-type: revert; math-shift: revert; math-style: revert; max-block-size: revert; max-height: revert; max-inline-size: revert; max-width: revert; min-block-size: revert; min-height: revert; min-inline-size: revert; min-width: revert; mix-blend-mode: revert; object-fit: revert; object-position: revert; object-view-box: revert; offset: revert; opacity: revert; order: revert; outline: revert; outline-offset: revert; overflow-anchor: revert; overflow-block: revert; overflow-clip-margin: revert; overflow-inline: revert; overflow-wrap: revert; overflow: revert; overlay: revert; overscroll-behavior-block: revert; overscroll-behavior-inline: revert; overscroll-behavior: revert; padding-block: revert; padding: revert; padding-inline: revert; page: revert; page-orientation: revert; paint-order: revert; perspective: revert; perspective-origin: revert; pointer-events: revert; position-try: revert; position-visibility: revert; print-color-adjust: revert; quotes: revert; r: revert; reading-flow: revert; reading-order: revert; resize: revert; rotate: revert; ruby-align: revert; ruby-position: revert; rule-overlap: revert; rx: revert; ry: revert; scale: revert; scroll-behavior: revert; scroll-initial-target: revert; scroll-margin-block: revert; scroll-margin: revert; scroll-margin-inline: revert; scroll-marker-group: revert; scroll-padding-block: revert; scroll-padding: revert; scroll-padding-inline: revert; scroll-snap-align: revert; scroll-snap-stop: revert; scroll-snap-type: revert; scroll-target-group: revert; scroll-timeline: revert; scrollbar-color: revert; scrollbar-gutter: revert; scrollbar-width: revert; shape-image-threshold: revert; shape-margin: revert; shape-outside: revert; shape-rendering: revert; size: revert; speak: revert; stop-color: revert; stop-opacity: revert; stroke: revert; stroke-dasharray: revert; stroke-dashoffset: revert; stroke-linecap: revert; stroke-linejoin: revert; stroke-miterlimit: revert; stroke-opacity: revert; stroke-width: revert; tab-size: revert; table-layout: revert; text-align-last: revert; text-anchor: revert; text-autospace: revert; text-box: revert; text-combine-upright: revert; text-decoration-line: revert; text-decoration-skip-ink: revert; text-emphasis: revert; text-emphasis-position: revert; text-justify: revert; text-overflow: revert; text-shadow: revert; text-underline-offset: revert; text-underline-position: revert; text-wrap-style: revert; timeline-scope: revert; timeline-trigger: revert; touch-action: revert; transform: revert; transform-box: revert; transform-origin: revert; transform-style: revert; transition: revert; translate: revert; trigger-scope: revert; user-select: revert; vector-effect: revert; vertical-align: revert; view-timeline: revert; view-transition-class: revert; view-transition-group: revert; view-transition-name: revert; view-transition-scope: revert; visibility: revert; border-spacing: revert; -webkit-box-align: revert; -webkit-box-decoration-break: revert; -webkit-box-direction: revert; -webkit-box-flex: revert; -webkit-box-ordinal-group: revert; -webkit-box-orient: revert; -webkit-box-pack: revert; -webkit-box-reflect: revert; -webkit-line-break: revert; -webkit-line-clamp: revert; -webkit-mask-box-image: revert; -webkit-rtl-ordering: revert; -webkit-ruby-position: revert; -webkit-tap-highlight-color: revert; -webkit-text-combine: revert; -webkit-text-decorations-in-effect: revert; -webkit-text-fill-color: revert; -webkit-text-security: revert; -webkit-text-stroke-color: revert; -webkit-user-drag: revert; width: revert; will-change: revert; word-break: revert; x: revert; y: revert; z-index: revert; background-color: #ffffff;">What Citrix is Doing</h2>
+<p style="box-sizing: border-box; scrollbar-width: thin; scrollbar-color: #80d2f2 rgba(0, 0, 0, 0); margin: 0px 0px 12px; color: rgba(0, 0, 0, 0.87); font-family: Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">Citrix is notifying customers and channel partners about this potential security issue through the publication of this security bulletin on the Citrix Knowledge Center at https://support.citrix.com/support-home/topic-article-list?trendingCategory=20&amp;trendingTopicName=Security%20Bulletin&nbsp;&nbsp;</p>
+<h2 style="flex-line-count: revert; page-margin-safety: revert; ruby-overhang: revert; scroll-axis-lock: revert; text-fit: revert; window-drag: revert; color: rgba(0, 0, 0, 0.87); font-family: Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color-scheme: revert; forced-color-adjust: revert; math-depth: revert; position: revert; position-anchor: revert; text-size-adjust: revert; appearance: revert; font-feature-settings: revert; font-kerning: revert; font-language-override: revert; font-optical-sizing: revert; font-palette: revert; font-size: revert; font-size-adjust: revert; font-stretch: revert; font-synthesis: revert; font-variant-alternates: revert; font-variant-east-asian: revert; font-variant-emoji: revert; font-variant-numeric: revert; font-variant-position: revert; font-variation-settings: revert; font-weight: revert; position-area: revert; text-orientation: revert; text-rendering: revert; text-spacing-trim: revert; -webkit-font-smoothing: revert; -webkit-locale: revert; -webkit-text-orientation: revert; -webkit-writing-mode: revert; writing-mode: revert; zoom: revert; accent-color: revert; place-content: revert; place-items: revert; place-self: revert; alignment-baseline: revert; anchor-name: revert; anchor-scope: revert; animation-composition: revert; animation: revert; animation-trigger: revert; app-region: revert; aspect-ratio: revert; backdrop-filter: revert; backface-visibility: revert; background-attachment: revert; background-blend-mode: revert; background-clip: revert; background-image: revert; background-origin: revert; background-position: revert; background-repeat: revert; background-size: revert; baseline-shift: revert; baseline-source: revert; block-size: revert; border-block: revert; border: revert; border-radius: revert; border-collapse: revert; border-end-end-radius: revert; border-end-start-radius: revert; border-inline: revert; border-shape: revert; border-start-end-radius: revert; border-start-start-radius: revert; inset: revert; box-decoration-break: revert; box-shadow: revert; box-sizing: revert; break-after: revert; break-before: revert; break-inside: revert; buffered-rendering: revert; caption-side: revert; caret-animation: revert; caret-color: revert; caret-shape: revert; clear: revert; clip: revert; clip-path: revert; clip-rule: revert; color-interpolation: revert; color-interpolation-filters: revert; color-rendering: revert; columns: revert; column-fill: revert; gap: revert; rule-break: revert; rule: revert; rule-inset: revert; rule-visibility-items: revert; column-span: revert; contain: revert; contain-intrinsic-block-size: revert; contain-intrinsic-size: revert; contain-intrinsic-inline-size: revert; container: revert; content: revert; content-visibility: revert; corner-shape: revert; corner-block-end-shape: revert; corner-block-start-shape: revert; counter-increment: revert; counter-reset: revert; counter-set: revert; cursor: revert; cx: revert; cy: revert; d: revert; display: revert; dominant-baseline: revert; dynamic-range-limit: revert; empty-cells: revert; field-sizing: revert; fill: revert; fill-opacity: revert; fill-rule: revert; filter: revert; flex: revert; flex-flow: revert; float: revert; flood-color: revert; flood-opacity: revert; grid: revert; grid-area: revert; height: revert; hyphenate-character: revert; hyphenate-limit-chars: revert; hyphens: revert; image-orientation: revert; image-rendering: revert; initial-letter: revert; inline-size: revert; inset-block: revert; inset-inline: revert; interactivity: revert; interest-delay: revert; interpolate-size: revert; isolation: revert; lighting-color: revert; line-break: revert; line-height: revert; list-style: revert; margin-block: revert; margin: revert; margin-inline: revert; marker: revert; mask: revert; mask-type: revert; math-shift: revert; math-style: revert; max-block-size: revert; max-height: revert; max-inline-size: revert; max-width: revert; min-block-size: revert; min-height: revert; min-inline-size: revert; min-width: revert; mix-blend-mode: revert; object-fit: revert; object-position: revert; object-view-box: revert; offset: revert; opacity: revert; order: revert; outline: revert; outline-offset: revert; overflow-anchor: revert; overflow-block: revert; overflow-clip-margin: revert; overflow-inline: revert; overflow-wrap: revert; overflow: revert; overlay: revert; overscroll-behavior-block: revert; overscroll-behavior-inline: revert; overscroll-behavior: revert; padding-block: revert; padding: revert; padding-inline: revert; page: revert; page-orientation: revert; paint-order: revert; perspective: revert; perspective-origin: revert; pointer-events: revert; position-try: revert; position-visibility: revert; print-color-adjust: revert; quotes: revert; r: revert; reading-flow: revert; reading-order: revert; resize: revert; rotate: revert; ruby-align: revert; ruby-position: revert; rule-overlap: revert; rx: revert; ry: revert; scale: revert; scroll-behavior: revert; scroll-initial-target: revert; scroll-margin-block: revert; scroll-margin: revert; scroll-margin-inline: revert; scroll-marker-group: revert; scroll-padding-block: revert; scroll-padding: revert; scroll-padding-inline: revert; scroll-snap-align: revert; scroll-snap-stop: revert; scroll-snap-type: revert; scroll-target-group: revert; scroll-timeline: revert; scrollbar-color: revert; scrollbar-gutter: revert; scrollbar-width: revert; shape-image-threshold: revert; shape-margin: revert; shape-outside: revert; shape-rendering: revert; size: revert; speak: revert; stop-color: revert; stop-opacity: revert; stroke: revert; stroke-dasharray: revert; stroke-dashoffset: revert; stroke-linecap: revert; stroke-linejoin: revert; stroke-miterlimit: revert; stroke-opacity: revert; stroke-width: revert; tab-size: revert; table-layout: revert; text-align-last: revert; text-anchor: revert; text-autospace: revert; text-box: revert; text-combine-upright: revert; text-decoration-line: revert; text-decoration-skip-ink: revert; text-emphasis: revert; text-emphasis-position: revert; text-justify: revert; text-overflow: revert; text-shadow: revert; text-underline-offset: revert; text-underline-position: revert; text-wrap-style: revert; timeline-scope: revert; timeline-trigger: revert; touch-action: revert; transform: revert; transform-box: revert; transform-origin: revert; transform-style: revert; transition: revert; translate: revert; trigger-scope: revert; user-select: revert; vector-effect: revert; vertical-align: revert; view-timeline: revert; view-transition-class: revert; view-transition-group: revert; view-transition-name: revert; view-transition-scope: revert; visibility: revert; border-spacing: revert; -webkit-box-align: revert; -webkit-box-decoration-break: revert; -webkit-box-direction: revert; -webkit-box-flex: revert; -webkit-box-ordinal-group: revert; -webkit-box-orient: revert; -webkit-box-pack: revert; -webkit-box-reflect: revert; -webkit-line-break: revert; -webkit-line-clamp: revert; -webkit-mask-box-image: revert; -webkit-rtl-ordering: revert; -webkit-ruby-position: revert; -webkit-tap-highlight-color: revert; -webkit-text-combine: revert; -webkit-text-decorations-in-effect: revert; -webkit-text-fill-color: revert; -webkit-text-security: revert; -webkit-text-stroke-color: revert; -webkit-user-drag: revert; width: revert; will-change: revert; word-break: revert; x: revert; y: revert; z-index: revert; background-color: #ffffff;">Obtaining Support on This Issue</h2>
+<p style="box-sizing: border-box; scrollbar-width: thin; scrollbar-color: #80d2f2 rgba(0, 0, 0, 0); margin: 0px 0px 12px; color: rgba(0, 0, 0, 0.87); font-family: Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">If you require technical assistance with this issue, please contact Citrix Technical Support. Contact details for Citrix Technical Support are available at https://support.citrix.com/support-home/home&nbsp;</p>
+<h2 style="flex-line-count: revert; page-margin-safety: revert; ruby-overhang: revert; scroll-axis-lock: revert; text-fit: revert; window-drag: revert; color: rgba(0, 0, 0, 0.87); font-family: Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color-scheme: revert; forced-color-adjust: revert; math-depth: revert; position: revert; position-anchor: revert; text-size-adjust: revert; appearance: revert; font-feature-settings: revert; font-kerning: revert; font-language-override: revert; font-optical-sizing: revert; font-palette: revert; font-size: revert; font-size-adjust: revert; font-stretch: revert; font-synthesis: revert; font-variant-alternates: revert; font-variant-east-asian: revert; font-variant-emoji: revert; font-variant-numeric: revert; font-variant-position: revert; font-variation-settings: revert; font-weight: revert; position-area: revert; text-orientation: revert; text-rendering: revert; text-spacing-trim: revert; -webkit-font-smoothing: revert; -webkit-locale: revert; -webkit-text-orientation: revert; -webkit-writing-mode: revert; writing-mode: revert; zoom: revert; accent-color: revert; place-content: revert; place-items: revert; place-self: revert; alignment-baseline: revert; anchor-name: revert; anchor-scope: revert; animation-composition: revert; animation: revert; animation-trigger: revert; app-region: revert; aspect-ratio: revert; backdrop-filter: revert; backface-visibility: revert; background-attachment: revert; background-blend-mode: revert; background-clip: revert; background-image: revert; background-origin: revert; background-position: revert; background-repeat: revert; background-size: revert; baseline-shift: revert; baseline-source: revert; block-size: revert; border-block: revert; border: revert; border-radius: revert; border-collapse: revert; border-end-end-radius: revert; border-end-start-radius: revert; border-inline: revert; border-shape: revert; border-start-end-radius: revert; border-start-start-radius: revert; inset: revert; box-decoration-break: revert; box-shadow: revert; box-sizing: revert; break-after: revert; break-before: revert; break-inside: revert; buffered-rendering: revert; caption-side: revert; caret-animation: revert; caret-color: revert; caret-shape: revert; clear: revert; clip: revert; clip-path: revert; clip-rule: revert; color-interpolation: revert; color-interpolation-filters: revert; color-rendering: revert; columns: revert; column-fill: revert; gap: revert; rule-break: revert; rule: revert; rule-inset: revert; rule-visibility-items: revert; column-span: revert; contain: revert; contain-intrinsic-block-size: revert; contain-intrinsic-size: revert; contain-intrinsic-inline-size: revert; container: revert; content: revert; content-visibility: revert; corner-shape: revert; corner-block-end-shape: revert; corner-block-start-shape: revert; counter-increment: revert; counter-reset: revert; counter-set: revert; cursor: revert; cx: revert; cy: revert; d: revert; display: revert; dominant-baseline: revert; dynamic-range-limit: revert; empty-cells: revert; field-sizing: revert; fill: revert; fill-opacity: revert; fill-rule: revert; filter: revert; flex: revert; flex-flow: revert; float: revert; flood-color: revert; flood-opacity: revert; grid: revert; grid-area: revert; height: revert; hyphenate-character: revert; hyphenate-limit-chars: revert; hyphens: revert; image-orientation: revert; image-rendering: revert; initial-letter: revert; inline-size: revert; inset-block: revert; inset-inline: revert; interactivity: revert; interest-delay: revert; interpolate-size: revert; isolation: revert; lighting-color: revert; line-break: revert; line-height: revert; list-style: revert; margin-block: revert; margin: revert; margin-inline: revert; marker: revert; mask: revert; mask-type: revert; math-shift: revert; math-style: revert; max-block-size: revert; max-height: revert; max-inline-size: revert; max-width: revert; min-block-size: revert; min-height: revert; min-inline-size: revert; min-width: revert; mix-blend-mode: revert; object-fit: revert; object-position: revert; object-view-box: revert; offset: revert; opacity: revert; order: revert; outline: revert; outline-offset: revert; overflow-anchor: revert; overflow-block: revert; overflow-clip-margin: revert; overflow-inline: revert; overflow-wrap: revert; overflow: revert; overlay: revert; overscroll-behavior-block: revert; overscroll-behavior-inline: revert; overscroll-behavior: revert; padding-block: revert; padding: revert; padding-inline: revert; page: revert; page-orientation: revert; paint-order: revert; perspective: revert; perspective-origin: revert; pointer-events: revert; position-try: revert; position-visibility: revert; print-color-adjust: revert; quotes: revert; r: revert; reading-flow: revert; reading-order: revert; resize: revert; rotate: revert; ruby-align: revert; ruby-position: revert; rule-overlap: revert; rx: revert; ry: revert; scale: revert; scroll-behavior: revert; scroll-initial-target: revert; scroll-margin-block: revert; scroll-margin: revert; scroll-margin-inline: revert; scroll-marker-group: revert; scroll-padding-block: revert; scroll-padding: revert; scroll-padding-inline: revert; scroll-snap-align: revert; scroll-snap-stop: revert; scroll-snap-type: revert; scroll-target-group: revert; scroll-timeline: revert; scrollbar-color: revert; scrollbar-gutter: revert; scrollbar-width: revert; shape-image-threshold: revert; shape-margin: revert; shape-outside: revert; shape-rendering: revert; size: revert; speak: revert; stop-color: revert; stop-opacity: revert; stroke: revert; stroke-dasharray: revert; stroke-dashoffset: revert; stroke-linecap: revert; stroke-linejoin: revert; stroke-miterlimit: revert; stroke-opacity: revert; stroke-width: revert; tab-size: revert; table-layout: revert; text-align-last: revert; text-anchor: revert; text-autospace: revert; text-box: revert; text-combine-upright: revert; text-decoration-line: revert; text-decoration-skip-ink: revert; text-emphasis: revert; text-emphasis-position: revert; text-justify: revert; text-overflow: revert; text-shadow: revert; text-underline-offset: revert; text-underline-position: revert; text-wrap-style: revert; timeline-scope: revert; timeline-trigger: revert; touch-action: revert; transform: revert; transform-box: revert; transform-origin: revert; transform-style: revert; transition: revert; translate: revert; trigger-scope: revert; user-select: revert; vector-effect: revert; vertical-align: revert; view-timeline: revert; view-transition-class: revert; view-transition-group: revert; view-transition-name: revert; view-transition-scope: revert; visibility: revert; border-spacing: revert; -webkit-box-align: revert; -webkit-box-decoration-break: revert; -webkit-box-direction: revert; -webkit-box-flex: revert; -webkit-box-ordinal-group: revert; -webkit-box-orient: revert; -webkit-box-pack: revert; -webkit-box-reflect: revert; -webkit-line-break: revert; -webkit-line-clamp: revert; -webkit-mask-box-image: revert; -webkit-rtl-ordering: revert; -webkit-ruby-position: revert; -webkit-tap-highlight-color: revert; -webkit-text-combine: revert; -webkit-text-decorations-in-effect: revert; -webkit-text-fill-color: revert; -webkit-text-security: revert; -webkit-text-stroke-color: revert; -webkit-user-drag: revert; width: revert; will-change: revert; word-break: revert; x: revert; y: revert; z-index: revert; background-color: #ffffff;">Subscribe to Receive Alerts</h2>
+<p style="box-sizing: border-box; scrollbar-width: thin; scrollbar-color: #80d2f2 rgba(0, 0, 0, 0); margin: 0px 0px 12px; color: rgba(0, 0, 0, 0.87); font-family: Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">Citrix strongly recommends that all customers subscribe to receive alerts when a Citrix security bulletin is created or modified at https://support.citrix.com/wolken-support/view/aboutsupport/my-support-alerts&nbsp;&nbsp;</p>
+<h2 style="flex-line-count: revert; page-margin-safety: revert; ruby-overhang: revert; scroll-axis-lock: revert; text-fit: revert; window-drag: revert; color: rgba(0, 0, 0, 0.87); font-family: Arial, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color-scheme: revert; forced-color-adjust: revert; math-depth: revert; position: revert; position-anchor: revert; text-size-adjust: revert; appearance: revert; font-feature-settings: revert; font-kerning: revert; font-language-override: revert; font-optical-sizing: revert; font-palette: revert; font-size: revert; font-size-adjust: revert; font-stretch: revert; font-synthesis: revert; font-variant-alternates: revert; font-variant-east-asian: revert; font-variant-emoji: revert; font-variant-numeric: revert; font-variant-position: revert; font-variation-settings: revert; font-weight: revert; position-area: revert; text-orientation: revert; text-rendering: revert; text-spacing-trim: revert; -webkit-font-smoothing: revert; -webkit-locale: revert; -webkit-text-orientation: revert; -webkit-writing-mode: revert; writing-mode: revert; zoom: revert; accent-color: revert; place-content: revert; place-items: revert; place-self: revert; alignment-baseline: revert; anchor-name: revert; anchor-scope: revert; animation-composition: revert; animation: revert; animation-trigger: revert; app-region: revert; aspect-ratio: revert; backdrop-filter: revert; backface-visibility: revert; background-attachment: revert; background-blend-mode: revert; background-clip: revert; background-image: revert; background-origin: revert; background-position: revert; background-repeat: revert; background-size: revert; baseline-shift: revert; baseline-source: revert; block-size: revert; border-block: revert; border: revert; border-radius: revert; border-collapse: revert; border-end-end-radius: revert; border-end-start-radius: revert; border-inline: revert; border-shape: revert; border-start-end-radius: revert; border-start-start-radius: revert; inset: revert; box-decoration-break: revert; box-shadow: revert; box-sizing: revert; break-after: revert; break-before: revert; break-inside: revert; buffered-rendering: revert; caption-side: revert; caret-animation: revert; caret-color: revert; caret-shape: revert; clear: revert; clip: revert; clip-path: revert; clip-rule: revert; color-interpolation: revert; color-interpolation-filters: revert; color-rendering: revert; columns: revert; column-fill: revert; gap: revert; rule-break: revert; rule: revert; rule-inset: revert; rule-visibility-items: revert; column-span: revert; contain: revert; contain-intrinsic-block-size: revert; contain-intrinsic-size: revert; contain-intrinsic-inline-size: revert; container: revert; content: revert; content-visibility: revert; corner-shape: revert; corner-block-end-shape: revert; corner-block-start-shape: revert; counter-increment: revert; counter-reset: revert; counter-set: revert; cursor: revert; cx: revert; cy: revert; d: revert; display: revert; dominant-baseline: revert; dynamic-range-limit: revert; empty-cells: revert; field-sizing: revert; fill: revert; fill-opacity: revert; fill-rule: revert; filter: revert; flex: revert; flex-flow: revert; float: revert; flood-color: revert; flood-opacity: revert; grid: revert; grid-area: revert; height: revert; hyphenate-character: revert; hyphenate-limit-chars: revert; hyphens: revert; image-orientation: revert; image-rendering: revert; initial-letter: revert; inline-size: revert; inset-block: revert; inset-inline: revert; interactivity: revert; interest-delay: revert; interpolate-size: revert; isolation: revert; lighting-color: revert; line-break: revert; line-height: revert; list-style: revert; margin-block: revert; margin: revert; margin-inline: revert; marker: revert; mask: revert; mask-type: revert; math-shift: revert; math-style: revert; max-block-size: revert; max-height: revert; max-inline-size: revert; max-width: revert; min-block-size: revert; min-height: revert; min-inline-size: revert; min-width: revert; mix-blend-mode: revert; object-fit: revert; object-position: revert; object-view-box: revert; offset: revert; opacity: revert; order: revert; outline: revert; outline-offset: revert; overflow-anchor: revert; overflow-block: revert; overflow-clip-margin: revert; overflow-inline: revert; overflow-wrap: revert; overflow: revert; overlay: revert; overscroll-behavior-block: revert; overscroll-behavior-inline: revert; overscroll-behavior: revert; padding-block: revert; padding: revert; padding-inline: revert; page: revert; page-orientation: revert; paint-order: revert; perspective: revert; perspective-origin: revert; pointer-events: revert; position-try: revert; position-visibility: revert; print-color-adjust: revert; quotes: revert; r: revert; reading-flow: revert; reading-order: revert; resize: revert; rotate: revert; ruby-align: revert; ruby-position: revert; rule-overlap: revert; rx: revert; ry: revert; scale: revert; scroll-behavior: revert; scroll-initial-target: revert; scroll-margin-block: revert; scroll-margin: revert; scroll-margin-inline: revert; scroll-marker-group: revert; scroll-padding-block: revert; scroll-padding: revert; scroll-padding-inline: revert; scroll-snap-align: revert; scroll-snap-stop: revert; scroll-snap-type: revert; scroll-target-group: revert; scroll-timeline: revert; scrollbar-color: revert; scrollbar-gutter: revert; scrollbar-width: revert; shape-image-threshold: revert; shape-margin: revert; shape-outside: revert; shape-rendering: revert; size: revert; speak: revert; stop-color: revert; stop-opacity: revert; stroke: revert; stroke-dasharray: revert; stroke-dashoffset: revert; stroke-linecap: revert; stroke-linejoin: revert; stroke-miterlimit: revert; stroke-opacity: revert; stroke-width: revert; tab-size: revert; table-layout: revert; text-align-last: revert; text-anchor: revert; text-autospace: revert; text-box: revert; text-combine-upright: revert; text-decoration-line: revert; text-decoration-skip-ink: revert; text-emphasis: revert; text-emphasis-position: revert; text-justify: revert; text-overflow: revert; text-shadow: revert; text-underline-offset: revert; text-underline-position: revert; text-wrap-style: revert; timeline-scope: revert; timeline-trigger: revert; touch-action: revert; transform: revert; transform-box: revert; transform-origin: revert; transform-style: revert; transition: revert; translate: revert; trigger-scope: revert; user-select: revert; vector-effect: revert; vertical-align: revert; view-timeline: revert; view-transition-class: revert; view-transition-group: revert; view-transition-name: revert; view-transition-scope: revert; visibility: revert; border-spacing: revert; -webkit-box-align: revert; -webkit-box-decoration-break: revert; -webkit-box-direction: revert; -webkit-box-flex: revert; -webkit-box-ordinal-group: revert; -webkit-box-orient: revert; -webkit-box-pack: revert; -webkit-box-reflect: revert; -webkit-line-break: revert; -webkit-line-clamp: revert; -webkit-mask-box-image: revert; -webkit-rtl-ordering: revert; -webkit-ruby-position: revert; -webkit-tap-highlight-color: revert; -webkit-text-combine: revert; -webkit-text-decorations-in-effect: revert; -webkit-text-fill-color: revert; -webkit-text-security: revert; -webkit-text-stroke-color: revert; -webkit-user-drag: revert; width: revert; will-change: revert; word-break: revert; x: revert; y: revert; z-index: revert; background-color: #ffffff;">Reporting Security Vulnerabilities to Citrix</h2>
+<p style="box-sizing: border-box; scrollbar-width: thin; scrollbar-color: #80d2f2 rgba(0, 0, 0, 0); margin: 0px 0px 12px; color: rgba(0, 0, 0, 0.87); font-family: Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff;">Citrix welcomes input regarding the security of its products and considers any and all potential vulnerabilities seriously. For details on our vulnerability response process and guidance on how to report security-related issues to Citrix, please see the following webpage: https://www.cloud.com/trust-center/support&nbsp;</p>
+<h2 style="all: revert !important;">Changelog</h2>
+<table style="box-sizing: border-box; scrollbar-width: thin; white-space: normal; scrollbar-color: #80d2f2 rgba(0, 0, 0, 0); table-layout: fixed; border-width: 1px; border-style: solid; border-collapse: collapse; word-break: break-word; color: rgba(0, 0, 0, 0.87); font-family: Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; background-color: #ffffff; width: 700.195px;" border="1">
+<tbody style="box-sizing: border-box; scrollbar-width: thin; scrollbar-color: #80d2f2 rgba(0, 0, 0, 0);">
+<tr style="box-sizing: border-box; scrollbar-width: thin; scrollbar-color: #80d2f2 rgba(0, 0, 0, 0);">
+<td style="box-sizing: border-box; scrollbar-width: thin; scrollbar-color: #80d2f2 rgba(0, 0, 0, 0); border-width: 1px; border-style: solid; border-collapse: collapse; padding: 10px; width: 311.484px;">2026-09-27</td>
+<td style="box-sizing: border-box; scrollbar-width: thin; scrollbar-color: #80d2f2 rgba(0, 0, 0, 0); border-width: 1px; border-style: solid; border-collapse: collapse; padding: 10px; width: 387.711px;">Initial Publication</td>
+</tr>
+<tr>
+<td style="box-sizing: border-box; scrollbar-width: thin; scrollbar-color: #80d2f2 rgba(0, 0, 0, 0); border-width: 1px; border-style: solid; border-collapse: collapse; padding: 10px; width: 311.484px;">2026-09-27</td>
+<td style="box-sizing: border-box; scrollbar-width: thin; scrollbar-color: #80d2f2 rgba(0, 0, 0, 0); border-width: 1px; border-style: solid; border-collapse: collapse; padding: 10px; width: 387.711px;"><span style="color: rgba(0, 0, 0, 0.87); font-family: Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">Added a link to the NetScaler blog that contains further context</span></td>
+</tr>
+</tbody>
+</table>
+                            </div>
+                        </div>
+                        
+
+                    
+                    
+
+                <div class="feedback-section">
+                    <div id="like-dislike-section" class="wolken-h5">
+                        <div class="wolken-h4" id="feedback_actionMsg">
+                            Was this article helpful?
+                        </div>
+                        <div id="feedback_actions" class="flex-row row-gap-16">
+                            <div class="flex-row row-align-center-center row-gap-8 like_dislike_btn" id="feedback_like" onclick="articleLikeDislikeHandler('like')">
+                                <span class="material-icons">thumb_up</span>
+                                <span>Yes</span>
+                            </div>
+                            <div class="flex-row row-align-center-center row-gap-8 like_dislike_btn" id="feedback_dislike" onclick="articleLikeDislikeHandler('dislike')">
+                                <span class="material-icons">thumb_down</span>
+                                <span>No</span>
+                            </div>
+                        </div>
+                    </div>
+                    <form id="feedbackForm" class="article-feedback-card" onsubmit="onSubmitSuggestionForm(event)" >
+                        <div id="checkboxSection" class="checkbox-section flex-column column-gap-8">
+                            <span id="feedback-form-msg" class="wolken-h4">Select Suggestions:</span>
+                            <span class="wolken-h5" id="suggestion-msg">Send us feedback</span>
+                        </div>
+                        <div>
+                            <input type="email" id="email" name="email" class="full-width" placeholder="Email">
+                        </div><br>
+                        <div>
+                            <textarea id="comment" name="comment" rows="6" maxlength="500" class="full-width wolken-h5" placeholder="Comment"></textarea>
+                        </div><br>
+                        <button class="wolken-primary-button cancel-button" type="button" onclick="onCancelSuggestionForm()">Cancel</button>
+                        <button class="wolken-primary-button reset-button" type="button" onclick="onResetSuggestionForm()">Reset</button>
+                        <button class="wolken-primary-button" type="submit" id="feedback-submit-button" disabled>Submit</button>
+                    </form>
+                    <div class="wolken-h5" id="feedback-success-msg"></div>
+                </div>
+            </div>
+             
+            <div class="flex-row wolken-footer">
+                <span class="mat-caption">Powered by</span>
+                <a target="_blank" href="https://www.wolkensoftware.com/">
+                    <img src="https://cdn.wolkenservicedesk.com/wolken-footer-image.png" alt="Wolken Software">
+                </a>
+            </div>
+            
+            
+            <iframe class="custom-footer" frameborder="0" scrolling="no"
+                title="https://cdn.wolkenservicedesk.com/Citrix/Header-footer/footer.html"
+                src="https://cdn.wolkenservicedesk.com/Citrix/Header-footer/footer.html" height="120px"></iframe>
+            
+        </div>
+
+        <div class="loader-container flex-column">
+            <div class="ghost-loader ghost-custom-header"></div>
+            <div class="wolken-content-container flex-column column-gap-16">
+                <div class="flex-row row-gap-16 row-align-space-between-center">
+                    <div class="ghost-loader ghost-article-title"></div>
+                    <div class="ghost-loader ghost-article-date"></div>
+                </div>
+                <div class="article-detail-card">
+                    <div class="article-detail-card-header">
+                        <div class="ghost-loader ghost-article-detail-title"></div>
+                    </div>
+                    <div class="article-detail-card-content">
+                        <div class="ghost-product-detail-content flex-row row-gap-16">
+                            <div class="ghost-loader"></div>
+                            <div class="ghost-loader"></div>
+                            <div class="ghost-loader"></div>
+                            <div class="ghost-loader"></div>
+                            <div class="ghost-loader"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="article-detail-card">
+                    <div class="article-detail-card-header">
+                        <div class="ghost-loader ghost-article-detail-title"></div>
+                    </div>
+                    <div class="article-detail-card-content">
+                        <div class="ghost-article-detail-content column-gap-16">
+                            <div class="ghost-loader"></div>
+                            <div class="ghost-loader"></div>
+                            <div class="ghost-loader"></div>
+                            <div class="ghost-loader"></div>
+                            <div class="ghost-loader"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="article-detail-card">
+                    <div class="article-detail-card-header">
+                        <div class="ghost-loader ghost-article-detail-title"></div>
+                    </div>
+                    <div class="article-detail-card-content">
+                        <div class="ghost-article-detail-content column-gap-16">
+                            <div class="ghost-loader"></div>
+                            <div class="ghost-loader"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="article-detail-card">
+                    <div class="article-detail-card-header">
+                        <div class="ghost-loader ghost-article-detail-title"></div>
+                    </div>
+                    <div class="article-detail-card-content">
+                        <div class="ghost-article-detail-content column-gap-16">
+                            <div class="ghost-loader"></div>
+                            <div class="ghost-loader"></div>
+                            <div class="ghost-loader"></div>
+                            <div class="ghost-loader"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="article-detail-card">
+                    <div class="article-detail-card-header">
+                        <div class="ghost-loader ghost-article-detail-title"></div>
+                    </div>
+                    <div class="article-detail-card-content">
+                        <div class="ghost-article-detail-content column-gap-16">
+                            <div class="ghost-loader"></div>
+                            <div class="ghost-loader"></div>
+                            <div class="ghost-loader"></div>
+                            <div class="ghost-loader"></div>
+                            <div class="ghost-loader"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ghost-loader ghost-custom-footer"></div>
+        </div>
+    </div>
+        <script type="application/ld+json">
+        {"@context":"http://schema.org","@type":"Article","name":["NetScaler"],"alternateName":["NetScaler"],"datePublished":"09-27-2026 10:10","dateModified":"09-27-2026 10:10","mainEntityOfPage":{"@type":"WebPage","url":"support.citrix.com/external/article/697096"},"keywords":["Security Bulletin","NetScaler"],"url":"support.citrix.com/external/article/697096","about":[],"author":{"@type":"Person","name":"Citrix"},"headline":"Citrix NetScaler ADC and Citrix NetScaler Gateway Security Bulletin for CVE-2026-88771, CVE-2026-88772, CVE-2026-88773, CVE-2026-88774, CVE-2026-88775, CVE-2026-88776, CVE-2026-88777, and CVE-2026-88778","publisher":{"@type":"Organization","name":"Citrix","logo":{"@type":"ImageObject","url":"https://support.citrix.com/assets/images/company-logo.png"}},"aggregateRating":{}}</script>
+
+</body>
+<script>
+
+    var apiDomain = 'https://api-csm.citrix.com/';
+    var uiDomain = '';
+    var articleId = '697096';
+    var articleTitle = 'Citrix NetScaler ADC and Citrix NetScaler Gateway Security Bulletin for CVE-2026-88771, CVE-2026-88772, CVE-2026-88773, CVE-2026-88774, CVE-2026-88775, CVE-2026-88776, CVE-2026-88777, and CVE-2026-88778';
+    var articlePageUrl = uiDomain + '/wolken-support/article?articleId=';
+    var attachmentVos = '';
+    var kb_public_page_domain = 'support.citrix.com'
+    var kbDownloadDomain = 'support.citrix.com';
+    var kbParamsDetails = JSON.parse('{"modifiedData":[{"parameterId":1,"identifier":"articleTitle","alias":"Title","active":true,"mandatory":true,"sequence":1,"enabled":true,"createEnabled":true,"detailsEnabled":true,"searchEnabled":true,"editEnabled":true,"checkForDuplicate":true,"duplicateSearchFieldIdentifier":"searchQuery","documentEnabled":false,"searchSortable":false,"sortableSequence":0,"updatedTime":1684142370398,"updatedBy":79,"operationalIdentifier":"searchQuery","enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":3,"identifier":"articleType","alias":"Article Record Type","active":true,"mandatory":true,"sequence":1,"enabled":false,"createEnabled":true,"detailsEnabled":true,"searchEnabled":false,"editEnabled":true,"checkForDuplicate":false,"duplicateSearchFieldIdentifier":"articleTypeId","documentEnabled":false,"searchSortable":false,"sortableSequence":0,"updatedTime":1684325797300,"updatedBy":24455,"operationalIdentifier":"articleTypeId","enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":7,"identifier":"description","alias":"Details","active":true,"mandatory":true,"sequence":14,"enabled":true,"createEnabled":true,"detailsEnabled":true,"searchEnabled":false,"editEnabled":true,"checkForDuplicate":false,"duplicateSearchFieldIdentifier":"","documentEnabled":false,"searchSortable":false,"sortableSequence":0,"updatedTime":1678686982844,"updatedBy":25291,"operationalIdentifier":"","enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":8,"identifier":"internalNotes","alias":"Internal Notes","active":true,"mandatory":false,"sequence":19,"enabled":true,"createEnabled":true,"detailsEnabled":true,"searchEnabled":false,"editEnabled":true,"checkForDuplicate":false,"duplicateSearchFieldIdentifier":"","documentEnabled":false,"searchSortable":false,"sortableSequence":0,"updatedTime":1675324102779,"updatedBy":24455,"enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":9,"identifier":"attachments","alias":"Attachments","active":true,"mandatory":false,"sequence":21,"enabled":true,"createEnabled":true,"detailsEnabled":true,"searchEnabled":false,"editEnabled":true,"checkForDuplicate":false,"documentEnabled":false,"searchSortable":false,"enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":20,"identifier":"status","alias":"Status","active":true,"mandatory":false,"sequence":5,"enabled":false,"createEnabled":false,"detailsEnabled":true,"searchEnabled":true,"editEnabled":false,"checkForDuplicate":false,"duplicateSearchFieldIdentifier":"statusId","documentEnabled":true,"searchSortable":false,"sortableSequence":0,"updatedTime":1676376985293,"updatedBy":24455,"operationalIdentifier":"statusId","enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":24,"identifier":"updatedTime","alias":"Last Modified Date","active":true,"mandatory":false,"sequence":9,"enabled":true,"createEnabled":false,"detailsEnabled":true,"searchEnabled":true,"editEnabled":false,"checkForDuplicate":false,"documentEnabled":false,"searchSortable":true,"sortableIdentifier":"updatedTimestamp","sortableSequence":3,"operationalIdentifier":"updatedTimestamp","enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":25,"identifier":"source","alias":"Source","active":true,"mandatory":false,"sequence":12,"enabled":false,"createEnabled":true,"detailsEnabled":true,"searchEnabled":false,"editEnabled":true,"checkForDuplicate":false,"duplicateSearchFieldIdentifier":"","documentEnabled":false,"searchSortable":false,"sortableSequence":0,"updatedTime":1675677599255,"updatedBy":24455,"enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":30,"identifier":"articleId","alias":"Article Id","active":true,"mandatory":false,"sequence":4,"enabled":false,"createEnabled":false,"detailsEnabled":true,"searchEnabled":false,"editEnabled":true,"checkForDuplicate":false,"duplicateSearchFieldIdentifier":"","documentEnabled":false,"searchSortable":false,"sortableSequence":0,"updatedTime":1675234273655,"updatedBy":25291,"enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":101,"identifier":"introduction","alias":"Summary","active":true,"mandatory":true,"sequence":13,"enabled":true,"createEnabled":true,"detailsEnabled":true,"searchEnabled":false,"editEnabled":true,"checkForDuplicate":false,"documentEnabled":true,"searchSortable":false,"createdTime":1684216671095,"createdBy":150,"updatedTime":1684216671095,"updatedBy":150,"enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":102,"identifier":"environment","alias":"Disclaimer","active":true,"mandatory":false,"sequence":20,"enabled":true,"createEnabled":true,"detailsEnabled":true,"searchEnabled":false,"editEnabled":true,"checkForDuplicate":false,"documentEnabled":true,"searchSortable":false,"createdTime":1684216671095,"createdBy":150,"updatedTime":1684216671095,"updatedBy":150,"enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":104,"identifier":"resolution","alias":"Resolution","active":true,"mandatory":false,"sequence":15,"enabled":true,"createEnabled":true,"detailsEnabled":true,"searchEnabled":false,"editEnabled":true,"checkForDuplicate":false,"documentEnabled":true,"searchSortable":false,"createdTime":1684216671095,"createdBy":150,"updatedTime":1684216671095,"updatedBy":150,"enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":105,"identifier":"additionalInfo","alias":"Additional information / Reference","active":true,"mandatory":false,"sequence":18,"enabled":true,"createEnabled":true,"detailsEnabled":true,"searchEnabled":false,"editEnabled":true,"checkForDuplicate":false,"documentEnabled":true,"searchSortable":false,"createdTime":1684216671095,"createdBy":150,"updatedTime":1684216671095,"updatedBy":150,"enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":112,"identifier":"restrictSubscriptionMail","alias":"Do Not Send Subscription Emails","active":true,"mandatory":false,"sequence":82,"enabled":true,"createEnabled":true,"detailsEnabled":true,"searchEnabled":false,"editEnabled":true,"checkForDuplicate":false,"documentEnabled":false,"searchSortable":false,"createdTime":1684216671095,"createdBy":150,"updatedTime":1684216671095,"updatedBy":150,"enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":119,"identifier":"cause","alias":"Problem Cause","active":true,"mandatory":false,"sequence":16,"enabled":true,"createEnabled":true,"detailsEnabled":true,"searchEnabled":false,"editEnabled":true,"checkForDuplicate":false,"documentEnabled":false,"searchSortable":false,"enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":120,"identifier":"publishedDate","alias":"Last Published Date","active":true,"mandatory":false,"sequence":18,"enabled":false,"createEnabled":false,"detailsEnabled":true,"searchEnabled":false,"editEnabled":true,"checkForDuplicate":false,"documentEnabled":false,"searchSortable":false,"enableMultiSelect":false,"enduserPortalEnabled":false,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":121,"identifier":"firstPublishedDate","alias":"Created Date","active":true,"mandatory":false,"sequence":7,"enabled":false,"createEnabled":false,"detailsEnabled":true,"searchEnabled":false,"editEnabled":true,"checkForDuplicate":false,"documentEnabled":false,"searchSortable":false,"enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true},{"parameterId":122,"identifier":"articleTypeLevelFlex","alias":"Flex on Article Type","active":true,"mandatory":false,"sequence":150,"enabled":true,"createEnabled":true,"detailsEnabled":true,"searchEnabled":false,"editEnabled":true,"checkForDuplicate":false,"duplicateSearchFieldIdentifier":"0","documentEnabled":false,"searchSortable":false,"sortableIdentifier":"0","enableMultiSelect":false,"enduserPortalEnabled":true,"kbFieldTypeId":0,"kbFieldDetails":"","knowledgeBlock":false,"publicPageEnabled":true}]}').modifiedData;
+    var regularAttachment = false;
+    var customProdWithRelease = 'true';
+    var productContainerHeight = '';
+    var imgPath = '';
+    imgPath = uiDomain !== '' ? 'https://' + uiDomain + '/assets/images/company-logo.png' : '';
+    document.getElementById('brand_logo').src = imgPath;
+
+    var feedbackConfigData = {};
+    var feedbackSuggestionOptionsData = {};
+    var selectedRating = 0;
+
+    const faviconURL = 'https://cdn.wolkenservicedesk.com/Citrix/Logos/company_logo/CitrixFavicon.ico';
+    const enduserAppURL = 'https://support.citrix.com/';
+    const link = document.createElement('link');
+    link.rel = 'icon';
+    link.type = 'image/x-icon'; 
+    link.href = faviconURL?faviconURL:enduserAppURL + '/favicon.ico';
+    document.head.appendChild(link);
+
+    if (document.getElementById('global-header')) {
+        document.getElementById('global-header').addEventListener('load', frameVisibilty);
+        setTimeout(function () {
+            document.getElementById('global-header').removeEventListener('load', frameVisibilty);
+            frameVisibilty();
+        }, 5000);
+    }
+
+    setThemeColors();
+    window.addEventListener('message', function (event) {
+    if (event && event.data && event.data.type === 'storeLocalStorage') {
+            const key = event.data.payload.key;
+            const value = event.data.payload.value;
+            localStorage.setItem(key, value);
+        }
+        else if (event.data.action === 'injectScript') {
+                if (!document.getElementById(event.data.scriptId)) {
+                    convertStringToFunction(event.data.scriptText, event.data.scriptId)
+                }
+            }
+        else if (event.data?.action === 'injectOneTimeScript') {
+        if (event.data.scriptText && event.data.scriptId && event.data.scriptFunctionName) {
+            if (!document.getElementById(event.data.scriptId)) {
+                convertStringToFunction(event.data.scriptText, event.data.scriptId);
+                }
+            try {
+                const func = window[event.data.scriptFunctionName];
+                if (typeof func === 'function') {
+                    func();
+                } else {
+                    console.error('Function ' + event.data.scriptFunctionName + ' not found');
+                }
+            } catch (error) {
+                console.error('Error injecting script:', error);
+            }
+        }
+        } 
+    });
+    const convertStringToFunction = (stringFn, identifier) => {
+    const ele = document.getElementById(identifier);
+    if (!ele) {
+    const source = stringFn;
+    const el = document.createElement("script");
+    el.id = identifier;
+    el.innerHTML = source;
+    el.type = "text/javascript";
+    document.head.appendChild(el);
+  }
+};
+
+    function setThemeColors() {
+        var themePrimary = '#2a6678';
+
+        var themePrimaryLight = '';
+
+        var themePrimaryComp = '';
+
+        var themeAccentComp = '';
+
+        const ele = document.documentElement;
+        if (themePrimary) {
+            ele.style.setProperty("--wolken-primary-color", themePrimary);
+        }
+        if (themePrimaryLight) {
+            ele.style.setProperty("--wolken-primary-color-light", themePrimaryLight);
+        }
+        if (themePrimaryComp) {
+            ele.style.setProperty("--wolken-primary-complimentory-color", themePrimaryComp);
+        }
+        if (themeAccentComp) {
+            ele.style.setProperty("--wolken-accent-complimentory-color", themeAccentComp);
+        }
+    }
+
+    function frameVisibilty() {
+
+        // setTimeout(function () {
+        //     document.getElementsByClassName('article-container')[0].style.display = 'flex';
+        //     document.getElementsByClassName('loader-container')[0].style.display = 'none';
+        // }, 1000);
+        var date = document.getElementById('date_time');
+        var d = '09-27-2026 10:10';
+        date.innerHTML = d;
+        date.innerHTML = d.split(' ')[0];
+        var showMoreProductLimit = '';
+        var arr = [];
+
+        if (customProdWithRelease) {
+            arr = document.getElementsByClassName("product-table-item");
+            productContainerHeight = productContainerHeight ? productContainerHeight : "26em";
+            showMoreProductLimit = showMoreProductLimit ? showMoreProductLimit : 10;
+        } else {
+            arr = document.getElementsByClassName("product-chip");
+            productContainerHeight = productContainerHeight ? productContainerHeight : "56px";
+            showMoreProductLimit = showMoreProductLimit ? showMoreProductLimit : 15;
+        }
+
+        if (arr.length > 0) {
+            if (arr.length > showMoreProductLimit) {
+                document.getElementsByClassName('product-container')[0].style.overflow = 'hidden';
+                document.getElementsByClassName('product-container')[0].style.height = productContainerHeight;
+                document.getElementsByClassName('show_more')[0].style.display = 'block';
+                document.getElementsByClassName('show_less')[0].style.display = 'none';
+            } else {
+                document.getElementsByClassName('product-container')[0].style.overflow = 'auto';
+                document.getElementsByClassName('product-container')[0].style.height = 'auto';
+                document.getElementsByClassName('show_more')[0].style.display = 'none';
+                document.getElementsByClassName('show_less')[0].style.display = 'none';
+            }
+        }
+
+    }
+    
+    function getAttachmentType() {
+        var getAttType = new XMLHttpRequest();
+        getAttType.open('GET', apiDomain + 'cau/attachment/get_type_of_attachment?moduleId=1');
+        getAttType.setRequestHeader("domain", kb_public_page_domain);
+
+        getAttType.send(getAttType);
+        getAttType.onload = function () {
+            if (getAttType.status == 200) {
+                var response = JSON.parse(getAttType.response);
+                return this.storageName = response?.data?.storageVO?.storageName;
+            }
+        };
+    }
+    function showMoreItems() {
+        document.getElementsByClassName('product-container')[0].style.overflow = 'auto';
+        document.getElementsByClassName('product-container')[0].style.height = 'auto';
+        document.getElementsByClassName('show_more')[0].style.display = 'none';
+        document.getElementsByClassName('show_less')[0].style.display = 'block';
+    }
+
+    function showLessItems() {
+        document.getElementsByClassName('product-container')[0].style.overflow = 'hidden';
+        document.getElementsByClassName('product-container')[0].style.height = productContainerHeight;
+        document.getElementsByClassName('show_more')[0].style.display = 'block';
+        document.getElementsByClassName('show_less')[0].style.display = 'none';
+    }
+
+    function downloadAttachment(uniquefileid, attachmentDetailes) {
+        var getAttType = new XMLHttpRequest();
+        getAttType.open('GET', apiDomain + 'cau/attachment/get_type_of_attachment?moduleId=1');
+        getAttType.setRequestHeader("domain", kb_public_page_domain);
+        getAttType.send(getAttType);
+        getAttType.onload = function () {
+            if (getAttType.status == 200) {
+                var response = JSON.parse(getAttType.response);
+                this.storageName = response?.data?.storageVO?.storageName;
+                if (this.storageName === 'S3') {
+                    let fPath = JSON.parse(attachmentDetailes).attachmentUrl.split('/');
+                    fPath = fPath.splice(4, fPath.length).join('/');
+                    const formData = new FormData();
+                    formData.append('data', JSON.stringify({
+                        "fileName": fPath,
+                        "fileUrl": JSON.parse(attachmentDetailes).attachmentUrl
+                    }));
+                    if (kb_public_page_domain) {
+                        var fileDownload = new XMLHttpRequest();
+                        fileDownload.open('POST', apiDomain + 'cau/attachment/preverify_attachment');
+                        fileDownload.setRequestHeader("domain", kb_public_page_domain);
+                        fileDownload.send(formData);
+                        fileDownload.onload = function () {
+                            if (fileDownload.status == 200) {
+                                var fileData = JSON.parse(fileDownload.response);
+                                window.open(fileData.data.preSignedURL, '');
+                            }
+                        };
+                    }
+                } else {
+                    var uniqueFileId = uniquefileid;
+                    var form = document.createElement('form');
+                    form.setAttribute('method', 'post');
+                    form.setAttribute('action', apiDomain + 'es/attachments/download_attachment?domain=' + kbDownloadDomain);
+                    form.setAttribute('target', '_self');
+                    var hiddenField = document.createElement('input');
+                    hiddenField.setAttribute('type', 'hidden');
+                    hiddenField.setAttribute('name', 'data');
+                    hiddenField.setAttribute('value', JSON.stringify({
+                        uniqueFileId: uniqueFileId
+                    }));
+                    form.appendChild(hiddenField);
+                    document.body.appendChild(form);
+                    window.open('', '_self');
+                    form.submit();
+                    form.parentNode.removeChild(form);
+            }
+                }
+            };
+    }
+
+
+    //     async  function downloadAttachment(uniqueFileId, attachmentDetails) {
+    //     try {
+    //         // Fetch attachment type
+    //         const getAttTypeResponse = await fetch(`${apiDomain}cau/attachment/get_type_of_attachment?moduleId=1`, {
+    //             method: 'GET',
+    //             headers: {
+    //                 "domain": kb_public_page_domain
+    //             }
+    //         });
+
+    //         if (!getAttTypeResponse.ok) throw new Error('Failed to fetch attachment type');
+
+    //         const attTypeData = await getAttTypeResponse.json();
+    //         const storageName = attTypeData?.data?.storageVO?.storageName;
+
+    //         // Handle S3 attachment
+    //         if (storageName === 'S3') {
+    //             const attachmentUrl = JSON.parse(attachmentDetails).attachmentUrl;
+    //             const filePath = attachmentUrl.split('/').slice(4).join('/');
+
+    //             const formData = new FormData();
+    //             formData.append('data', JSON.stringify({
+    //                 fileName: filePath,
+    //                 fileUrl: attachmentUrl
+    //             }));
+
+    //             const preVerifyResponse = await fetch(`${apiDomain}cau/attachment/preverify_attachment`, {
+    //                 method: 'POST',
+    //                 headers: {
+    //                     "domain": kb_public_page_domain
+    //                 },
+    //                 body: formData
+    //             });
+
+    //             if (!preVerifyResponse.ok) throw new Error('Failed to pre-verify attachment');
+
+    //             const preVerifyData = await preVerifyResponse.json();
+    //             const preSignedURL = preVerifyData?.data?.preSignedURL;
+
+    //             if (preSignedURL) {
+    //                 window.open(preSignedURL, '');
+    //             } else {
+    //                 console.error('Pre-signed URL not found');
+    //             }
+
+    //         } else {
+    //             // Handle non-S3 attachment (Download directly)
+    //             const form = document.createElement('form');
+    //             form.setAttribute('method', 'POST');
+    //             form.setAttribute('action', `${apiDomain}es/attachments/download_attachment?domain=${kbDownloadDomain}`);
+    //             form.setAttribute('target', '_self');
+
+    //             const hiddenField = document.createElement('input');
+    //             hiddenField.setAttribute('type', 'hidden');
+    //             hiddenField.setAttribute('name', 'data');
+    //             hiddenField.setAttribute('value', JSON.stringify({ uniqueFileId }));
+    //             form.appendChild(hiddenField);
+
+    //             document.body.appendChild(form);
+    //             form.submit();
+    //             form.remove();
+    //         }
+    //     } catch (error) {
+    //         console.error('Error during attachment download process:', error);
+    //     }
+    // }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        articleViewed();
+        getFeedbackConfig();
+        saveArticleViewCountHistory();
+        renderArticleDetails(kbParamsDetails);
+    });
+
+
+    function articleViewed() {
+        try {
+
+            gza("conversion", {
+                index: "server_ws_knowledge_article",
+                type: 'ws_knowledge_articles_doc',
+                id: articleId,
+                rank: 1,
+                convUrl: location.href,
+                convSub: articleTitle
+            });
+        } catch (error) {
+            console.log(error);
+        }
+
+        saveArticleCount('views');
+    }
+
+    function getFeedbackConfig() {
+        if (kb_public_page_domain) {
+            var articleFeedbackConfigRequest = new XMLHttpRequest();
+            articleFeedbackConfigRequest.open('GET', apiDomain + 'es/nau/feedback/config');
+            articleFeedbackConfigRequest.setRequestHeader("domain", kb_public_page_domain);
+            articleFeedbackConfigRequest.send();
+            articleFeedbackConfigRequest.onload = function () {
+                if (articleFeedbackConfigRequest.status == 200) {
+                    var response = JSON.parse(articleFeedbackConfigRequest.response);
+                    if (response && response.data && response.data.feedbackConfigData) {
+                        feedbackConfigData = response.data.feedbackConfigData;
+                        document.getElementById('feedback_actionMsg').innerHTML = feedbackConfigData.actionMsg;
+                        if(feedbackConfigData?.suggestionOptionMandatory){
+                            var spanRequired = document.createElement('span');
+                            spanRequired.className = 'text-red';
+                            spanRequired.textContent = '*';
+                            document.getElementById('suggestion-msg').appendChild(spanRequired);
+                        }
+                    } else {
+                        document.getElementsByClassName('feedback-section')[0].remove();
+                    }
+                    getFeedbackSuggestion();
+                }
+            };
+        }
+    }
+
+    function getFeedbackSuggestion() {
+        if (kb_public_page_domain && feedbackConfigData && feedbackConfigData.feedbackComment) {
+            var fbReq = new XMLHttpRequest();
+            fbReq.open('GET', apiDomain + 'es/nau/feedback/suggestion_options?active=true');
+            fbReq.setRequestHeader("domain", kb_public_page_domain);
+            fbReq.send();
+            fbReq.onload = function () {
+                if (fbReq.status == 200) {
+                    var response = JSON.parse(fbReq.response);
+                    if (response && response.data && response.data.feedbackSuggestionOptionsData) {
+                        feedbackSuggestionOptionsData = response.data.feedbackSuggestionOptionsData;
+                        setSuggestionData(response.data.feedbackSuggestionOptionsData);
+                    } else {
+                        document.getElementsByClassName('feedback-section')[0].remove();
+                    }
+                } 
+            };
+        }
+    }
+
+    function setSuggestionData(suggestionList) {
+        // suggestionList = [{"fbSuggestionOptId": 1,"desc": "Less Information","active": true}, {"fbSuggestionOptId": 2,"desc": "Not relevant info","active": true}, {"fbSuggestionOptId": 3,"desc": "No sufficient Images","active": true}];
+
+        if (suggestionList && suggestionList.length > 0) {
+            const checkboxTemp = document.getElementById('checkboxSection');
+            suggestionList.forEach(function (item) {
+                const checkboxContainer = document.createElement('div');
+                checkboxContainer.classList.add('checkbox-item','flex-row', 'row-gap-8', 'wolken-h5');
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.value = item.desc;
+                checkbox.innerText = item.desc;
+                checkbox.id = 'checkbox'+item.fbSuggestionOptId;
+                checkbox.name="suggestion";
+                const checkboxLabel = document.createElement('label');
+                checkboxLabel.innerText = item.desc;
+                checkboxLabel.htmlFor = 'checkbox'+item.fbSuggestionOptId;
+                checkboxContainer.appendChild(checkbox);
+                checkboxContainer.appendChild(checkboxLabel);
+                checkboxTemp.appendChild(checkboxContainer);
+            });
+        }
+    }
+    const form = document.getElementById('feedbackForm');
+   form.addEventListener('input', function(e) {
+    var feedbackValid = true;
+    var commentsField = document.getElementById('comment');
+    var selectedSuggestions = [];
+    var checkboxes = form.querySelectorAll('input[type="checkbox"]:checked');
+    for (var i = 0; i < checkboxes.length; i++) {
+        selectedSuggestions.push(checkboxes[i].value);
+    }
+    if (commentsField) {
+        if (feedbackConfigData.feedbackCommentMandatory) {
+            if (!commentsField.value || commentsField.value.length === 0) {
+                feedbackValid = false;
+            }
+        }
+        if (feedbackConfigData.feedbackCommentMinLimit) {
+            if (!commentsField.value || commentsField.value.length < feedbackConfigData.feedbackCommentMinLimit) {
+                feedbackValid = false;
+            }
+        }
+    }
+    if (feedbackConfigData.suggestionOptionMandatory) {
+        if (!selectedSuggestions || selectedSuggestions.length === 0) {
+            feedbackValid = false;
+        }
+    }
+    var submitBtn = document.getElementById('feedback-submit-button');
+    if (submitBtn) {
+        submitBtn.disabled = !feedbackValid;
+    }
+    });
+
+    function onSubmitSuggestionForm(event) {
+        event.preventDefault();
+        saveArticleCount(selectedRating === 1 ? 'likes' : 'dislikes');
+        
+        if(!event.target) {
+            return;
+        }
+        const form = event.target;
+
+        const email = form.elements['email'].value ? form.elements['email'].value : '';
+        let comment = form.elements['comment'];
+        if(comment && comment.value) {
+            comment = comment.value.trim();
+        } else {
+            comment = '';
+        }
+
+        const selectedSuggestions = [];
+        const checkboxes = form.querySelectorAll('input[type="checkbox"]:checked');
+        checkboxes.forEach(function (checkbox) {
+            selectedSuggestions.push(checkbox.value);
+        });
+
+        try {
+            const suggestionTemplate = `<section id="template"><div><ul class="points"></ul></div><p class="desc"></p></section>`;
+
+            const feedBackLayout = document.createElement("div");
+            feedBackLayout.innerHTML = suggestionTemplate.replace(new RegExp("\r?\n|\r", "g"),"");
+            
+            selectedSuggestions.forEach(function (s) {
+                const list = feedBackLayout.querySelector(".points");
+                const listItem = document.createElement("li");
+                listItem.textContent = s;
+                list.appendChild(listItem);
+            });
+            
+            feedBackLayout.querySelector(".desc").innerHTML = comment.replace(new RegExp("\r?\n|\r", "g"), "<br>").replaceAll("    ", "&emsp;").replaceAll("  ", "&ensp;").replaceAll(" ", "&nbsp;");
+
+            if (kb_public_page_domain) {
+                const formData = new FormData();
+                formData.append(
+                "data",
+                JSON.stringify({
+                    articleId: articleId,
+                    suggestion: feedBackLayout.innerHTML,
+                    like: selectedRating === 1 ? true : undefined,
+                    dislike: selectedRating === 1 ? undefined : true,
+                    userEmailId: email ? email : '',
+                    })
+                );
+                try {
+                    var suggestionRequest = new XMLHttpRequest();
+                    suggestionRequest.open('POST', apiDomain + 'es/nau/feedback/suggestion');
+                    suggestionRequest.setRequestHeader("domain", kb_public_page_domain);
+                    suggestionRequest.send(formData);
+                    suggestionRequest.onload = function () {
+                        if (suggestionRequest.status == 200) {
+                            afterRequestSentHelper();
+                        } else {
+                            afterRequestSentHelper();
+                        }
+                    };
+
+                    suggestionRequest.onerror = function () {
+                        afterRequestSentHelper();
+                    };
+                } catch (error) {
+                    afterRequestSentHelper();
+                }
+            }
+        } catch (error) {
+            return;
+        }
+    }
+    
+    function afterRequestSentHelper() {
+        document.getElementById('feedbackForm').style.display = 'none';
+        document.getElementById('feedback-success-msg').innerHTML = feedbackConfigData ? feedbackConfigData.fbSuccessMsg ? feedbackConfigData.fbSuccessMsg : 'Thanks for the feedback.' : 'Thanks for the feedback.';
+        const likeDislikeElem = document.getElementById('like-dislike-section');
+        if( likeDislikeElem) {
+            likeDislikeElem.remove();
+        }
+    }
+
+    function onCancelSuggestionForm() {
+        document.getElementById('feedbackForm').reset();
+        document.getElementById('feedbackForm').style.display = 'none';
+        document.getElementById('like-dislike-section').style.display = 'block';
+        document.getElementById('feedback_actionMsg').innerHTML = feedbackConfigData ? feedbackConfigData.actionMsg ? feedbackConfigData.actionMsg : 'Was this article helpful?' : 'Was this article helpful?';
+        const errorMessage = document.getElementById('comment-error');
+        if (errorMessage) {
+            errorMessage.remove();
+        }
+    }
+
+    function onResetSuggestionForm() {
+        document.getElementById('feedbackForm').reset();
+        const checkboxes = document.querySelectorAll('#checkboxSection input[type="checkbox"]');
+        if (checkboxes && checkboxes.length > 0) {
+            checkboxes.forEach(function (checkbox) {
+                checkbox.checked = false;
+            });
+        }
+        const errorMessage = document.getElementById('comment-error');
+        if (errorMessage) {
+            errorMessage.remove();
+        }
+    }
+
+    function saveArticleCount(countType) {
+        try {
+            gza("pageRating", {
+                referer: document.referrer,
+                url: window.location.href,
+                t: document.getElementsByTagName('title')[0] ? document.getElementsByTagName('title')[0].innerText : window.location.href,
+                uid: '1fd47e1f-f7d9-11ea-beba-0242ac12000b',
+                feedback: selectedRating
+            });
+        } catch (error) {
+            console.log(error);
+        }
+
+        var data = {
+            articleId: articleId
+        };
+
+        data[countType] = 1;
+
+        var formData = new FormData();
+        formData.append('data', JSON.stringify(data));
+
+        if (kb_public_page_domain) {
+            try {
+                var articleLikeRequest = new XMLHttpRequest();
+                articleLikeRequest.open('POST', apiDomain + 'es/nau/feedback/feedback_count');
+                articleLikeRequest.setRequestHeader("domain", kb_public_page_domain);
+                articleLikeRequest.send(formData);
+                articleLikeRequest.onload = function () {};
+            } catch (error) {
+                console.log(error);
+            }
+        }
+    }
+
+    function saveArticleViewCountHistory() {
+        let articleViewData = new FormData();
+        articleViewData.append('data', JSON.stringify({
+            "articleId": articleId,
+            "countType": "VIEWS"
+        }));
+
+        if (kb_public_page_domain) {
+            var articleViewRequest = new XMLHttpRequest();
+            articleViewRequest.open('POST', apiDomain + 'es/nau/count/save_article_count');
+            articleViewRequest.setRequestHeader("domain", kb_public_page_domain);
+            //articleViewRequest.withCredentials = true;
+            articleViewRequest.send(articleViewData);
+            articleViewRequest.onload = function () {};
+        }
+    }
+
+    function articleLikeDislikeHandler(ratingType) {
+        let showForm = true;
+        if (ratingType === 'like') {
+            selectedRating = 1;
+        } else {
+            selectedRating = 0;
+        }
+        try {
+            if (feedbackConfigData && feedbackConfigData.enableForPublicPage) {
+            const checkboxSection = document.getElementById('checkboxSection');
+            const emailElem = document.getElementById('email');
+            if (selectedRating === 1) {
+                if(feedbackConfigData && (feedbackConfigData.likeCommentEnabled || feedbackConfigData.likeSuggestionEnabled)) {
+                    if (feedbackConfigData && feedbackConfigData.likeCommentEnabled) {
+                        setUpCommentSection();
+                    } else {
+                        resetCommentSection();
+                    }
+                    if (feedbackConfigData && feedbackConfigData.likeSuggestionEnabled) {
+                        checkboxSection.style.display = 'flex';
+                    } else {
+                        checkboxSection.style.display = 'none';
+                    }
+                } else {
+                    showForm = false;
+                }
+            } else {
+                setUpCommentSection();
+                if(checkboxSection) {
+                    checkboxSection.style.display = 'flex';
+                    }
+                }
+            } else {
+                showForm = false;
+            }
+            if (showForm) {
+                if (selectedRating === 1) {
+                    document.getElementById('feedback-form-msg').innerHTML = feedbackConfigData ? feedbackConfigData.yesMsg ? feedbackConfigData.yesMsg : 'Thanks for the feedback.' : 'Please send us your feedback.';
+                } else {
+                    document.getElementById('feedback-form-msg').innerHTML = feedbackConfigData ? feedbackConfigData.noMsg ? feedbackConfigData.noMsg : 'Sorry! Please help us to improve the article.' : 'Please send us your feedback.';
+                }
+                document.getElementById('like-dislike-section').style.display = 'none';
+                document.getElementById('feedbackForm').style.display = 'block';
+                document.getElementById('email').focus();
+            } else {
+                afterRequestSentHelper();
+                if (selectedRating === 1) {
+                    saveArticleCount('likes');
+                } else {
+                    saveArticleCount('dislikes');
+                }
+            }
+        } catch (error) {
+            console.log('Error in handling feedback:', error);
+            document.getElementById('like-dislike-section').remove();
+            document.getElementById('feedback-success-msg').innerHTML = feedbackConfigData ? feedbackConfigData.fbSuccessMsg ? feedbackConfigData.fbSuccessMsg : 'Thanks for the feedback.' : 'Thanks for the feedback.';            
+        }
+
+        function resetCommentSection() {
+            const commentEl = document.getElementById('comment');
+            commentEl.removeAttribute('required');
+            commentEl.removeAttribute('minlength');
+            commentEl.setCustomValidity('');
+            commentEl.value = '';
+            commentEl.style.display = 'none'
+            const errorMessage = document.getElementById('comment-error');
+            if(errorMessage) {
+                errorMessage.remove();
+            }
+        }
+
+        function setUpCommentSection() {
+            const commentElem = document.getElementById('comment');
+            if (feedbackConfigData && feedbackConfigData.feedbackCommentMandatory) {
+                commentElem.setAttribute('required', true);
+                commentElem.setAttribute('placeholder',`Comment *`);
+            }
+            if (feedbackConfigData && feedbackConfigData.feedbackCommentMinLimit) {
+                commentElem.setAttribute('minlength', feedbackConfigData.feedbackCommentMinLimit);
+            }
+            if (commentElem.hasAttribute('required') || commentElem.hasAttribute('minlength')) {
+                commentElem.addEventListener('keyup', function () {
+                const errorMessage = document.getElementById('comment-error');
+                // Check for validation errors
+                if (commentElem.validity && !commentElem.validity.valid) {
+                    let errorText = '';
+                    if (commentElem.validity.valueMissing) {
+                        errorText = 'Comment is required.';
+                    } else if (commentElem.validity.tooShort) {
+                        errorText = `Comment must be at least ${commentElem.minLength} characters.`;
+                    }
+                    if (!errorMessage) {
+                        const error = document.createElement('div');
+                        error.id = 'comment-error';
+                        error.textContent = errorText;
+                        error.className="text-red";
+                        commentElem.parentElement.appendChild(error);
+                    } else {
+                        errorMessage.textContent = errorText;
+                    }
+                } else if (errorMessage) {
+                    errorMessage.remove();
+                }
+                });
+            }
+            commentElem.style.display = 'block';
+        }
+    }
+
+    function redirectToFeedbackPage() {
+        window.open(articlePageUrl + articleId + '&action=feedback', '_self');
+    }
+
+    function clearSearch() {
+        document.getElementById('searchBox').value = '';
+    }
+
+    function redirectOnSearch(e) {
+        if (e && e.keyCode === 13 || e === undefined) {
+            const searchText = document.getElementById('searchBox').value;
+            var redirectOnSearchUrl = '';
+
+            if (!redirectOnSearchUrl) {
+                console.log('Error! Search URL is not configured.');
+                return;
+            } else {
+                window.open(redirectOnSearchUrl + searchText, '_blank');
+            }
+        }
+    }
+
+    function renderArticleDetails(detailsKbParamData) {
+        if (detailsKbParamData && detailsKbParamData.length > 0) {
+            detailsKbParamData.forEach(function (param) {
+                if (param && param.identifier) {
+                    const paramName = param.identifier;
+                    let paramResKey = "";
+                    let headerSection = false;
+                    let icon = 'article';
+                    let paramValue = null;
+                    switch(paramName) {
+                        //For descriptive fields
+                        case 'description':
+                        case 'environment':
+                        case 'cause':
+                        case 'resolution':
+                        case 'introduction':
+                        case 'additionalInfo':
+                            const parentElem = document.getElementById(paramName);
+                            if(parentElem) {
+                                parentElem.style.display = 'block';
+                                const childTitle = parentElem.querySelector('.article-detail-card-header h4');
+                                parentElem.style.order = param.sequence ? param.sequence : initial;
+                                childTitle.innerText = param.alias;
+                            }
+                            break;
+                        // For meta data fields
+                        case 'createdBy':
+                            paramResKey = "createdByName";
+                            paramValue = 'Rasika Bindoo';
+                            headerSection = true;
+                            icon = 'account_circle';
+                            break;
+                        case 'createdTime':
+                            paramResKey = "createdTime";
+                            paramValue = '09-10-2026 07:19';
+                            headerSection = true;
+                            icon = 'calendar_today';
+                            break;
+                        case 'articleVersion':
+                            paramResKey = "articleOtherInfoVO.formattedVersion";
+                            paramValue = 'v.3.0';
+                            headerSection = true;
+                            break;
+                        case 'articleType':
+                            paramResKey = "articleTypeName";
+                            paramValue = 'Security Bulletin';
+                            headerSection = true;
+                            icon = 'timeline';
+                            break;
+                        case 'firstPublishedDate':
+                            paramResKey = "articleOtherInfoVO.firstPublishedDateVal";
+                            paramValue = '09-27-2026 15:22';
+                            headerSection = true;
+                            icon = 'calendar_today';
+                            break;
+                        case 'publishedDate':
+                            paramResKey = "articleOtherInfoVO.publishedDateVal";
+                            paramValue = '09-27-2026 17:14';
+                            headerSection = true;
+                            icon = 'calendar_today';
+                            break;
+                        };
+
+                    if (paramValue && paramValue.length > 0) {
+                         if(headerSection) {
+                            const container = document.getElementById('article-header-info');
+                            const newElement = document.createElement('div');
+                            newElement.classList.add("flex-row", "row-gap-8", "article-updated-time");
+                            newElement.style.order = param.sequence ? param.sequence : initial;
+                            newElement.innerHTML = 
+                            `<span class="material-icons article-updated-date-icon_cal">${icon}</span>
+                            <h4 class="wolken-h4">${param.alias}: <span>${paramValue}</span></h4>`;
+                            container.appendChild(newElement);
+                        }
+                    }
+                }
+            });
+        }
+        setLoadingPage(false);
+    }
+
+    function setLoadingPage(state) {
+        setTimeout(function () {
+            if (state) {
+                document.getElementsByClassName('article-container')[0].style.display = 'none';
+                document.getElementsByClassName('loader-container')[0].style.display = 'flex';
+            } else {
+                document.getElementsByClassName('article-container')[0].style.display = 'flex';
+                document.getElementsByClassName('loader-container')[0].style.display = 'none';
+            }
+        }, 1000);
+    }
+
+</script>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe title="No Script" src="https://www.googletagmanager.com/ns.html?id=GTM-KF7XWD" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<script type="text/javascript">
+    function loadErroredFile(file, path, isEdit) {
+        if (!isEdit) {
+            if (path) {
+                file.id = path;
+                if (file.id && document.getElementById(file.id)) {
+                    document.getElementById(file.id).style.display = 'none';
+                    document.getElementById(file.id).style.border = 'none';
+                }
+                if (!file.src.includes('X-Amz-Security-Token')) {
+                    const formData = new FormData();
+                    const input = new Object();
+                    input['fileName'] = path;
+                    input['fileUrl'] = file.src;
+                    formData.append('data', JSON.stringify(input));
+                    const fileRequest = new XMLHttpRequest();
+                    apiUrl = apiDomain + 'cau/attachment/preverify_attachment';
+                    fileRequest.open('POST', apiUrl, true);
+                    fileRequest.withCredentials = true;
+
+                    fileRequest.setRequestHeader('domain', kb_public_page_domain);
+                    fileRequest.send(formData);
+                    fileRequest.onload = function () {
+                        if (this.status === 200) {
+                            let response = this.response;
+                            if (typeof response === 'string') {
+                                response = JSON.parse(response);
+                            }
+                            success(response);
+                        }
+                    }
+
+                    let success = (response) => {
+                        if (response && response.data) {
+                            if (file && file.src) {
+                                file.src = response.data.preSignedURL;
+                                if (file.id && document.getElementById(file.id)) {
+                                    document.getElementById(file.id).style.display = '';
+                                }
+                            } else {
+                                file = response.data.preSignedURL;
+                                if (file.id && document.getElementById(file.id)) {
+                                    document.getElementById(file.id).style.display = '';
+                                }
+                            }
+                        }
+                    }
+                } else {
+                    if (file.id) {
+                        document.getElementById(file.id).style.display = '';
+                    }
+                }
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('img[data-ximg-check]').forEach((img) => {
+      if (!img.dataset.ximgChecked) {
+        img.onerror = function () {
+          if (!img.src) return;
+          try {
+            loadErroredFile(img, getFilePath(img.src));
+          } catch (err) {
+            console.error('Error handling failed image:', err);
+          }
+        };
+        img.dataset.ximgChecked = 'true';
+      }
+    });
+});
+
+  function getFilePath(path) {
+    const safePathPattern = /^[\w\-. ]+(?:\/[\w\-. ]+)*$/;
+    try {
+      const segments = path.split('/');
+      if (segments.length < 5) return null;
+      const fileName = segments.slice(4).join('/');
+      const decodedfileName = decodeURIComponent(fileName);
+      if (!safePathPattern.test(decodedfileName)) return null;
+      return decodedfileName;
+    } catch {
+      return null;
+    }
+  }
+</script>
+     
+        <script src="https://cdn.wolkenservicedesk.com/Citrix/JS_Files/wolkenInsight.js"></script>
+    
+    <script type="text/javascript">
+    var flexFields = JSON.parse('[{"active":true,"articleTypeId":1,"articleTypeName":"Security Bulletin","attributeId":12,"attributeName":"Severity","attributeTypeId":2,"attributeTypeName":"LOV","createdBy":2,"createdDate":0,"defaultValue":"","dependencyId":0,"dependencyName":"","endUserEnable":true,"flexAttributeLOVList":[{"childRequired":false,"dependancyName":"","dependencyId":0,"dependencyName":"","lovId":6688,"lovName":"Critical"},{"childRequired":false,"dependancyName":"","dependencyId":0,"dependencyName":"","lovId":6689,"lovName":"Informational"},{"childRequired":false,"dependancyName":"","dependencyId":0,"dependencyName":"","lovId":6690,"lovName":"High"},{"childRequired":false,"dependancyName":"","dependencyId":0,"dependencyName":"","lovId":6691,"lovName":"Medium"},{"childRequired":false,"dependancyName":"","dependencyId":0,"dependencyName":"","lovId":6692,"lovName":"Low"}],"kbFlexMapId":6,"lovId":0,"lovName":"","mandatory":false,"mapId":0,"multiSelectLOVFields":[],"placeHolder":0,"publicPageEnable":true,"sequence":6,"textValue":"","type":"","updatedBy":2,"updatedDate":0,"valId":0,"visible":true}]');
+    var flexDetails = JSON.parse('{"actionId":0,"actionname":"","appCatArticleMapVOs":[],"appCategoryId":[],"appSubCatArticleMapVOs":[],"appSubCategoryId":[],"appSubSubCatArticleMapVOs":[],"appSubSubCategoryId":[],"approvalEnabled":false,"approvalNote":"","approvers":[],"approversList":[],"approversListId":[],"aqiFeedback":false,"aqiFeedbackOptionId":0,"articleCreated":false,"articleFaqDetailsVO":{"answer":"","articleFaqDetailsId":0,"articleId":0,"internalComments":""},"articleId":697096,"articleKbHelpDetailsVO":{"articleId":0,"articleKbHelpDetailsId":0},"articleLatestScore":0,"articleLatestScorePercentage":0,"articleOtherInfoVO":{"additionalInfo":"","additionalInfoText":"","articleOtherInfoId":0,"articleTopicId":0,"articleTopicName":"","articleVersion":0,"cause":"","causeText":"","checkoutBy":0,"checkoutByName":"","checkoutEnabled":false,"dynamicCategoryId":0,"dynamicCategoryLevelDetails":"","dynamicCategoryVal":"","environment":"","environmentText":"","firstPublishedBy":"","firstPublishedDate":0,"firstPublishedDateVal":"","formattedVersion":"","internalNotes":"","internalNotesText":"","introduction":"","introductionText":"","kbAccessTypeId":0,"kbAccessTypeName":"","kbIdFormatted":"","kbSourceId":0,"kbSourceName":"","kbTaskEnabled":false,"language":"","languageName":"","primaryLanguage":"","publishedBy":"","publishedDate":0,"publishedDateVal":"","requestFormattedId":"","requestId":0,"requesterEmailId":"","requesterId":0,"requesterUserName":"","resolution":"","resolutionText":"","restrictSubscriptionMail":false,"retiredDate":0,"retiredDateVal":"","validToDate":"","validToTimestamp":0,"validationStatusId":0,"validationStatusName":""},"articleSLNDetailsVO":{"articleId":0,"articleSlnDetailsId":0,"fixedInVersion":"","internalComments":"","productDefect":"","resolution":"","rootCause":"","softwareRelease":"","symptom":"","workAround":""},"articleTitle":"","articleTypeId":0,"articleTypeName":"","articleURLName":"","articleUrl":"","articleUserCriteriaList":[],"articleVersionType":0,"attachmentIds":"","attachmentVos":[],"categoryId":0,"categoryName":"","ciArticleMapVOs":[],"ciName":"","companyId":0,"countryList":[],"createdBy":0,"createdByManagerId":0,"createdByManagerName":"","createdByName":"","createdTime":"","description":"","dislikes":0,"enablePrimaryLanguageEdit":false,"enableViewCount":false,"extArticleUrl":"","favoriteArticles":[],"featuredArticle":false,"feedbackActionId":0,"ignoreAuditDetails":false,"indexType":"","intArticleUrl":"","invalidateDelegateUser":false,"isFavorite":false,"isSubscribed":false,"itemReleaseReferenceId":[],"itemReleaseReferenceVOs":[],"kbArticleCountryMappingVOs":[],"kbCatArticleMapVOs":[],"kbCategoryMaster":[],"kbConfigTypeId":0,"kbFlexMapValueList":[{"articleId":697096,"attributeId":1,"attributeName":"Resolution type","attributeTypeId":2,"attributeTypeName":"LOV","childRequired":false,"defaultValue":"","deleted":false,"dependencyId":0,"dependencyName":"","endUserEnable":false,"flexAttributeLOVList":[{"childRequired":false,"dependancyName":"","dependencyId":0,"dependencyName":"","lovId":6649,"lovName":"CSG Product Configuration"},{"childRequired":false,"dependancyName":"","dependencyId":0,"dependencyName":"","lovId":6650,"lovName":"CSG Product Code Fix"},{"childRequired":false,"dependancyName":"","dependencyId":0,"dependencyName":"","lovId":6651,"lovName":"Customer Environment Configuration"},{"childRequired":false,"dependancyName":"","dependencyId":0,"dependencyName":"","lovId":6652,"lovName":"Workaround"},{"childRequired":false,"dependancyName":"","dependencyId":0,"dependencyName":"","lovId":6653,"lovName":"3 Strike - Non-Responsive"},{"childRequired":false,"dependancyName":"","dependencyId":0,"dependencyName":"","lovId":6654,"lovName":"Not Resolved - Unable To Collect Diag Data"},{"childRequired":false,"dependancyName":"","dependencyId":0,"dependencyName":"","lovId":6655,"lovName":"3rd Party Code Change"},{"childRequired":false,"dependancyName":"","dependencyId":0,"dependencyName":"","lovId":6656,"lovName":"Issue Not Reproducible"},{"childRequired":false,"dependancyName":"","dependencyId":0,"dependencyName":"","lovId":6657,"lovName":"Customer Resolved - Solution Unknown"},{"childRequired":false,"dependancyName":"","dependencyId":0,"dependencyName":"","lovId":6658,"lovName":"Not Resolved"},{"childRequired":false,"dependancyName":"","dependencyId":0,"dependencyName":"","lovId":6659,"lovName":"Other"}],"kbFlexMapId":1,"kbFlexMapValId":107534,"lovId":6650,"lovName":"CSG Product Code Fix","mandatory":false,"mapId":0,"multiSelectLOVFields":[],"requestId":0,"sequence":1,"textValue":"","updatedById":0,"updatedByName":"","updatedDate":"","valId":0},{"articleId":697096,"attributeId":3,"attributeName":"Article has Workaround Solution","attributeTypeId":5,"attributeTypeName":"Y/N","childRequired":false,"defaultValue":"","deleted":false,"dependencyId":0,"dependencyName":"","endUserEnable":false,"flexAttributeLOVList":[],"kbFlexMapId":2,"kbFlexMapValId":106716,"lovId":0,"lovName":"","mandatory":false,"mapId":0,"multiSelectLOVFields":[],"requestId":0,"sequence":2,"textValue":"N","updatedById":0,"updatedByName":"","updatedDate":"","valId":0},{"articleId":697096,"attributeId":5,"attributeName":"Landing Page Product","attributeTypeId":8,"attributeTypeName":"Multi-Select","childRequired":false,"defaultValue":"","deleted":false,"dependencyId":0,"dependencyName":"","endUserEnable":false,"flexAttributeLOVList":[{"childRequired":false,"dependancyName":"","dependencyId":0,"dependencyName":"","lovId":11,"lovName":"Landing Page"},{"childRequired":false,"dependancyName":"","dependencyId":0,"dependencyName":"","lovId":12,"lovName":"Citrix"},{"childRequired":false,"dependancyName":"","dependencyId":0,"dependencyName":"","lovId":13,"lovName":"NetScaler"},{"childRequired":true,"dependancyName":"","dependencyId":0,"dependencyName":"","lovId":14,"lovName":"Citrix Cloud"},{"childRequired":true,"dependancyName":"","dependencyId":0,"dependencyName":"","lovId":15,"lovName":"Endpoint Management"},{"childRequired":true,"dependancyName":"","dependencyId":0,"dependencyName":"","lovId":16,"lovName":"XenServer"}],"kbFlexMapId":3,"kbFlexMapValId":107554,"lovId":0,"lovName":"","mandatory":false,"mapId":0,"multiSelectLOVFields":[{"lovId":11,"lovName":"Landing Page","valId":107554},{"lovId":13,"lovName":"NetScaler","valId":107555}],"requestId":0,"sequence":3,"textValue":"","updatedById":0,"updatedByName":"","updatedDate":"","valId":0},{"articleId":697096,"attributeId":6,"attributeName":"Topic","attributeTypeId":8,"attributeTypeName":"Multi-Select","childRequired":false,"defaultValue":"","deleted":false,"dependencyId":5,"dependencyName":"Landing Page Product","endUserEnable":false,"flexAttributeLOVList":[{"childRequired":false,"dependancyName":"","dependencyId":11,"dependencyName":"","lovId":17,"lovName":"MyAccount & Billing"},{"childRequired":false,"dependancyName":"","dependencyId":11,"dependencyName":"","lovId":18,"lovName":"Licensing"},{"childRequired":false,"dependancyName":"","dependencyId":11,"dependencyName":"","lovId":19,"lovName":"Software Updates"},{"childRequired":false,"dependancyName":"","dependencyId":11,"dependencyName":"","lovId":20,"lovName":"Latest Security Bulletin"},{"childRequired":false,"dependancyName":"","dependencyId":12,"dependencyName":"","lovId":21,"lovName":"Citrix Urgent"},{"childRequired":false,"dependancyName":"","dependencyId":12,"dependencyName":"","lovId":22,"lovName":"Citrix Trending"},{"childRequired":false,"dependancyName":"","dependencyId":12,"dependencyName":"","lovId":23,"lovName":"Citrix Common"},{"childRequired":false,"dependancyName":"","dependencyId":13,"dependencyName":"","lovId":6660,"lovName":"NetScaler Urgent"},{"childRequired":false,"dependancyName":"","dependencyId":13,"dependencyName":"","lovId":6661,"lovName":"NetScaler Trending"},{"childRequired":false,"dependancyName":"","dependencyId":13,"dependencyName":"","lovId":6662,"lovName":"NetScaler Common"},{"childRequired":false,"dependancyName":"","dependencyId":14,"dependencyName":"","lovId":6663,"lovName":"Citrix Cloud Urgent"},{"childRequired":false,"dependancyName":"","dependencyId":14,"dependencyName":"","lovId":6664,"lovName":"Citrix Cloud Trending"},{"childRequired":false,"dependancyName":"","dependencyId":14,"dependencyName":"","lovId":6665,"lovName":"Citrix Cloud Common"},{"childRequired":false,"dependancyName":"","dependencyId":15,"dependencyName":"","lovId":6666,"lovName":"Endpoint Management Urgent"},{"childRequired":false,"dependancyName":"","dependencyId":15,"dependencyName":"","lovId":6667,"lovName":"Endpoint Management Trending"},{"childRequired":false,"dependancyName":"","dependencyId":15,"dependencyName":"","lovId":6668,"lovName":"Endpoint Management Common"},{"childRequired":false,"dependancyName":"","dependencyId":16,"dependencyName":"","lovId":6669,"lovName":"XenServer Urgent"},{"childRequired":false,"dependancyName":"","dependencyId":16,"dependencyName":"","lovId":6670,"lovName":"XenServer Trending"},{"childRequired":false,"dependancyName":"","dependencyId":16,"dependencyName":"","lovId":6671,"lovName":"XenServer Common"},{"childRequired":false,"dependancyName":"","dependencyId":12,"dependencyName":"","lovId":6700,"lovName":"Citrix Security Bulletin"},{"childRequired":false,"dependancyName":"","dependencyId":13,"dependencyName":"","lovId":6701,"lovName":"NetScaler Security Bulletin"},{"childRequired":false,"dependancyName":"","dependencyId":14,"dependencyName":"","lovId":6702,"lovName":"Citrix Cloud Security Bulletin"},{"childRequired":false,"dependancyName":"","dependencyId":15,"dependencyName":"","lovId":6703,"lovName":"Endpoint Management  Security Bulletin"},{"childRequired":false,"dependancyName":"","dependencyId":16,"dependencyName":"","lovId":6704,"lovName":"XenServer Security Bulletin"}],"kbFlexMapId":4,"kbFlexMapValId":107556,"lovId":0,"lovName":"","mandatory":false,"mapId":0,"multiSelectLOVFields":[{"lovId":20,"lovName":"Latest Security Bulletin","valId":107556},{"lovId":6701,"lovName":"NetScaler Security Bulletin","valId":107557}],"requestId":0,"sequence":4,"textValue":"","updatedById":0,"updatedByName":"","updatedDate":"","valId":0},{"articleId":697096,"attributeId":11,"attributeName":"Solution Status","attributeTypeId":2,"attributeTypeName":"LOV","childRequired":false,"defaultValue":"","deleted":false,"dependencyId":0,"dependencyName":"","endUserEnable":false,"flexAttributeLOVList":[{"childRequired":false,"dependancyName":"","dependencyId":0,"dependencyName":"","lovId":6675,"lovName":"Interim"},{"childRequired":false,"dependancyName":"","dependencyId":0,"dependencyName":"","lovId":6676,"lovName":"Final"}],"kbFlexMapId":5,"kbFlexMapValId":106717,"lovId":6676,"lovName":"Final","mandatory":true,"mapId":0,"multiSelectLOVFields":[],"requestId":0,"sequence":5,"textValue":"","updatedById":0,"updatedByName":"","updatedDate":"","valId":0},{"articleId":697096,"attributeId":12,"attributeName":"Severity","attributeTypeId":2,"attributeTypeName":"LOV","childRequired":false,"defaultValue":"","deleted":false,"dependencyId":0,"dependencyName":"","endUserEnable":false,"flexAttributeLOVList":[{"childRequired":false,"dependancyName":"","dependencyId":0,"dependencyName":"","lovId":6688,"lovName":"Critical"},{"childRequired":false,"dependancyName":"","dependencyId":0,"dependencyName":"","lovId":6689,"lovName":"Informational"},{"childRequired":false,"dependancyName":"","dependencyId":0,"dependencyName":"","lovId":6690,"lovName":"High"},{"childRequired":false,"dependancyName":"","dependencyId":0,"dependencyName":"","lovId":6691,"lovName":"Medium"},{"childRequired":false,"dependancyName":"","dependencyId":0,"dependencyName":"","lovId":6692,"lovName":"Low"}],"kbFlexMapId":6,"kbFlexMapValId":107539,"lovId":6688,"lovName":"Critical","mandatory":false,"mapId":0,"multiSelectLOVFields":[],"requestId":0,"sequence":6,"textValue":"","updatedById":0,"updatedByName":"","updatedDate":"","valId":0}],"kbSectionMapValueList":[],"kbSubCatArticleMapVOs":[],"kbSubCategoryMaster":[],"kbSubSubCatArticleMapVOs":[],"kbSubSubCategoryMaster":[],"legacyId":"","levelId":0,"levelName":"","likes":0,"mappedArticleBlockList":[],"mappedRelatedArticles":[],"previousSourceId":0,"productSuiteDetails":[],"productname":"","publishedDateVal":"","rating":"","relatedArticleIds":[],"requestIdFormatted":"","restoredVersion":0,"reviewDate":"","reviewDateStr":"","reviewers":"","reviewersStr":"","source":"","statusAliasName":"","statusId":0,"statusName":"","summary":"","templateId":0,"templateName":"","translatedVersionDetails":[],"translationDetails":{},"updatedBy":0,"updatedByEmail":"","updatedByManagerId":0,"updatedByManagerName":"","updatedByName":"","updatedTime":"","updatedTimeInMilli":0,"updateddatetime":"","views":0}');
+    function mergeFieldsAndValues(fields, values) {
+        var merged = [];
+        var fieldMap = {};
+        var valueMap = {};
+        var allIdsMap = {};
+        for (var i = 0; i < fields.length; i++) {
+            fieldMap[fields[i].attributeId] = fields[i];
+            allIdsMap[fields[i].attributeId] = true;
+        }
+        for (var j = 0; j < values.length; j++) {
+            valueMap[values[j].attributeId] = values[j];
+            allIdsMap[values[j].attributeId] = true;
+        }
+        for (var attributeId in allIdsMap) {
+            if (
+                fieldMap[attributeId] &&
+                fieldMap[attributeId].attributeName &&
+                valueMap[attributeId] &&
+                (valueMap[attributeId].lovName || valueMap[attributeId].textValue)
+            ) {
+                merged.push({
+                id: attributeId,
+                name: fieldMap[attributeId]
+                ? fieldMap[attributeId].attributeName
+                : null,
+                value: valueMap[attributeId]
+                ? valueMap[attributeId].lovName
+                ? valueMap[attributeId].lovName
+                : valueMap[attributeId].textValue
+                : null,
+                sequence:valueMap[attributeId]?valueMap[attributeId].sequence+20:20  //fields should be at the end
+                });
+            }
+        }
+        return merged;
+    }
+    if(flexDetails && flexDetails.kbFlexMapValueList){
+        var flexValues = mergeFieldsAndValues(
+            flexFields,
+            flexDetails.kbFlexMapValueList
+        );
+        var container = document.getElementById('article-header-info');
+        flexValues.forEach(function (item) {
+            const newElement = document.createElement('div');
+            newElement.classList.add("flex-row", "row-gap-8", "article-updated-time");
+            newElement.style.order = item.sequence ? item.sequence : initial;
+            newElement.style.paddingLeft = '32px';
+            newElement.style.marginRight = '0';
+            newElement.innerHTML = `<h4 class="wolken-h4">${item.name}: <span>${item.value}</span></h4>`;
+            container.appendChild(newElement);
+        });
+    }
+        </script>
+        
+</html>

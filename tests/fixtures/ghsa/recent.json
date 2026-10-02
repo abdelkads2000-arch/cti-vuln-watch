@@ -1,0 +1,698 @@
+[
+  {
+    "ghsa_id": "GHSA-hq2x-r82h-9wj4",
+    "cve_id": "CVE-2026-102673",
+    "url": "https://api.github.com/advisories/GHSA-hq2x-r82h-9wj4",
+    "html_url": "https://github.com/advisories/GHSA-hq2x-r82h-9wj4",
+    "summary": "Electron drops inherited HTML sandbox restrictions for popups opened through OpenURLFromTab",
+    "description": "### Impact\n\nPopups opened from a sandboxed iframe through a link (for example `target=\"_blank\"` or a middle-click) did not inherit the iframe's HTML `sandbox` restrictions. Content that was meant to run sandboxed could open a popup with the embedding app's full origin, gaining access to that origin's cookies, storage, and same-origin scripting.\n\nApps are only affected if they embed untrusted content in iframes sandboxed with `allow-scripts allow-popups`. Apps that do not embed untrusted content in sandboxed iframes are not affected.\n\n### Workarounds\n\nUse `setWindowOpenHandler` on the parent `WebContents` to deny or constrain popups opened from sandboxed frames, or do not apply `allow-popups` to sandboxed iframes that render untrusted content.\n\n### Fixed Versions\n\n* `43.0.0`\n* `42.5.2`\n* `41.10.4`\n\n### For more information\n\nIf you have any questions or comments about this advisory, email us at [security@electronjs.org](mailto:security@electronjs.org)",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": "https://api.github.com/repos/electron/electron/security-advisories/GHSA-hq2x-r82h-9wj4",
+    "source_code_location": "https://github.com/electron/electron",
+    "identifiers": [
+      {
+        "value": "GHSA-hq2x-r82h-9wj4",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-102673",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/electron/electron/security/advisories/GHSA-hq2x-r82h-9wj4",
+      "https://github.com/electron/electron/pull/52133",
+      "https://github.com/electron/electron/commit/7ea14d5f55ecb11a30447701ddca16b3feee0bba",
+      "https://github.com/electron/electron/commit/e26b2640e7795c42bfb111b76009cbb4327c9a69",
+      "https://github.com/electron/electron/commit/ebe1165ee2b05c203c26dd2244ef1c5b9b1c04da",
+      "https://github.com/electron/electron/releases/tag/v41.10.4",
+      "https://github.com/electron/electron/releases/tag/v42.5.2",
+      "https://github.com/electron/electron/releases/tag/v43.0.0",
+      "https://github.com/advisories/GHSA-hq2x-r82h-9wj4"
+    ],
+    "published_at": "2026-09-29T18:05:34Z",
+    "updated_at": "2026-09-29T18:05:37Z",
+    "github_reviewed_at": "2026-09-29T18:05:34Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": "< 41.10.4",
+        "first_patched_version": "41.10.4",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 42.0.0-alpha.1, < 42.5.2",
+        "first_patched_version": "42.5.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 43.0.0-alpha.1, < 43.0.0",
+        "first_patched_version": "43.0.0",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N",
+        "score": 8.2
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-346",
+        "name": "Origin Validation Error"
+      },
+      {
+        "cwe_id": "CWE-693",
+        "name": "Protection Mechanism Failure"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "varisys",
+          "id": 266523539,
+          "node_id": "U_kgDOD-LTkw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/266523539?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/varisys",
+          "html_url": "https://github.com/varisys",
+          "followers_url": "https://api.github.com/users/varisys/followers",
+          "following_url": "https://api.github.com/users/varisys/following{/other_user}",
+          "gists_url": "https://api.github.com/users/varisys/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/varisys/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/varisys/subscriptions",
+          "organizations_url": "https://api.github.com/users/varisys/orgs",
+          "repos_url": "https://api.github.com/users/varisys/repos",
+          "events_url": "https://api.github.com/users/varisys/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/varisys/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N",
+      "score": 8.2
+    }
+  },
+  {
+    "ghsa_id": "GHSA-gr2m-v5gq-v685",
+    "cve_id": "CVE-2026-102674",
+    "url": "https://api.github.com/advisories/GHSA-gr2m-v5gq-v685",
+    "html_url": "https://github.com/advisories/GHSA-gr2m-v5gq-v685",
+    "summary": "Electron: Windows opened from a sandboxed top-level document do not inherit its sandbox restrictions",
+    "description": "### Impact\n\nWindows opened from a sandboxed top-level document did not inherit that document's HTML `sandbox` restrictions, so content that was meant to run sandboxed could open a window with the app's full origin. GHSA-hq2x-r82h-9wj4 covers the same issue for sandboxed iframes.\n\nApps are only affected if they render untrusted content in a sandboxed top-level document that allows popups. Apps that deny popups from untrusted content with `setWindowOpenHandler` are not affected.\n\n### Workarounds\n\nReturn `{ action: 'deny' }` from `setWindowOpenHandler` for windows opened by untrusted content.\n\n### Fixed Versions\n\n* `44.0.0-beta.5`\n* `43.4.1`\n* `42.9.2`\n* `41.10.6`\n\n### For more information\n\nIf you have any questions or comments about this advisory, email us at [security@electronjs.org](mailto:security@electronjs.org)",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": "https://api.github.com/repos/electron/electron/security-advisories/GHSA-gr2m-v5gq-v685",
+    "source_code_location": "https://github.com/electron/electron",
+    "identifiers": [
+      {
+        "value": "GHSA-gr2m-v5gq-v685",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-102674",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/electron/electron/security/advisories/GHSA-gr2m-v5gq-v685",
+      "https://github.com/electron/electron/commit/29fc130569f970e91e355383821a4af0f25724a2",
+      "https://github.com/electron/electron/commit/3ecf3e74f4be6e2360644679b0b4698742be0e1d",
+      "https://github.com/electron/electron/commit/6594d5a5b074cf501da084dc7908d3df0d68a886",
+      "https://github.com/electron/electron/commit/e9c4d3cbe912e18d7c63af78e63e98ae7a48cd3a",
+      "https://github.com/electron/electron/releases/tag/v41.10.6",
+      "https://github.com/electron/electron/releases/tag/v42.9.2",
+      "https://github.com/electron/electron/releases/tag/v43.4.1",
+      "https://github.com/electron/electron/releases/tag/v44.0.0-beta.5",
+      "https://github.com/advisories/GHSA-gr2m-v5gq-v685"
+    ],
+    "published_at": "2026-09-29T18:05:11Z",
+    "updated_at": "2026-09-29T18:05:12Z",
+    "github_reviewed_at": "2026-09-29T18:05:11Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": "< 41.10.6",
+        "first_patched_version": "41.10.6",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 42.0.0-alpha.1, < 42.9.2",
+        "first_patched_version": "42.9.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 43.0.0-alpha.1, < 43.4.1",
+        "first_patched_version": "43.4.1",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 44.0.0-alpha.1, < 44.0.0-beta.5",
+        "first_patched_version": "44.0.0-beta.5",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N",
+        "score": 8.2
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-266",
+        "name": "Incorrect Privilege Assignment"
+      },
+      {
+        "cwe_id": "CWE-693",
+        "name": "Protection Mechanism Failure"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "Mickey777777",
+          "id": 87453250,
+          "node_id": "MDQ6VXNlcjg3NDUzMjUw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/87453250?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/Mickey777777",
+          "html_url": "https://github.com/Mickey777777",
+          "followers_url": "https://api.github.com/users/Mickey777777/followers",
+          "following_url": "https://api.github.com/users/Mickey777777/following{/other_user}",
+          "gists_url": "https://api.github.com/users/Mickey777777/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/Mickey777777/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/Mickey777777/subscriptions",
+          "organizations_url": "https://api.github.com/users/Mickey777777/orgs",
+          "repos_url": "https://api.github.com/users/Mickey777777/repos",
+          "events_url": "https://api.github.com/users/Mickey777777/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/Mickey777777/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N",
+      "score": 8.2
+    }
+  },
+  {
+    "ghsa_id": "GHSA-j84w-jfhq-vhvj",
+    "cve_id": "CVE-2026-102675",
+    "url": "https://api.github.com/advisories/GHSA-j84w-jfhq-vhvj",
+    "html_url": "https://github.com/advisories/GHSA-j84w-jfhq-vhvj",
+    "summary": "Electron: File and HTTP protocol handlers allow cross-origin reads without corsEnabled",
+    "description": "### Impact\n\nResponses served through `protocol.registerFileProtocol` or `protocol.registerHttpProtocol` for a custom scheme registered with `supportFetchAPI: true` but without `corsEnabled: true` could be read cross-origin by web content. This completes the fix for CVE-2026-70604.\n\nApps are only affected if they register such a scheme, serve it through one of those handlers, and load untrusted content. Apps that set `corsEnabled: true`, or that do not load untrusted content, are not affected.\n\n### Workarounds\n\nSet `corsEnabled: true` on the scheme, or do not load untrusted content in windows that can reach it.\n\n### Fixed Versions\n\n* `44.0.0-beta.5`\n* `43.4.1`\n* `42.9.2`\n* `41.10.6`\n\n### For more information\n\nIf you have any questions or comments about this advisory, email us at [security@electronjs.org](mailto:security@electronjs.org)",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": "https://api.github.com/repos/electron/electron/security-advisories/GHSA-j84w-jfhq-vhvj",
+    "source_code_location": "https://github.com/electron/electron",
+    "identifiers": [
+      {
+        "value": "GHSA-j84w-jfhq-vhvj",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-102675",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/electron/electron/security/advisories/GHSA-j84w-jfhq-vhvj",
+      "https://github.com/electron/electron/commit/4d2784cc8592471ee2276235b8c2a03efddf937d",
+      "https://github.com/electron/electron/commit/80178e4631cb2f6a5e42f8e793b2ae9624e78a0d",
+      "https://github.com/electron/electron/commit/c595b05976e7a885465b043d17e00a92fc3c3397",
+      "https://github.com/electron/electron/commit/ef75c4b98caaa3ebc615f1eba302027028ee04d2",
+      "https://github.com/electron/electron/releases/tag/v41.10.6",
+      "https://github.com/electron/electron/releases/tag/v42.9.2",
+      "https://github.com/electron/electron/releases/tag/v43.4.1",
+      "https://github.com/electron/electron/releases/tag/v44.0.0-beta.5",
+      "https://github.com/advisories/GHSA-j84w-jfhq-vhvj"
+    ],
+    "published_at": "2026-09-29T18:04:24Z",
+    "updated_at": "2026-09-29T18:04:27Z",
+    "github_reviewed_at": "2026-09-29T18:04:24Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": "< 41.10.6",
+        "first_patched_version": "41.10.6",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 42.0.0-alpha.1, < 42.9.2",
+        "first_patched_version": "42.9.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 43.0.0-alpha.1, < 43.4.1",
+        "first_patched_version": "43.4.1",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 44.0.0-alpha.1, < 44.0.0-beta.5",
+        "first_patched_version": "44.0.0-beta.5",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N",
+        "score": 7.4
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-346",
+        "name": "Origin Validation Error"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "manus-use",
+          "id": 213290975,
+          "node_id": "U_kgDODLaP3w",
+          "avatar_url": "https://avatars.githubusercontent.com/u/213290975?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/manus-use",
+          "html_url": "https://github.com/manus-use",
+          "followers_url": "https://api.github.com/users/manus-use/followers",
+          "following_url": "https://api.github.com/users/manus-use/following{/other_user}",
+          "gists_url": "https://api.github.com/users/manus-use/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/manus-use/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/manus-use/subscriptions",
+          "organizations_url": "https://api.github.com/users/manus-use/orgs",
+          "repos_url": "https://api.github.com/users/manus-use/repos",
+          "events_url": "https://api.github.com/users/manus-use/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/manus-use/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N",
+      "score": 7.4
+    }
+  },
+  {
+    "ghsa_id": "GHSA-9qh4-3jw8-366w",
+    "cve_id": "CVE-2026-102676",
+    "url": "https://api.github.com/advisories/GHSA-9qh4-3jw8-366w",
+    "html_url": "https://github.com/advisories/GHSA-9qh4-3jw8-366w",
+    "summary": "Electron: <webview> can enable Node.js integration in Web Workers despite embedder restrictions",
+    "description": "### Impact\n\nA `<webview>` could enable Node.js integration in its Web Workers even when its embedder had Node.js integration disabled, giving guest content more privilege than the embedder allowed.\n\nApps are only affected if they enable the `<webview>` tag and the embedder is unsandboxed. Apps that do not use `<webview>`, or that keep the embedder sandboxed, are not affected.\n\n### Workarounds\n\nRemove `nodeIntegrationInWorker` from the guest preferences in a `will-attach-webview` handler, or do not enable the `<webview>` tag when loading untrusted content.\n\n### Fixed Versions\n\n* `44.0.0-beta.5`\n* `43.4.1`\n* `42.9.2`\n* `41.10.6`\n\n### For more information\n\nIf you have any questions or comments about this advisory, email us at [security@electronjs.org](mailto:security@electronjs.org)",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": "https://api.github.com/repos/electron/electron/security-advisories/GHSA-9qh4-3jw8-366w",
+    "source_code_location": "https://github.com/electron/electron",
+    "identifiers": [
+      {
+        "value": "GHSA-9qh4-3jw8-366w",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-102676",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/electron/electron/security/advisories/GHSA-9qh4-3jw8-366w",
+      "https://github.com/electron/electron/commit/6462a2e1dc4e6adffd3b7d9b9be1474c45dcbbe2",
+      "https://github.com/electron/electron/commit/9a675aef8822bae4088567822969f900b3a37671",
+      "https://github.com/electron/electron/commit/b3ae0aab5cf81c2ed03d04df1ae8e69ecfab7886",
+      "https://github.com/electron/electron/commit/cd34f335c8664613db5b6e61ae51e2e1846233ae",
+      "https://github.com/electron/electron/releases/tag/v41.10.6",
+      "https://github.com/electron/electron/releases/tag/v42.9.2",
+      "https://github.com/electron/electron/releases/tag/v43.4.1",
+      "https://github.com/electron/electron/releases/tag/v44.0.0-beta.5",
+      "https://github.com/advisories/GHSA-9qh4-3jw8-366w"
+    ],
+    "published_at": "2026-09-29T18:02:18Z",
+    "updated_at": "2026-09-29T18:02:22Z",
+    "github_reviewed_at": "2026-09-29T18:02:18Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": "< 41.10.6",
+        "first_patched_version": "41.10.6",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 42.0.0-alpha.1, < 42.9.2",
+        "first_patched_version": "42.9.2",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 43.0.0-alpha.1, < 43.4.1",
+        "first_patched_version": "43.4.1",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 44.0.0-alpha.1, < 44.0.0-beta.5",
+        "first_patched_version": "44.0.0-beta.5",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
+        "score": 8.3
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-269",
+        "name": "Improper Privilege Management"
+      },
+      {
+        "cwe_id": "CWE-1188",
+        "name": "Initialization of a Resource with an Insecure Default"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "XlabAITeam",
+          "id": 214060066,
+          "node_id": "U_kgDODMJMIg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/214060066?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/XlabAITeam",
+          "html_url": "https://github.com/XlabAITeam",
+          "followers_url": "https://api.github.com/users/XlabAITeam/followers",
+          "following_url": "https://api.github.com/users/XlabAITeam/following{/other_user}",
+          "gists_url": "https://api.github.com/users/XlabAITeam/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/XlabAITeam/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/XlabAITeam/subscriptions",
+          "organizations_url": "https://api.github.com/users/XlabAITeam/orgs",
+          "repos_url": "https://api.github.com/users/XlabAITeam/repos",
+          "events_url": "https://api.github.com/users/XlabAITeam/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/XlabAITeam/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "keenanwgn",
+          "id": 20946854,
+          "node_id": "MDQ6VXNlcjIwOTQ2ODU0",
+          "avatar_url": "https://avatars.githubusercontent.com/u/20946854?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/keenanwgn",
+          "html_url": "https://github.com/keenanwgn",
+          "followers_url": "https://api.github.com/users/keenanwgn/followers",
+          "following_url": "https://api.github.com/users/keenanwgn/following{/other_user}",
+          "gists_url": "https://api.github.com/users/keenanwgn/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/keenanwgn/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/keenanwgn/subscriptions",
+          "organizations_url": "https://api.github.com/users/keenanwgn/orgs",
+          "repos_url": "https://api.github.com/users/keenanwgn/repos",
+          "events_url": "https://api.github.com/users/keenanwgn/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/keenanwgn/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "liangjs",
+          "id": 10512425,
+          "node_id": "MDQ6VXNlcjEwNTEyNDI1",
+          "avatar_url": "https://avatars.githubusercontent.com/u/10512425?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/liangjs",
+          "html_url": "https://github.com/liangjs",
+          "followers_url": "https://api.github.com/users/liangjs/followers",
+          "following_url": "https://api.github.com/users/liangjs/following{/other_user}",
+          "gists_url": "https://api.github.com/users/liangjs/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/liangjs/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/liangjs/subscriptions",
+          "organizations_url": "https://api.github.com/users/liangjs/orgs",
+          "repos_url": "https://api.github.com/users/liangjs/repos",
+          "events_url": "https://api.github.com/users/liangjs/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/liangjs/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "score": 8.3
+    }
+  },
+  {
+    "ghsa_id": "GHSA-qmv3-fv6v-rmhq",
+    "cve_id": "CVE-2026-102677",
+    "url": "https://api.github.com/advisories/GHSA-qmv3-fv6v-rmhq",
+    "html_url": "https://github.com/advisories/GHSA-qmv3-fv6v-rmhq",
+    "summary": "Electron: Sandboxed preload code cache can be poisoned by a compromised renderer",
+    "description": "### Impact\n\nThe cache Electron keeps for sandboxed preload scripts did not verify that a cached entry matched the preload it was served for. A compromised renderer could use this to run its own code in the preload context on a later load.\n\nApps are only affected if they load untrusted content. Apps that do not load untrusted content are not affected.\n\n### Workarounds\n\nThere are no app side workarounds, you must update to a patched version of Electron.\n\n### Fixed Versions\n\n* `44.0.0-beta.6`\n* `43.5.0 `\n* `42.10.0`\n\n### For more information\n\nIf you have any questions or comments about this advisory, email us at [security@electronjs.org](mailto:security@electronjs.org)",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": "https://api.github.com/repos/electron/electron/security-advisories/GHSA-qmv3-fv6v-rmhq",
+    "source_code_location": "https://github.com/electron/electron",
+    "identifiers": [
+      {
+        "value": "GHSA-qmv3-fv6v-rmhq",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-102677",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/electron/electron/security/advisories/GHSA-qmv3-fv6v-rmhq",
+      "https://github.com/electron/electron/pull/52480",
+      "https://github.com/electron/electron/commit/000453e399bd1dee5e86376cdd9ece5fc071e601",
+      "https://github.com/electron/electron/commit/06a12a87a23f40abbf580fc7a552bc1189812c45",
+      "https://github.com/electron/electron/commit/25ba8be57c65a83d8c14ebb8aa37693df17a04f3",
+      "https://github.com/electron/electron/commit/c38d6fd68756f04647ea857bdb6a2abec332e217",
+      "https://github.com/electron/electron/releases/tag/v42.10.0",
+      "https://github.com/electron/electron/releases/tag/v43.5.0",
+      "https://github.com/electron/electron/releases/tag/v44.0.0-beta.6",
+      "https://github.com/advisories/GHSA-qmv3-fv6v-rmhq"
+    ],
+    "published_at": "2026-09-29T18:02:01Z",
+    "updated_at": "2026-09-29T18:02:02Z",
+    "github_reviewed_at": "2026-09-29T18:02:01Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 42.3.3, < 42.10.0",
+        "first_patched_version": "42.10.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 43.0.0-beta.1, < 43.5.0",
+        "first_patched_version": "43.5.0",
+        "vulnerable_functions": [
+
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 44.0.0-alpha.1, < 44.0.0-beta.6",
+        "first_patched_version": "44.0.0-beta.6",
+        "vulnerable_functions": [
+
+        ]
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
+        "score": 7.8
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-20",
+        "name": "Improper Input Validation"
+      },
+      {
+        "cwe_id": "CWE-345",
+        "name": "Insufficient Verification of Data Authenticity"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "varisys",
+          "id": 266523539,
+          "node_id": "U_kgDOD-LTkw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/266523539?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/varisys",
+          "html_url": "https://github.com/varisys",
+          "followers_url": "https://api.github.com/users/varisys/followers",
+          "following_url": "https://api.github.com/users/varisys/following{/other_user}",
+          "gists_url": "https://api.github.com/users/varisys/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/varisys/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/varisys/subscriptions",
+          "organizations_url": "https://api.github.com/users/varisys/orgs",
+          "repos_url": "https://api.github.com/users/varisys/repos",
+          "events_url": "https://api.github.com/users/varisys/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/varisys/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 7.8
+    }
+  }
+]

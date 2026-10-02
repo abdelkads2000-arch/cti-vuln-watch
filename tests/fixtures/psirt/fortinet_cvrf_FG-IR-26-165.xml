@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvrf:cvrfdoc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvrf-common="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/common" xmlns:cvrf="http://docs.oasis-open.org/csaf/ns/csaf-cvrf/v1.2/cvrf">
+    <cvrf:DocumentTitle>Arbitrary process termination from exposed minifilter communication port</cvrf:DocumentTitle>
+    <cvrf:DocumentType>Fortinet PSIRT Advisories</cvrf:DocumentType>
+    <cvrf:DocumentPublisher Type="Vendor">
+        <cvrf:ContactDetails>
+            Fortinet PSIRT Contact:
+            Website: https://fortiguard.fortinet.com/faq/psirt-contact
+        </cvrf:ContactDetails>
+     </cvrf:DocumentPublisher>
+    <cvrf:DocumentTracking>
+        <cvrf:Identification>
+            <cvrf:ID>FG-IR-26-165</cvrf:ID>
+        </cvrf:Identification>
+        <cvrf:Status>Final</cvrf:Status>
+        <cvrf:Version>1</cvrf:Version>
+        <cvrf:RevisionHistory>
+            <cvrf:Revision>
+                <cvrf:Number>1</cvrf:Number>
+                <cvrf:Date>2026-09-08T00:00:00</cvrf:Date>
+                <cvrf:Description>Initial publication</cvrf:Description>
+            </cvrf:Revision>
+        </cvrf:RevisionHistory>
+        <cvrf:InitialReleaseDate>2026-09-08T00:00:00</cvrf:InitialReleaseDate>
+        <cvrf:CurrentReleaseDate>2026-09-08T00:00:00</cvrf:CurrentReleaseDate>
+    </cvrf:DocumentTracking>
+    <cvrf:DocumentNotes>
+        <cvrf:Note Title="Summary" Type="Summary" Ordinal="1">
+            An Unverified Ownership Vulnerability [CWE-283] in FortiClient Windows fortimon3 driver may allow an authenticated attacker to terminate arbitrary processes via an exposed minifilter communication port.
+        </cvrf:Note>
+        <cvrf:Note Title="Description" Type="General" Ordinal="2">
+            None
+        </cvrf:Note>
+        <cvrf:Note Title="Impact" Type="General" Ordinal="3">
+            Improper access control
+        </cvrf:Note>
+        <cvrf:Note Title="Solutions" Type="General" Ordinal="4">
+            None
+        </cvrf:Note>
+    </cvrf:DocumentNotes>
+    <cvrf:Acknowledgments>
+        <cvrf:Acknowledgment>
+            <cvrf:Description>Fortinet is pleased to thank Robel Campbell from Halcyon and Mirae Yim for reporting this vulnerability under responsible disclosure.</cvrf:Description>
+        </cvrf:Acknowledgment>
+    </cvrf:Acknowledgments>
+    <ProductTree>
+        <Branch Name="Fortinet" Type="Vendor">
+            <Branch Name="FortiClientWindows" Type="Product Name">
+                <Branch Name="FortiClientWindows 8.0" Type="Product Version">
+                    <FullProductName ProductID="FortiClientWindows-FortiClientWindows 8.0">FortiClientWindows FortiClientWindows 8.0</FullProductName>
+                </Branch>
+                <Branch Name="FortiClientWindows 7.4" Type="Product Version">
+                    <FullProductName ProductID="FortiClientWindows-FortiClientWindows 7.4">FortiClientWindows FortiClientWindows 7.4</FullProductName>
+                </Branch>
+                <Branch Name="FortiClientWindows 7.2" Type="Product Version">
+                    <FullProductName ProductID="FortiClientWindows-FortiClientWindows 7.2">FortiClientWindows FortiClientWindows 7.2</FullProductName>
+                </Branch>
+            </Branch>
+        </Branch>
+    </ProductTree>
+    <Vulnerability Ordinal="1">
+        <Title>Arbitrary process termination from exposed minifilter communication port</Title>
+        <cvrf:CVE>CVE-2026-84386</cvrf:CVE>
+        <ProductStatuses>
+            <Status Type="Known Affected">
+                <ProductID>FortiClientWindows-FortiClientWindows 8.0</ProductID>
+                <ProductID>FortiClientWindows-FortiClientWindows 7.4</ProductID>
+                <ProductID>FortiClientWindows-FortiClientWindows 7.2</ProductID>
+            </Status>
+        </ProductStatuses>
+        <CVSSScoreSets>
+            <ScoreSetV3>
+                <BaseScoreV3>4.7</BaseScoreV3>
+                <VectorV3>CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:H/E:P/RL:O/RC:C</VectorV3>
+            </ScoreSetV3>
+        </CVSSScoreSets>
+        <References Type="Self">
+            <Reference>
+                <URL>https://fortiguard.fortinet.com/psirt/FG-IR-26-165</URL>
+                <Description>Arbitrary process termination from exposed minifilter communication port</Description>
+            </Reference>Reference>
+        </References>
+    </Vulnerability>
+</cvrf:cvrfdoc>

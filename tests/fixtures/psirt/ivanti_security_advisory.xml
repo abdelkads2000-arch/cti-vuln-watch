@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Ivanti Blog: Security Advisory</title><description /><language>en</language><atom:link rel="self" href="https://www.ivanti.com/blog/topics/security-advisory/rss" /><link>https://www.ivanti.com/blog/topics/security-advisory</link><item><guid isPermaLink="false">e86dc917-1939-42fe-908b-9317a628983c</guid><link>https://www.ivanti.com/blog/september-2026-security-update</link><category>Security Advisory</category><title>September 2026 Security Update</title><description>&lt;p&gt;Ivanti releases standard security patches on the second Tuesday of every month. In today’s rapidly evolving technology and threat landscape, we believe responsible transparency should be a cornerstone of any product security program. &lt;a href="https://www.ivanti.com/resources/whitepapers/the-patch-apocalypse"&gt;AI is compressing the time-to-exploit&lt;/a&gt;, and Ivanti uses leading technologies to proactively find and fix issues––including integrating advanced LLMs into our Engineering and product security to enhance the capabilities of our teams and identify vulnerabilities that traditional tools have previously missed.&lt;/p&gt;
+
+&lt;p&gt;Our philosophy is simple: discovering and communicating vulnerabilities and sharing that information with defenders is not an indication of weakness; rather it is evidence of rigorous scrutiny and a proactive vulnerability management program. By aggressively seeking to identify and address vulnerabilities, our aim is to get ahead of threat actors to ensure our customers can take the steps needed to protect their environments.&lt;/p&gt;
+
+&lt;p&gt;To that end, today Ivanti is disclosing vulnerabilities in Ivanti Neurons for ITSM, Endpoint Manager Mobile (EPMM), and Sentry.&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;It is important for customers to know:&lt;/span&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;We have no evidence of these vulnerabilities being exploited in the wild.&lt;/li&gt;
+	&lt;li&gt;These vulnerabilities do not impact any other Ivanti solutions.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;More information on these vulnerabilities and detailed instructions on how to remediate the issues can be found in the Security Advisories:&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;&lt;a href="https://forums.ivanti.com/s/article/Security-Advisory-Ivanti-Neurons-for-ITSM-Multiple-CVEs" target="_blank"&gt;Ivanti Neurons for ITSM&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="https://forums.ivanti.com/s/article/Security-Advisory---Ivanti-Endpoint-Manager-Mobile-CVE-2026-18851" target="_blank"&gt;Ivanti Endpoint Manager Mobile (EPMM)&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="https://forums.ivanti.com/s/article/Security-Advisory-Ivanti-Sentry-CVE-2026-83527" target="_blank"&gt;Ivanti Sentry&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;u&gt;How we are using AI in product security&lt;/u&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Ivanti continues to explore, test, and implement leading technologies and processes in every stage of our product development. Our security team has integrated multiple advanced LLM models into our product security processes.&lt;/p&gt;
+
+&lt;p&gt;This has increased the capabilities of our Engineering and Product Security Red Teams to identify and fix vulnerabilities, especially those that are difficult to identify with traditional tooling, such as SAST and DAST. We have already successfully identified vulnerabilities which traditional tools missed, including some that we are disclosing today.&lt;/p&gt;
+
+&lt;p&gt;As these tools are integrated further into our processes and refined, we expect an increase in vulnerability disclosures. We will continue to share transparently what we have found and resolved to ensure the security of our products. If you are not already following our Security Blog or subscribed to receive alerts for updates on the products you own through the Ivanti Innovators Hub, we highly recommend you do so.&lt;/p&gt;
+
+&lt;p&gt;Importantly, we are committed to using AI responsibly in product security, including keeping a human in the loop to verify automated or agentic work. While this will result in an uptick in disclosures, we see this as a good thing, and an important part of ensuring our products keep pace with modern security requirements as they change.&lt;/p&gt;
+
+&lt;p&gt;Our top priority is the security of our customers and believe the increase in identified, resolved, and transparently communicated vulnerabilities demonstrates that commitment.&lt;/p&gt;
+
+&lt;p&gt;Our Support team is always available to help customers and partners should they have any questions. Cases can be logged via the &lt;a href="https://hub.ivanti.com/" target="_blank"&gt;Ivanti Innovators Hub&lt;/a&gt; (login credentials required).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Want to stay up to date on Ivanti Security Advisories? Paste &lt;a href="https://www.ivanti.com/blog/topics/security-advisory" target="_blank"&gt;https://www.ivanti.com/blog/topics/security-advisory/rss&lt;/a&gt; into your preferred RSS reader / functionality in your email program.&lt;/em&gt;&lt;/p&gt;
+</description><pubDate>Tue, 08 Sep 2026 14:28:03 Z</pubDate></item><item><guid isPermaLink="false">694baa35-07e1-4aa3-81ea-82868000291c</guid><link>https://www.ivanti.com/blog/august-2026-security-update</link><category>Security Advisory</category><title>August 2026 Security Update</title><description>&lt;p&gt;Ivanti releases standard security patches on the second Tuesday of every month. In today’s rapidly evolving technology and threat landscape, we believe responsible transparency should be a cornerstone of any product security program. &lt;a href="https://www.ivanti.com/resources/whitepapers/the-patch-apocalypse"&gt;AI is compressing the time-to-exploit&lt;/a&gt;, and Ivanti uses leading technologies to proactively find and fix issues ––including integrating advanced LLMs into our Engineering and product security to enhance the capabilities of our teams.&lt;/p&gt;
+
+&lt;p&gt;Our philosophy is simple: discovering and communicating vulnerabilities, and sharing that information with defenders, is not an indication of weakness; rather it is evidence of rigorous scrutiny and a proactive vulnerability management program. By aggressively seeking to identify and address vulnerabilities, our aim is to get ahead of threat actors to ensure our customers can take the steps needed to protect their environments.&lt;/p&gt;
+
+&lt;p&gt;To that end, today Ivanti is disclosing vulnerabilities in Ivanti Neurons for MDM and Endpoint Manager (EPM).&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;It is important for customers to know:&lt;/span&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;We have no evidence of these vulnerabilities being exploited in the wild.&lt;/li&gt;
+	&lt;li&gt;These vulnerabilities do not impact any other Ivanti solutions.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;More information on these vulnerabilities and detailed instructions on how to remediate the issues can be found in the Security Advisories:&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;&lt;a href="https://forums.ivanti.com/s/article/August-2026-Security-Advisory-Ivanti-Neurons-for-MDM" target="_blank"&gt;Ivanti Neurons for MDM&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="https://forums.ivanti.com/s/article/Security-Advisory-Ivanti-Endpoint-Manager-EPM-August-2026" target="_blank"&gt;Endpoint Manager (EPM)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;u&gt;&lt;strong&gt;How AI will affect vulnerability disclosures in our products&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;
+
+&lt;p&gt;Ivanti continues to explore, test, and implement leading technologies and processes in every stage of our product development. In recent months, our security team began a project to integrate multiple advanced LLM models into our product security processes.&lt;/p&gt;
+
+&lt;p&gt;This project has increased the capabilities of our Engineering and Product Security Red Teams to identify and fix vulnerabilities, especially those that are difficult to identify with traditional tooling, such as SAST and DAST. We have already successfully identified vulnerabilities which traditional tools missed.&lt;/p&gt;
+
+&lt;p&gt;As these tools are integrated further into our processes and refined, we expect an increase in vulnerability disclosures. We will continue to share transparently what we have found and resolved to ensure the security of our products. If you are not already following our Security Blog or subscribed to receive alerts for updates on the products you own through the Ivanti Innovators Hub, we highly recommend you do so.&lt;/p&gt;
+
+&lt;p&gt;Importantly, we are committed to using AI responsibly in product security, including keeping a human in the loop to verify automated or agentic work. While this will result in an uptick in disclosures, we see this as a good thing, and an important part of ensuring our products keep pace with modern security requirements as they change.&lt;/p&gt;
+
+&lt;p&gt;Our top priority is the security of our customers and believe the increase in identified, resolved, and transparently communicated vulnerabilities demonstrates that commitment.&lt;/p&gt;
+
+&lt;p&gt;Our Support team is always available to help customers and partners should they have any questions. Cases can be logged via the &lt;a href="https://hub.ivanti.com/" target="_blank"&gt;Ivanti Innovators Hub&lt;/a&gt; (login credentials required).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Want to stay up to date on Ivanti Security Advisories? Paste &lt;a href="https://www.ivanti.com/blog/topics/security-advisory"&gt;https://www.ivanti.com/blog/topics/security-advisory/rss&lt;/a&gt; into your preferred RSS reader / functionality in your email program.&lt;/em&gt;&lt;/p&gt;
+</description><pubDate>Tue, 11 Aug 2026 14:23:41 Z</pubDate></item><item><guid isPermaLink="false">c6eece21-9cea-4fdd-a585-75fdec54dc39</guid><link>https://www.ivanti.com/blog/july-2026-security-update</link><category>Security Advisory</category><title>July 2026 Security Update</title><description>&lt;p&gt;Ivanti releases standard security patches on the second Tuesday of every month. In today’s rapidly evolving technology and threat landscape, we believe responsible transparency should be a cornerstone of any product security program. &lt;a href="https://www.ivanti.com/resources/whitepapers/the-patch-apocalypse"&gt;AI is compressing the time-to-exploit&lt;/a&gt;, and Ivanti uses leading technologies to proactively find and fix issues ––including integrating advanced LLMs into our Engineering and product security to enhance the capabilities of our teams.&lt;/p&gt;
+
+&lt;p&gt;Our philosophy is simple: discovering and communicating vulnerabilities, and sharing that information with defenders, is not an indication of weakness; rather it is evidence of rigorous scrutiny and a proactive vulnerability management program. By aggressively seeking to identify and address vulnerabilities, our aim is to get ahead of threat actors to ensure our customers can take the steps needed to protect their environments.&lt;/p&gt;
+
+&lt;p&gt;To that end, today Ivanti is disclosing vulnerabilities in Ivanti Xtraction.&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;It is important for customers to know:&lt;/span&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;We have no evidence of these vulnerabilities being exploited in the wild.&lt;/li&gt;
+	&lt;li&gt;These vulnerabilities do not impact any other Ivanti solutions.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;More information on these vulnerabilities and detailed instructions on how to remediate the issues can be found in the Security Advisories:&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;&lt;a href="https://forums.ivanti.com/s/article/Security-Advisory-Ivanti-Xtraction-CVE-2026-14902-CVE-2026-14903" target="_blank"&gt;Xtraction&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;u&gt;&lt;strong&gt;How AI will affect vulnerability disclosures in our products&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;
+
+&lt;p&gt;Ivanti continues to explore, test, and implement leading technologies and processes in every stage of our product development. In recent months, our security team began a project to integrate multiple advanced LLM models into our product security processes.&lt;/p&gt;
+
+&lt;p&gt;This project has increased the capabilities of our Engineering and Product Security Red Teams to identify and fix vulnerabilities, especially those that are difficult to identify with traditional tooling, such as SAST and DAST. We have already successfully identified vulnerabilities which traditional tools missed.&lt;/p&gt;
+
+&lt;p&gt;As these tools are integrated further into our processes and refined, we expect an increase in vulnerability disclosures. We will continue to share transparently what we have found and resolved to ensure the security of our products. If you are not already following our Security Blog or subscribed to receive alerts for updates on the products you own through the Ivanti Innovators Hub, we highly recommend you do so.&lt;/p&gt;
+
+&lt;p&gt;Importantly, we are committed to using AI responsibly in product security, including keeping a human in the loop to verify automated or agentic work. While this will result in an uptick in disclosures, we see this as a good thing, and an important part of ensuring our products keep pace with modern security requirements as they change.&lt;/p&gt;
+
+&lt;p&gt;Our top priority is the security of our customers and believe the increase in identified, resolved, and transparently communicated vulnerabilities demonstrates that commitment.&lt;/p&gt;
+
+&lt;p&gt;Our Support team is always available to help customers and partners should they have any questions. Cases can be logged via the &lt;a href="https://hub.ivanti.com/" target="_blank"&gt;Ivanti Innovators Hub&lt;/a&gt; (login credentials required).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Want to stay up to date on Ivanti Security Advisories? Paste &lt;a href="https://www.ivanti.com/blog/topics/security-advisory"&gt;https://www.ivanti.com/blog/topics/security-advisory/rss&lt;/a&gt; into your preferred RSS reader / functionality in your email program.&lt;/em&gt;&lt;/p&gt;
+</description><pubDate>Tue, 14 Jul 2026 14:15:30 Z</pubDate></item><item><guid isPermaLink="false">b27adb18-ced1-4714-99e7-8913ee4e7cd7</guid><link>https://www.ivanti.com/blog/june-2026-security-update</link><category>Security Advisory</category><title>June 2026 Security Update</title><description>&lt;p&gt;Ivanti releases standard security patches on the second Tuesday of every month. In today’s rapidly evolving technology and threat landscape, we believe responsible transparency should be a cornerstone of any product security program. &lt;a href="https://www.ivanti.com/resources/whitepapers/the-patch-apocalypse" target="_blank"&gt;AI is compressing the time-to-exploit&lt;/a&gt;, and Ivanti uses leading technologies to proactively find and fix issues ––including integrating advanced LLMs into our Engineering and product security to enhance the capabilities of our teams.&lt;/p&gt;
+
+&lt;p&gt;Our philosophy is simple: discovering and communicating vulnerabilities, and sharing that information with defenders, is not an indication of weakness; rather it is evidence of rigorous scrutiny and a proactive vulnerability management program. By aggressively seeking to identify and address vulnerabilities, our aim is to get ahead of threat actors to ensure our customers can take the steps needed to protect their environments.&lt;/p&gt;
+
+&lt;p&gt;To that end, today Ivanti is disclosing vulnerabilities in Ivanti Endpoint Manager Mobile (EPMM) and Ivanti Sentry.&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;It is important for customers to know:&lt;/span&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;We have no evidence of these vulnerabilities being exploited in the wild.&lt;/li&gt;
+	&lt;li&gt;These vulnerabilities do not impact any other Ivanti solutions.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;More information on these vulnerabilities and detailed instructions on how to remediate the issues can be found in the Security Advisories:&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;&lt;a href="https://forums.ivanti.com/s/article/Security-Advisory-Ivanti-Endpoint-Manager-Mobile-EPMM-CVE-2026-6973-CVE-2026-10727" target="_blank"&gt;Ivanti Endpoint Manager Mobile&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="https://forums.ivanti.com/s/article/Security-Advisory-Ivanti-Sentry-CVE-2026-10520-CVE-2026-10523" target="_blank"&gt;Ivanti Sentry&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;u&gt;&lt;strong&gt;How AI will affect vulnerability disclosures in our products&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;
+
+&lt;p&gt;Ivanti continues to explore, test, and implement leading technologies and processes in every stage of our product development. In recent months, our security team began a project to integrate multiple advanced LLM models into our product security processes.&lt;/p&gt;
+
+&lt;p&gt;This project has increased the capabilities of our Engineering and Product Security Red Teams to identify and fix vulnerabilities, especially those that are difficult to identify with traditional tooling, such as SAST and DAST. We have already successfully identified vulnerabilities which traditional tools missed, including some of those disclosed today.&lt;/p&gt;
+
+&lt;p&gt;As these tools are integrated further into our processes and refined, we expect an increase in vulnerability disclosures. We will continue to share transparently what we have found and resolved to ensure the security of our products. If you are not already following our Security Blog or subscribed to receive alerts for updates on the products you own through the Ivanti Innovators Hub, we highly recommend you do so.&lt;/p&gt;
+
+&lt;p&gt;Importantly, we are committed to using AI responsibly in product security, including keeping a human in the loop to verify automated or agentic work. While this will result in an uptick in disclosures, we see this as a good thing, and an important part of ensuring our products keep pace with modern security requirements as they change.&lt;/p&gt;
+
+&lt;p&gt;Our top priority is the security of our customers and believe the increase in identified, resolved, and transparently communicated vulnerabilities demonstrates that commitment.&lt;/p&gt;
+
+&lt;p&gt;Our Support team is always available to help customers and partners should they have any questions. Cases can be logged via the &lt;a href="https://hub.ivanti.com/" target="_blank"&gt;Ivanti Innovators Hub&lt;/a&gt; (login credentials required).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Want to stay up to date on Ivanti Security Advisories? Paste &lt;a href="https://www.ivanti.com/blog/topics/security-advisory"&gt;https://www.ivanti.com/blog/topics/security-advisory/rss&lt;/a&gt; into your preferred RSS reader / functionality in your email program.&lt;/em&gt;&lt;/p&gt;
+</description><pubDate>Tue, 09 Jun 2026 14:06:32 Z</pubDate></item><item><guid isPermaLink="false">4b5e8789-4afd-423a-bb03-824e079ec5f1</guid><link>https://www.ivanti.com/blog/june-2026-ivanti-neurons-for-itsm-security-update</link><category>Security Advisory</category><title>June 2026 Ivanti Neurons for ITSM Security Update</title><description>&lt;p&gt;In today’s rapidly evolving technology and threat landscape, responsible transparency should be a cornerstone of any product security program. As part of our ongoing product security program, we continually assess, investigate, and address vulnerabilities. When an issue is found, we communicate relevant information as quickly and responsibly as possible.&lt;/p&gt;
+
+&lt;p&gt;To this end, we are issuing an important security update addressing vulnerabilities in Ivanti Neurons for ITSM (cloud and on-premises). Customers should review the &lt;a href="https://forums.ivanti.com/s/article/Security-Advisory-Ivanti-Neurons-for-ITSM-CVE-2026-9614" target="_blank"&gt;Security Advisory&lt;/a&gt; for more information and version specific details.&lt;/p&gt;
+
+&lt;p&gt;Customers using the on-premises Ivanti Neurons for ITSM solution should review the Security advisory and apply fix as soon as possible.&lt;/p&gt;
+
+&lt;p&gt;At the time of this publication, we are not aware of any customers being exploited through the vulnerability disclosed today.&lt;/p&gt;
+
+&lt;p&gt;Our top priority is the security of our customers and believe the increase in identified, resolved, and transparently communicated vulnerabilities demonstrates that commitment.&lt;/p&gt;
+
+&lt;p&gt;Customers and partners with questions about their environment or remediation steps can contact Ivanti Support. Cases can be logged via the &lt;a href="https://hub.ivanti.com/" target="_blank"&gt;Ivanti Innovators Hub&lt;/a&gt; (login credentials required).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Want to stay up to date on Ivanti Security Advisories? Paste &lt;a href="https://www.ivanti.com/blog/topics/security-advisory"&gt;https://www.ivanti.com/blog/topics/security-advisory/rss&lt;/a&gt; into your preferred RSS reader / functionality in your email program.&lt;/em&gt;&lt;/p&gt;
+</description><pubDate>Mon, 01 Jun 2026 14:00:44 Z</pubDate></item><item><guid isPermaLink="false">6d5e27b8-d74b-40b2-a546-4670546b0080</guid><link>https://www.ivanti.com/blog/may-2026-security-update</link><category>Security Advisory</category><title>May 2026 Security Update</title><description>&lt;p&gt;Ivanti releases standard security patches on the second Tuesday of every month. In today’s rapidly evolving technology and threat landscape, we believe responsible transparency should be a cornerstone of any product security program. &lt;a href="https://www.ivanti.com/resources/whitepapers/the-patch-apocalypse"&gt;AI is compressing the time-to-exploit&lt;/a&gt;, and Ivanti uses leading technologies to proactively find and fix issues ––including integrating advanced LLMs into our Engineering and product security to enhance the capabilities of our teams.&lt;/p&gt;
+
+&lt;p&gt;Our philosophy is simple: discovering and communicating vulnerabilities, and sharing that information with defenders, is not an indication of weakness; rather it is evidence of rigorous scrutiny and a proactive vulnerability management program. By aggressively seeking to identify and address vulnerabilities, our aim is to get ahead of threat actors to ensure our customers can take the steps needed to protect their environments.&lt;/p&gt;
+
+&lt;p&gt;To that end, today Ivanti is disclosing vulnerabilities in Ivanti Secure Access Client, Xtraction, Virtual Traffic Manager and Endpoint Manager (EPM).&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;It is important for customers to know:&lt;/span&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;We have no evidence of these vulnerabilities being exploited in the wild.&lt;/li&gt;
+	&lt;li&gt;These vulnerabilities do not impact any other Ivanti solutions.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;More information on these vulnerabilities and detailed instructions on how to remediate the issues can be found in the Security Advisories:&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;&lt;a href="https://forums.ivanti.com/s/article/May-2026-Security-Advisory-Ivanti-Secure-Access-Client-CVE-2026-7431-CVE-2026-7432" target="_blank"&gt;Ivanti Secure Access Client&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="https://forums.ivanti.com/s/article/Security-Advisory---Ivanti-Xtraction-CVE-2026-8043" target="_blank"&gt;Ivanti Xtraction&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="https://forums.ivanti.com/s/article/May-2026-Security-Advisory-Ivanti-Virtual-Traffic-Manager-vTM-CVE-2026-8051" target="_blank"&gt;Ivanti Virtual Traffic Manager&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="https://forums.ivanti.com/s/article/Security-Advisory-Ivanti-Endpoint-Manager-EPM-May-2026" target="_blank"&gt;Ivanti Endpoint Manager (EPM)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;u&gt;How AI will affect vulnerability announcements in our products&lt;/u&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Ivanti continues to explore, test, and implement leading technologies and processes in every stage of our product development. In recent months, our security team began a project to integrate multiple advanced LLM models into our product security processes.&lt;/p&gt;
+
+&lt;p&gt;This project has increased the capabilities of our Engineering and Product Security Red Teams to identify and fix vulnerabilities, especially those that are difficult to identify with traditional tooling, such as SAST and DAST. We have already successfully identified vulnerabilities which traditional tools missed, including some of those disclosed today.&lt;/p&gt;
+
+&lt;p&gt;As these tools are integrated further into our processes and refined, we expect an increase in vulnerability disclosures. We will continue to share transparently what we have found and resolved to ensure the security of our products. If you are not already following our Security Blog or subscribed to receive alerts for updates on the products you own through the Ivanti Innovators Hub, we highly recommend you do so.&lt;/p&gt;
+
+&lt;p&gt;Importantly, we are committed to using AI responsibly in product security, including keeping a human in the loop to verify automated or agentic work. While this will result in an uptick in disclosures, we see this as a good thing, and an important part of ensuring our products keep pace with modern security requirements as they change.&lt;/p&gt;
+
+&lt;p&gt;Our top priority is the security of our customers and believe the increase in identified, resolved, and transparently communicated vulnerabilities demonstrates that commitment.&lt;/p&gt;
+
+&lt;p&gt;Our Support team is always available to help customers and partners should they have any questions. Cases can be logged via the &lt;a href="https://hub.ivanti.com/" target="_blank"&gt;Ivanti Innovators Hub&lt;/a&gt; (login credentials required).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Want to stay up to date on Ivanti Security Advisories? Paste &lt;a href="https://www.ivanti.com/blog/topics/security-advisory"&gt;https://www.ivanti.com/blog/topics/security-advisory/rss&lt;/a&gt; into your preferred RSS reader / functionality in your email program.&lt;/em&gt;&lt;/p&gt;
+</description><pubDate>Tue, 12 May 2026 14:11:21 Z</pubDate></item><item><guid isPermaLink="false">fee9b979-fd63-4fe1-825a-89bdb3bbb17f</guid><link>https://www.ivanti.com/blog/may-2026-epmm-security-update</link><category>Security Advisory</category><title>May 2026 EPMM Security Update</title><description>&lt;p&gt;In today’s rapidly evolving technology and threat landscape, responsible transparency should be a cornerstone of any product security program. Especially with the advancements in AI, we believe it is important to respond quickly when a new risk is discovered.&lt;/p&gt;
+
+&lt;p&gt;Ivanti’s efforts integrating AI into our development and product security process have increased the capabilities of our Engineering and Product Security Red Teams to identify and fix vulnerabilities. Our objective in proactively discovering issues is to increase the resilience of our products in today’s threat environment and reduce the likelihood of exploited-in-the-wild Zero Days. We have already successfully identified vulnerabilities traditional tools missed, including some that are being disclosed today.&lt;/p&gt;
+
+&lt;p&gt;Importantly, we are committed to using AI responsibly in product security, including keeping a human in the loop to verify automated or agentic work. Our top priority is the security of our customers, and we expect that this work will naturally increase the number of vulnerabilities found, fixed, and disclosed. While this will result in an uptick in disclosures, we see this as a good thing, and an important part of ensuring our products keep pace with modern security requirements as they change.&lt;/p&gt;
+
+&lt;p&gt;To this end, we are issuing an important security update addressing vulnerabilities in Ivanti Endpoint Manager Mobile (EPMM).&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;More information can be found in the &lt;a href="https://forums.ivanti.com/s/article/May-2026-Security-Advisory-Ivanti-Endpoint-Manager-Mobile-EPMM-Multiple-CVEs" target="_blank"&gt;Security Advisory, which describes the nature of the vunlerabilities and detailed remediation instructions for customers.&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;At the time of disclosure, we are aware of very limited exploitation of CVE-2026-6973, which requires admin authentication for successful exploitation.&lt;/li&gt;
+	&lt;li&gt;We are not aware of any customers being exploited by the other vulnerabilities disclosed today.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The issues only affect the on-prem EPMM product, and are not present in Ivanti Neurons for MDM, Ivanti’s cloud-based unified endpoint management solution, Ivanti EPM (a similarly named, but different product), Ivanti Sentry, or any other Ivanti products.&lt;/p&gt;
+
+&lt;p&gt;Advanced AI models have collapsed the time-to-exploit from days to hours after disclosure. Because of this, &lt;u&gt;we strongly encourage our customers to apply the patch to their on-premises EPMM promptly to protect their environment&lt;/u&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;u&gt;&lt;strong&gt;How AI will affect vulnerability announcements in our products&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;
+
+&lt;p&gt;Ivanti continues to explore, test, and implement leading technologies and processes in our product development. In recent months, our security team began a project to integrate multiple advanced LLM models into our product security processes.&lt;/p&gt;
+
+&lt;p&gt;This project has increased the capabilities of our Engineering and Product Security Red Teams to identify and fix vulnerabilities, especially those that are difficult to identify with traditional tooling, such as SAST and DAST. We have already successfully identified vulnerabilities which traditional tools missed, including some of those disclosed today.&lt;/p&gt;
+
+&lt;p&gt;As these tools are integrated further into our processes and refined, we expect an increase in vulnerability disclosures. We will continue to share transparently what we have found and resolved to ensure the security of our products. If you are not already following our Security Blog or subscribed to receive alerts for updates on the products you own through the Ivanti Innovators Hub, we highly recommend you do so.&lt;/p&gt;
+
+&lt;p&gt;Our top priority is the security of our customers and believe the increase in identified, resolved, and transparently communicated vulnerabilities demonstrates that commitment.&lt;/p&gt;
+
+&lt;p&gt;Our Support team is always available to help customers and partners should they have any questions. Cases can be logged via the &lt;a href="https://hub.ivanti.com/" target="_blank"&gt;Ivanti Innovators Hub&lt;/a&gt; (login credentials required).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Want to stay up to date on Ivanti Security Advisories? Paste &lt;a href="https://www.ivanti.com/blog/topics/security-advisory"&gt;https://www.ivanti.com/blog/topics/security-advisory/rss&lt;/a&gt; into your preferred RSS reader / functionality in your email program.&lt;/em&gt;&lt;/p&gt;
+</description><pubDate>Thu, 07 May 2026 14:23:06 Z</pubDate></item><item><guid isPermaLink="false">bb18f48d-02e3-4447-ae10-01f3dd87efd8</guid><link>https://www.ivanti.com/blog/april-2026-security-update</link><category>Security Advisory</category><title>April 2026 Security Update</title><description>&lt;p&gt;Ivanti releases standard security patches on the second Tuesday of every month. &amp;nbsp;Our vulnerability management program is central to our commitment to maintaining secure products. Our philosophy is simple: discovering and communicating vulnerabilities, and sharing that information with defenders, is not an indication of weakness; rather it is evidence of rigorous scrutiny and a proactive vulnerability management program. By aggressively seeking to identify and address vulnerabilities, our aim is to get ahead of threat actors to ensure our customers can take the steps needed to protect their environments.&lt;/p&gt;
+
+&lt;p&gt;We believe that responsible transparency helps protect our customers, and that CVE disclosures are an essential and effective tool to communicate software vulnerabilities. The purpose of assigning a CVE is to provide a beacon to security teams and signal the need for urgent updates.&lt;/p&gt;
+
+&lt;p&gt;To that end, today Ivanti is disclosing vulnerabilities in Ivanti Neurons for ITSM (on-premises and cloud).&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;&lt;b&gt;It is important for customers to know:&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;We have no evidence of these vulnerabilities being exploited in the wild.&lt;/li&gt;
+	&lt;li&gt;These vulnerabilities do not impact any other Ivanti solutions.&lt;/li&gt;
+	&lt;li&gt;Customers using the cloud version of Ivanti Neurons for ITSM do not need to take any action as the fix was applied on 12 December 2025 to all cloud environments.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;More information on these vulnerabilities and detailed instructions on how to remediate the issues can be found in this &lt;a href="https://forums.ivanti.com/s/article/Security-Advisory-Ivanti-Neurons-for-ITSM-CVE-2026-4913-CVE-2026-4914" target="_blank"&gt;Security Advisory&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Want to stay up to date on Ivanti Security Advisories? Paste &lt;a href="https://www.ivanti.com/blog/topics/security-advisory"&gt;https://www.ivanti.com/blog/topics/security-advisory/rss&lt;/a&gt; into your preferred RSS reader / functionality in your email program.&lt;/em&gt;&lt;/p&gt;
+</description><pubDate>Tue, 14 Apr 2026 14:08:24 Z</pubDate></item><item><guid isPermaLink="false">1bc1b6b1-a480-4f6a-88b0-749da8241d7d</guid><link>https://www.ivanti.com/blog/march-2026-security-update</link><category>Security Advisory</category><title>March 2026 Security Update</title><description>&lt;p&gt;Ivanti releases standard security patches on the second Tuesday of every month. &amp;nbsp;Our vulnerability management program is central to our commitment to maintaining secure products. Our philosophy is simple: discovering and communicating vulnerabilities, and sharing that information with defenders, is not an indication of weakness; rather it is evidence of rigorous scrutiny and a proactive vulnerability management program. By aggressively seeking to identify and address vulnerabilities, our aim is to get ahead of threat actors to ensure our customers can take the steps needed to protect their environments.&lt;/p&gt;
+
+&lt;p&gt;We believe that responsible transparency helps protect our customers, and that CVE disclosures are an essential and effective tool to communicate software vulnerabilities. The purpose of assigning a CVE is to provide a beacon to security teams and signal the need for urgent updates.&lt;/p&gt;
+
+&lt;p&gt;To that end, today Ivanti is disclosing vulnerabilities in Ivanti Desktop and Server Management (DSM).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;span&gt;It is important for customers to know:&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;We have no evidence of this vulnerability being exploited in the wild.&lt;/li&gt;
+	&lt;li&gt;This vulnerability does not impact any other Ivanti solutions.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;More information on this vulnerability and detailed instructions on how to remediate the issues can be found in this &lt;a href="https://forums.ivanti.com/s/article/Security-Advisory-Ivanti-DSM-CVE-2026-3483" target="_blank"&gt;Security Advisory&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Our Support team is always available to help customers and partners should they have any questions. Cases can be logged via the &lt;a href="https://hub.ivanti.com/" target="_blank"&gt;Ivanti Innovators Hub&lt;/a&gt; (login credentials required).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Want to stay up to date on Ivanti Security Advisories? Paste &lt;a href="https://www.ivanti.com/blog/topics/security-advisory"&gt;https://www.ivanti.com/blog/topics/security-advisory/rss&lt;/a&gt; into your preferred RSS reader / functionality in your email program.&lt;/em&gt;&lt;/p&gt;
+</description><pubDate>Tue, 10 Mar 2026 14:13:58 Z</pubDate></item><item><guid isPermaLink="false">0cda8b94-e9d7-478c-9f58-afc9c44664fe</guid><link>https://www.ivanti.com/blog/february-2026-security-update</link><category>Security Advisory</category><title>February 2026 Security Update</title><description>&lt;p&gt;Ivanti releases standard security patches on the second Tuesday of every month. &amp;nbsp;Our vulnerability management program is central to our commitment to maintaining secure products. Our philosophy is simple: discovering and communicating vulnerabilities, and sharing that information with defenders, is not an indication of weakness; rather it is evidence of rigorous scrutiny and a proactive vulnerability management program. By aggressively seeking to identify and address vulnerabilities, our aim is to get ahead of threat actors to ensure our customers can take the steps needed to protect their environments.&lt;/p&gt;
+
+&lt;p&gt;We believe that responsible transparency helps protect our customers, and that CVE disclosures are an essential and effective tool to communicate software vulnerabilities. The purpose of assigning a CVE is to provide a beacon to security teams and signal the need for urgent updates.&lt;/p&gt;
+
+&lt;p&gt;To that end, today Ivanti is disclosing vulnerabilities in Ivanti Endpoint Manager (EPM).&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;&lt;b&gt;It is important for customers to know:&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;We have no evidence of this vulnerability being exploited in the wild.&lt;/li&gt;
+	&lt;li&gt;This vulnerability does not impact any other Ivanti solutions.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;More information on this vulnerability and detailed instructions on how to remediate the issues can be found in this &lt;a href="https://forums.ivanti.com/s/article/Security-Advisory-EPM-February-2026-for-EPM-2024" target="_blank"&gt;Security Advisory&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Our Support team is always available to help customers and partners should they have any questions. Cases can be logged via the &lt;a href="https://hub.ivanti.com/" target="_blank"&gt;Ivanti Innovators Hub&lt;/a&gt; (login credentials required).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Want to stay up to date on Ivanti Security Advisories? Paste &lt;a href="https://www.ivanti.com/blog/topics/security-advisory"&gt;https://www.ivanti.com/blog/topics/security-advisory/rss&lt;/a&gt; into your preferred RSS reader / functionality in your email program.&lt;/em&gt;&lt;/p&gt;
+</description><pubDate>Tue, 10 Feb 2026 15:05:16 Z</pubDate></item><item><guid isPermaLink="false">43dda94c-f09c-472c-a7a4-ab75944d5b69</guid><link>https://www.ivanti.com/blog/january-2026-epmm-security-update</link><category>Security Advisory</category><title>January 2026 EPMM Security Update</title><description>&lt;p&gt;At Ivanti, responsible transparency is a cornerstone of our commitment to customer security and trust. We have a long-standing commitment to provide information that allows our customers and the broader security ecosystem to take proactive measures to safeguard their environments, while mitigating the risks of a rapidly evolving and highly sophisticated threat landscape.&lt;/p&gt;
+
+&lt;p&gt;To this end, we are issuing an important security update addressing vulnerabilities in Ivanti Endpoint Manager Mobile (EPMM). More information can be found in the Security Advisory. At the time of disclosure, we are aware of a very limited number of customers whose solution has been exploited.&lt;/p&gt;
+
+&lt;p&gt;The issue affects only the on-prem EPMM product. It is not present in Ivanti Neurons for MDM, Ivanti’s cloud-based unified endpoint management solution, Ivanti EPM (a similarly named, but different product), Ivanti Sentry, or any other Ivanti products.&lt;/p&gt;
+
+&lt;p&gt;&lt;u&gt;We urge all customers using the on-prem EPMM product to promptly install the Security Update. &lt;/u&gt;&lt;/p&gt;
+
+&lt;p&gt;As we respond to this situation, we are making the following information available to defenders now:&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;Our &lt;a href="https://forums.ivanti.com/s/article/Security-Advisory-Ivanti-Endpoint-Manager-Mobile-EPMM-CVE-2026-1281-CVE-2026-1340" target="_blank"&gt;Security Advisory&lt;/a&gt;, which describes the nature of the vulnerabilities and detailed remediation instructions for customers.&lt;/li&gt;
+	&lt;li&gt;A &lt;a href="https://forums.ivanti.com/s/article/Analysis-Guidance-Ivanti-Endpoint-Manager-Mobile-EPMM-CVE-2026-1281-CVE-2026-1340" target="_blank"&gt;Technical Analysis&lt;/a&gt; that includes affected endpoint specifics and log analysis guidance to support investigation and forensics.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We have a longstanding commitment to responsibly share information through Ivanti channels, as well as through coordination with government agencies and trusted security partners, to help defenders assess risk, prioritize remediation, and deploy defenses effectively. In this case, we determined that early proactive release of technical details concurrent with the patch aligns with responsible disclosure and arms defenders to best mitigate potential exploitation.&lt;/p&gt;
+
+&lt;p&gt;Our Support team is always available to help customers and partners should they have any questions. Cases can be logged via the &lt;a href="https://success.ivanti.com/" target="_blank"&gt;Success portal&lt;/a&gt; (login credentials required).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Want to stay up to date on Ivanti Security Advisories? Paste &lt;a href="https://www.ivanti.com/blog/topics/security-advisory"&gt;https://www.ivanti.com/blog/topics/security-advisory/rss&lt;/a&gt; into your preferred RSS reader / functionality in your email program.&lt;/em&gt;&lt;/p&gt;
+</description><pubDate>Thu, 29 Jan 2026 19:05:22 Z</pubDate></item><item><guid isPermaLink="false">d3c4d335-4c29-435e-ac7f-405e86cf33cc</guid><link>https://www.ivanti.com/blog/december-2025-security-update</link><category>Security Advisory</category><title>December 2025 Security Update</title><description>&lt;p&gt;Ivanti releases standard security patches on the second Tuesday of every month.&amp;nbsp; Our vulnerability management program is central to our commitment to maintaining secure products. Our philosophy is simple: discovering and communicating vulnerabilities, and sharing that information with defenders, is not an indication of weakness; rather it is evidence of rigorous scrutiny and a proactive vulnerability management program. By aggressively seeking to identify and address vulnerabilities, our aim is to get ahead of threat actors to ensure our customers can take the steps needed to protect their environments.&lt;/p&gt;
+
+&lt;p&gt;We believe that responsible transparency helps protect our customers, and that CVE disclosures are an essential and effective tool to communicate software vulnerabilities. The purpose of assigning a CVE is to provide a beacon to security teams and signal the need for urgent updates.&lt;/p&gt;
+
+&lt;p&gt;To that end, today Ivanti is disclosing vulnerabilities in Ivanti Endpoint Manager (EPM).&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;It is important for customers to know:&lt;/span&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;We have no evidence of this vulnerability being exploited in the wild.&lt;/li&gt;
+	&lt;li&gt;This vulnerability does not impact any other Ivanti solutions.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;More information on this vulnerability and detailed instructions on how to remediate the issues can be found in this &lt;a href="https://forums.ivanti.com/s/article/Security-Advisory-EPM-December-2025-for-EPM-2024" target="_blank"&gt;Security Advisory&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Our Support team is always available to help customers and partners should they have any questions. Cases can be logged via the &lt;a href="https://success.ivanti.com/" target="_blank"&gt;Success portal&lt;/a&gt; (login credentials required).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Want to stay up to date on Ivanti Security Advisories? Paste &lt;a href="https://www.ivanti.com/blog/topics/security-advisory"&gt;https://www.ivanti.com/blog/topics/security-advisory/rss&lt;/a&gt; into your preferred RSS reader / functionality in your email program.&lt;/em&gt;&lt;/p&gt;
+</description><pubDate>Tue, 09 Dec 2025 16:11:25 Z</pubDate></item><item><guid isPermaLink="false">b14d098a-fef6-4307-a3c8-c508857c1c0d</guid><link>https://www.ivanti.com/blog/november-2025-security-update</link><category>Security Advisory</category><title>November 2025 Security Update</title><description>&lt;p&gt;Ivanti releases standard security patches on the second Tuesday of every month. &amp;nbsp;Our vulnerability management program is central to our commitment to maintaining secure products. Our philosophy is simple: discovering and communicating vulnerabilities, and sharing that information with defenders, is not an indication of weakness; rather it is evidence of rigorous scrutiny and a proactive vulnerability management program. By aggressively seeking to identify and address vulnerabilities, our aim is to get ahead of threat actors to ensure our customers can take the steps needed to protect their environments.&lt;/p&gt;
+
+&lt;p&gt;We believe that responsible transparency helps protect our customers, and that CVE disclosures are an essential and effective tool to communicate software vulnerabilities. The purpose of assigning a CVE is to provide a beacon to security teams and signal the need for urgent updates.&lt;/p&gt;
+
+&lt;p&gt;To that end, today Ivanti is disclosing a vulnerability in Ivanti Endpoint Manager (EPM).&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;It is important for customers to know:&lt;/span&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;We have no evidence of this vulnerability being exploited in the wild.&lt;/li&gt;
+	&lt;li&gt;This vulnerability does not impact any other Ivanti solutions.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;More information on this vulnerability and detailed instructions on how to remediate the issues can be found in this &lt;a href="https://forums.ivanti.com/s/article/Security-Advisory-EPM-November-2025-for-EPM-2024" target="_blank"&gt;Security Advisory&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Our Support team is always available to help customers and partners should they have any questions. Cases can be logged via the &lt;a href="https://success.ivanti.com/" target="_blank"&gt;Success portal&lt;/a&gt; (login credentials required).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Want to stay up to date on Ivanti Security Advisories? Paste &lt;a href="https://www.ivanti.com/blog/topics/security-advisory"&gt;https://www.ivanti.com/blog/topics/security-advisory/rss&lt;/a&gt; into your preferred RSS reader / functionality in your email program.&lt;/em&gt;&lt;/p&gt;
+</description><pubDate>Tue, 11 Nov 2025 15:12:04 Z</pubDate></item><item><guid isPermaLink="false">6c83705e-b3f7-4d2f-af07-1be17da7e339</guid><link>https://www.ivanti.com/blog/october-2025-security-update</link><category>Security Advisory</category><title>October 2025 Security Update</title><description>&lt;p&gt;Ivanti releases standard security patches on the second Tuesday of every month.&amp;nbsp; Our vulnerability management program is central to our commitment to maintaining secure products. Our philosophy is simple: discovering and communicating vulnerabilities, and sharing that information with defenders, is not an indication of weakness; rather it is evidence of rigorous scrutiny and a proactive vulnerability management program. By aggressively seeking to identify and address vulnerabilities, our aim is to get ahead of threat actors to ensure our customers can take the steps needed to protect their environments.&lt;/p&gt;
+
+&lt;p&gt;We believe that responsible transparency helps protect our customers, and that CVE disclosures are an essential and effective tool to communicate software vulnerabilities. The purpose of assigning a CVE is to provide a beacon to security teams and signal the need for urgent updates.&lt;/p&gt;
+
+&lt;p&gt;To that end, today Ivanti is disclosing vulnerabilities in Ivanti Endpoint Manager Mobile (EPMM) and Neurons for MDM.&lt;/p&gt;
+
+&lt;p&gt;More information on these vulnerabilities and detailed instructions on how to remediate the issues can be found in these Security Advisories:&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;&lt;a href="https://forums.ivanti.com/s/article/Security-Advisory-Endpoint-Manager-Mobile-EPMM-10-2025-Multiple-CVEs?language=en_US" target="_blank"&gt;Ivanti Endpoint Manager Mobile (EPMM)&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="https://forums.ivanti.com/s/article/October-2025-Security-Advisory-Ivanti-Neurons-for-MDM" target="_blank"&gt;Ivanti Neurons for MDM&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In addition, Ivanti has issued a &lt;a href="https://forums.ivanti.com/s/article/Security-Advisory-Ivanti-Endpoint-Manager-EPM-October-2025" target="_blank"&gt;Security Advisory for Ivanti Endpoint Manager&lt;/a&gt;, which provides mitigation options for vulnerabilities disclosed October 7, 2025. &amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;It is important for customers to know:&lt;/span&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;We have no evidence of any of these vulnerabilities being exploited in the wild.&lt;/li&gt;
+	&lt;li&gt;These vulnerabilities do not impact any other Ivanti solutions.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Our Support team is always available to help customers and partners should they have any questions. Cases can be logged via the &lt;a href="https://success.ivanti.com/" target="_blank"&gt;Success portal&lt;/a&gt; (login credentials required).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Want to stay up to date on Ivanti Security Advisories? Paste &lt;a href="https://www.ivanti.com/blog/topics/security-advisory"&gt;https://www.ivanti.com/blog/topics/security-advisory/rss&lt;/a&gt; into your preferred RSS reader / functionality in your email program.&lt;/em&gt;&lt;/p&gt;
+</description><pubDate>Tue, 14 Oct 2025 14:20:14 Z</pubDate></item><item><guid isPermaLink="false">f6a082d9-98ad-4456-8bb3-dcd1c2f45fb6</guid><link>https://www.ivanti.com/blog/september-2025-security-update</link><category>Security Advisory</category><title>September 2025 Security Update</title><description>&lt;p&gt;Ivanti releases standard security patches on the second Tuesday of every month.&amp;nbsp; Our vulnerability management program is central to our commitment to maintaining secure products. Our philosophy is simple: discovering and communicating vulnerabilities, and sharing that information with defenders, is not an indication of weakness; rather it is evidence of rigorous scrutiny and a proactive vulnerability management program. By aggressively seeking to identify and address vulnerabilities, our aim is to get ahead of threat actors to ensure our customers can take the steps needed to protect their environments. At the core, we believe that responsible transparency helps protect our customers.&lt;/p&gt;
+
+&lt;p&gt;We believe that responsible transparency helps protect our customers, and that CVE disclosures are an essential and effective tool to communicate software vulnerabilities. The purpose of assigning a CVE is to provide a beacon to security teams and signal the need for urgent updates.&lt;/p&gt;
+
+&lt;p&gt;To that end, today Ivanti is disclosing vulnerabilities in Ivanti Endpoint Manager (EPM) and Ivanti Connect Secure, Policy Secure, ZTA Gateways and Neurons for Secure Access.&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;It is important for customers to know:&lt;/span&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;We have no evidence of any of these vulnerabilities being exploited in the wild.&lt;/li&gt;
+	&lt;li&gt;These vulnerabilities do not impact any other Ivanti solutions.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;More information on these vulnerabilities and detailed instructions on how to remediate the issues can be found in these Security Advisories:&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;&lt;a href="https://forums.ivanti.com/s/article/Security-Advisory-September-2025-for-Ivanti-EPM-2024-SU3-and-EPM-2022-SU8" target="_blank"&gt;Ivanti Endpoint Manager (EPM)&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="https://forums.ivanti.com/s/article/September-Security-Advisory-Ivanti-Connect-Secure-Policy-Secure-ZTA-Gateways-and-Neurons-for-Secure-Access-Multiple-CVEs" target="_blank"&gt;Ivanti Connect Secure, Policy Secure, ZTNA and nSA&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Our Support team is always available to help customers and partners should they have any questions. Cases can be logged via the &lt;a href="https://success.ivanti.com/" target="_blank"&gt;Success portal&lt;/a&gt; (login credentials required).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Want to stay up to date on Ivanti Security Advisories? Paste &lt;a href="https://www.ivanti.com/blog/topics/security-advisory"&gt;https://www.ivanti.com/blog/topics/security-advisory/rss&lt;/a&gt; into your preferred RSS reader / functionality in your email program.&lt;/em&gt;&lt;/p&gt;
+</description><pubDate>Tue, 09 Sep 2025 14:16:12 Z</pubDate></item><item><guid isPermaLink="false">9e7807bc-1f70-4a3f-9e21-bdd705346407</guid><link>https://www.ivanti.com/blog/august-2025-security-update</link><category>Security Advisory</category><title>August 2025 Security Update</title><description>&lt;p&gt;Ivanti releases standard security patches on the second Tuesday of every month. &amp;nbsp;Our vulnerability management program is central to our commitment to maintaining secure products. Our philosophy is simple: discovering and communicating vulnerabilities, and sharing that information with defenders, is not an indication of weakness; rather it is evidence of rigorous scrutiny and a proactive vulnerability management program. By aggressively seeking to identify and address vulnerabilities, our aim is to get ahead of threat actors to ensure our customers can take the steps needed to protect their environments. At the core, we believe that responsible transparency helps protect our customers.&lt;/p&gt;
+
+&lt;p&gt;We believe that responsible transparency helps protect our customers, and that CVE disclosures are an essential and effective tool to communicate software vulnerabilities. The purpose of assigning a CVE is to provide a beacon to security teams and signal the need for urgent updates.&lt;/p&gt;
+
+&lt;p&gt;To that end, today Ivanti is disclosing vulnerabilities in Ivanti Avalanche, Ivanti Virtual Application Delivery Control (vADC) (previously known as vTM) and Ivanti Connect Secure, Policy Secure, ZTA Gateways and Neurons for Secure Access.&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;It is important for customers to know:&lt;/span&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;We have no evidence of any of these vulnerabilities being exploited in the wild.&lt;/li&gt;
+	&lt;li&gt;These vulnerabilities do not impact any other Ivanti solutions.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;More information on these vulnerabilities and detailed instructions on how to remediate the issues can be found in these Security Advisories:&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;&lt;a href="https://forums.ivanti.com/s/article/Security-Advisory-Ivanti-Avalanche-CVE-2025-8296-CVE-2025-8297" target="_blank"&gt;Ivanti Avalanche&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="https://forums.ivanti.com/s/article/August-Security-Advisory-Ivanti-Virtual-Application-Delivery-Controller-vADC-previously-vTM-CVE-2025-8310" target="_blank"&gt;Ivanti vADC&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="https://forums.ivanti.com/s/article/August-Security-Advisory-Ivanti-Connect-Secure-Policy-Secure-ZTA-Gateways-Multiple-CVEs" target="_blank"&gt;Ivanti Connect Secure, Policy Secure, ZTA Gateways&amp;nbsp;and Neurons for Secure Access&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Our Support team is always available to help customers and partners should they have any questions. Cases can be logged via the &lt;a href="https://success.ivanti.com/" target="_blank"&gt;Success portal&lt;/a&gt; (login credentials required).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Want to stay up to date on Ivanti Security Advisories? Paste &lt;a href="https://www.ivanti.com/blog/topics/security-advisory"&gt;https://www.ivanti.com/blog/topics/security-advisory/rss&lt;/a&gt; into your preferred RSS reader / functionality in your email program.&lt;/em&gt;&lt;/p&gt;
+</description><pubDate>Tue, 12 Aug 2025 14:16:05 Z</pubDate></item><item><guid isPermaLink="false">ab3d75ba-d2f9-489f-a4fe-58ac719c6455</guid><link>https://www.ivanti.com/blog/july-security-update-2025</link><category>Security Advisory</category><title>July Security Update</title><description>&lt;p&gt;Ivanti releases standard security patches on the second Tuesday of every month.&amp;nbsp; Our vulnerability management program is central to our commitment to maintaining secure products.&amp;nbsp;Our philosophy is simple: discovering and communicating vulnerabilities, and sharing that information with defenders, is not an indication of weakness; rather it is evidence of rigorous scrutiny and a proactive vulnerability management program. By aggressively seeking to identify and address vulnerabilities, our aim is to get ahead of threat actors to ensure our customers can take the steps needed to protect their environments.&lt;/p&gt;
+
+&lt;p&gt;We believe that responsible transparency helps protect our customers, and that CVE disclosures are an essential and effective tool to communicate software vulnerabilities. The purpose of assigning a CVE is to provide a beacon to security teams and signal the need for urgent updates.&lt;/p&gt;
+
+&lt;p&gt;To that end, today Ivanti is disclosing vulnerabilities in Ivanti Connect Secure and Policy Secure, Ivanti EPM, and Ivanti EPMM.&amp;nbsp;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;It is important for customers to know:&lt;/span&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;We have no evidence of any of these vulnerabilities being exploited in the wild.&lt;/li&gt;
+	&lt;li&gt;These vulnerabilities do not impact any other Ivanti solutions.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;More information on these vulnerabilities and detailed instructions on how to remediate the issues can be found in these Security Advisories:&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;&lt;a href="https://forums.ivanti.com/s/article/July-Security-Advisory-Ivanti-Connect-Secure-and-Ivanti-Policy-Secure-Multiple-CVEs" target="_blank"&gt;Ivanti Connect Secure and Policy Secure&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="https://forums.ivanti.com/s/article/Security-Advisory-Ivanti-Endpoint-Manager-Mobile-EPMM-CVE-2025-6770-CVE-2025-6771" target="_blank"&gt;Ivanti EPMM&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="https://forums.ivanti.com/s/article/Security-Advisory-July-2025-for-Ivanti-EPM-2024-SU2-and-EPM-2022-SU8" target="_blank"&gt;Ivanti EPM&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Our Support team is always available to help customers and partners should they have any questions. Cases can be logged via the &lt;a href="https://success.ivanti.com/" target="_blank"&gt;Success portal&lt;/a&gt; (login credentials required).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Want to stay up to date on Ivanti Security Advisories? Paste &lt;a href="https://www.ivanti.com/blog/topics/security-advisory"&gt;https://www.ivanti.com/blog/topics/security-advisory/rss&lt;/a&gt; into your preferred RSS reader / functionality in your email program.&lt;/em&gt;&lt;/p&gt;
+</description><pubDate>Tue, 08 Jul 2025 14:45:10 Z</pubDate></item><item><guid isPermaLink="false">52882483-4dbe-4b07-ad9d-999d081a2233</guid><link>https://www.ivanti.com/blog/june-security-update</link><category>Security Advisory</category><title>June Security Update</title><description>&lt;p&gt;Ivanti releases standard security patches on the second Tuesday of every month. It is our philosophy that responsible transparency helps protect our customers. CVE disclosures are an essential and effective tool for communicating software vulnerabilities and necessary actions to customers. A CVE serves as a beacon to security teams and signals the need for urgent updates. &amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;Today, Ivanti is disclosing vulnerabilities in Ivanti Workspace Control.&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;It is important for customers to know:&lt;/span&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;We have no evidence of any of these vulnerabilities being exploited in the wild.&lt;/li&gt;
+	&lt;li&gt;These vulnerabilities do not impact any other Ivanti solutions.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;More information on these vulnerabilities and detailed instructions on how to remediate the issues can be found in these Security Advisories:&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;&lt;a href="https://forums.ivanti.com/s/article/Security-Advisory-Ivanti-Workspace-Control-CVE-2025-5353-CVE-CVE-2025-22463-CVE-2025-22455" target="_blank"&gt;Ivanti Workspace Control (IWC)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Our Support team is always available to help customers and partners should they have any questions. Cases can be logged via the &lt;a href="https://success.ivanti.com/" target="_blank"&gt;Success portal&lt;/a&gt; (login credentials required).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Want to stay up to date on Ivanti Security Advisories? Paste &lt;a href="https://www.ivanti.com/blog/topics/security-advisory"&gt;https://www.ivanti.com/blog/topics/security-advisory/rss&lt;/a&gt; into your preferred RSS reader / functionality in your email program.&lt;/em&gt;&lt;/p&gt;
+</description><pubDate>Tue, 10 Jun 2025 14:06:36 Z</pubDate></item><item><guid isPermaLink="false">6ff2c0c7-08d8-44b9-9420-2d4113224412</guid><link>https://www.ivanti.com/blog/may-2025-security-update</link><category>Security Advisory</category><title>May Security Update</title><description>&lt;p&gt;Ivanti releases standard security patches on the second Tuesday of every month. For many of our customers, the predictable schedule facilitates better planning and management of IT resources, allowing them to allocate time and personnel efficiently for the timely updates.&lt;/p&gt;
+
+&lt;p&gt;Today, Ivanti is disclosing vulnerabilities in Ivanti ITSM (on-premises only), Cloud Security Application (CSA) and Neurons for MDM.&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;It is important for customers to know:&lt;/span&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;We have no evidence of any of these vulnerabilities being exploited in the wild.&lt;/li&gt;
+	&lt;li&gt;These vulnerabilities do not impact any other Ivanti solutions.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;More information on these vulnerabilities and detailed instructions on how to remediate the issues can be found in these Security Advisories:&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;&lt;a href="https://forums.ivanti.com/s/article/Security-Advisory-Ivanti-Neurons-for-ITSM-on-premises-only-CVE-2025-22462" target="_blank"&gt;Ivanti Neurons for ITSM (on-premises only)&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="https://forums.ivanti.com/s/article/Security-Advisory-Ivanti-Cloud-Services-Application-CVE-2025-22460" target="_blank"&gt;Cloud Security Application (CSA)&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="https://forums.ivanti.com/s/article/Security-Advisory-May-2025-Ivanti-Neurons-for-MDM-N-MDM" target="_blank"&gt;Ivanti Neurons for MDM&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Our Support team is always available to help customers and partners should they have any questions. Cases can be logged via the &lt;a href="https://success.ivanti.com/" target="_blank"&gt;Success portal&lt;/a&gt; (login credentials required).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Want to stay up to date on Ivanti Security Advisories? Paste &lt;a href="https://www.ivanti.com/blog/topics/security-advisory"&gt;https://www.ivanti.com/blog/topics/security-advisory/rss&lt;/a&gt; into your preferred RSS reader / functionality in your email program.&lt;/em&gt;&lt;/p&gt;
+</description><pubDate>Tue, 13 May 2025 15:02:59 Z</pubDate></item></channel></rss>

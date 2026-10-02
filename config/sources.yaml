@@ -1,0 +1,126 @@
+# =====================================================================
+# Registre des sources. Ajouter une source = ajouter un bloc (ou `./cti source add`).
+#
+# type      : collecteur utilisé (kev, nvd, cvelist, epss, ghsa, certfr, citrix_bulletins,
+#             fortinet_psirt, rss, json_api)
+# role      : vendor | cert | reference | research | press | social
+#             -> détermine le type de preuve produit par une phrase d'exploitation
+#                (vendor/cert = exploitation CONFIRMÉE ; research/press/social = RAPPORTÉE)
+# tier      : 1 (référence) à 4 (signal faible)
+# reliability : poids 0-1 dans le score de confiance (défaut selon tier)
+# status    : active | observation (collectée, jamais d'alerte seule) | disabled
+# interval  : fréquence de collecte (s, m, h)
+# requires  : variable(s) .env nécessaires ; si absente -> source désactivée proprement
+# =====================================================================
+
+sources:
+  # ---------------- Niveau 1 : référence structurée ----------------
+  - name: cisa-kev
+    type: kev
+    role: reference
+    tier: 1
+    url: https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json
+    interval: 1h
+    status: active
+
+  - name: nvd
+    type: nvd
+    role: reference
+    tier: 1
+    url: https://services.nvd.nist.gov/rest/json/cves/2.0
+    interval: 2h
+    status: active
+    config:
+      initial_lookback_days: 3
+
+  - name: cvelist-v5
+    type: cvelist
+    role: reference
+    tier: 1
+    url: https://api.github.com/repos/CVEProject/cvelistV5/releases/latest
+    interval: 1h
+    status: active
+
+  - name: first-epss
+    type: epss
+    role: reference
+    tier: 1
+    url: https://api.first.org/data/v1/epss
+    interval: 12h
+    status: active
+
+  - name: github-advisories
+    type: ghsa
+    role: reference
+    tier: 1
+    url: https://api.github.com/advisories
+    interval: 2h
+    status: active
+    config:
+      initial_lookback_days: 3
+
+  - name: certfr-alertes
+    type: certfr
+    role: cert
+    tier: 1
+    url: https://www.cert.ssi.gouv.fr/alerte/feed/
+    interval: 30m
+    status: active
+
+  - name: certfr-avis
+    type: certfr
+    role: cert
+    tier: 1
+    url: https://www.cert.ssi.gouv.fr/avis/feed/
+    interval: 1h
+    status: active
+
+  # ---------------- PSIRT éditeurs ----------------
+  - name: psirt-citrix
+    type: citrix_bulletins
+    role: vendor
+    tier: 1
+    url: https://support.citrix.com/external/article/
+    interval: 30m
+    status: active
+    config:
+      # Pas de flux officiel exploitable : les bulletins sont découverts via les liens
+      # cités par les autres sources (CERT-FR, NVD, cvelist) + cette liste de suivi.
+      watch: [CTX697096]
+      follow_days: 60
+
+  - name: psirt-fortinet
+    type: fortinet_psirt
+    role: vendor
+    tier: 1
+    url: https://filestore.fortinet.com/fortiguard/rss/ir.xml
+    interval: 1h
+    status: active
+
+  - name: psirt-ivanti
+    type: rss
+    role: vendor
+    tier: 1
+    url: https://www.ivanti.com/blog/topics/security-advisory/rss
+    interval: 2h
+    status: active
+    config:
+      fetch_article: true   # le contenu utile (CVE, exploitation) est dans l'article
+      vendor: Ivanti
+
+  # ---------------- Exemples de sources génériques (niveau 3) ----------------
+  - name: watchtowr-labs
+    type: rss
+    role: research
+    tier: 2
+    url: https://labs.watchtowr.com/rss/
+    interval: 2h
+    status: observation
+
+  - name: bleepingcomputer
+    type: rss
+    role: press
+    tier: 3
+    url: https://www.bleepingcomputer.com/feed/
+    interval: 1h
+    status: observation
