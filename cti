@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# CLI wrapper: runs the agent CLI inside the app container.
+# Usage: ./cti status | ./cti run | ./cti source list | ./cti watchlist add CVE-... ...
+source "$(dirname "$0")/scripts/_common.sh"
+require_docker
+if ! docker compose config --services | grep -qx app; then
+  die "Le service 'app' n'existe pas encore (livré en phase 1)."
+fi
+# Disable TTY allocation when piped (CI, scripts).
+tty_flag=(); [[ -t 0 && -t 1 ]] || tty_flag=(-T)
+exec docker compose run --rm "${tty_flag[@]}" app cti "$@"

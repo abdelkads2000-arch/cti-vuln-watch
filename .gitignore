@@ -1,0 +1,29 @@
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+
+# Runtime data
+backups/*
+!backups/.gitkeep
+data/
+*.log
+
+# Real client inventories must never be committed (only the fictitious example)
+config/inventory*.yaml
+!config/inventory.example.yaml
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+*.egg-info/
+
+# IDE / OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
